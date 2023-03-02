@@ -48,7 +48,6 @@ health = "1.0.0-beta02"
 health-connect = "1.0.0-alpha10"
 heifwriter = "1.1.0-alpha01"
 hilt = "1.0.0"
-hilt-plugin = "2.44"
 input = "1.0.0-alpha02"
 interpolator = "1.0.0"
 javascriptengine = "1.0.0-alpha03"
@@ -273,7 +272,6 @@ health-connect-client = { module = "androidx.health.connect:connect-client", ver
 
 heifwriter = { module = "androidx.heifwriter:heifwriter", version.ref = "heifwriter" }
 
-hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt-plugin" }
 hilt-navigation = { module = "androidx.hilt:hilt-navigation", version.ref = "hilt" }
 hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt" }
 hilt-navigation-fragment = { module = "androidx.hilt:hilt-navigation-fragment", version.ref = "hilt" }
@@ -490,6 +488,5 @@ work-multiprocess = { module = "androidx.work:work-multiprocess", version.ref = 
 
 [plugins]
 benchmark = { id = "androidx.benchmark", version.ref = "benchmark" }
-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt-plugin" }
 navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "navigation" }
 navigation-safeargs-kotlin = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
