@@ -8,7 +8,7 @@ subprojects {
     apply(plugin = "maven-publish")
 
     group = "net.lyxnx.android"
-    version = "2023.03.01"
+    version = "2023.03.06"
 
     catalog {
         versionCatalog {
