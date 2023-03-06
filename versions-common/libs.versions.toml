@@ -1,0 +1,44 @@
+[versions]
+kotlin = "1.8.10"
+kotlinx-coroutines = "1.6.4"
+
+android-gradle-plugin = "7.4.1"
+ksp = "1.8.0-1.0.9"
+
+hilt = "1.0.0"
+hilt-plugin = "2.44.2"
+
+[libraries]
+kotlin-bom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlin" }
+kotlin-gradleplugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib" }
+kotlin-stdlib-jdk7 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk7" }
+kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test" }
+kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit" }
+kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5" }
+
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
+
+hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt-plugin" }
+hilt-navigation = { module = "androidx.hilt:hilt-navigation", version.ref = "hilt" }
+hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt" }
+hilt-navigation-fragment = { module = "androidx.hilt:hilt-navigation-fragment", version.ref = "hilt" }
+hilt-work = { module = "androidx.hilt:hilt-work", version.ref = "hilt" }
+
+android-gradleplugin = { module = "com.android.tools.build:gradle", version.ref = "android-gradle-plugin" }
+ksp-gradleplugin = { module = "com.google.devtools.ksp:symbol-processing-gradle-plugin", version.ref = "ksp" }
+
+[plugins]
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+
+android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
+android-library = { id = "com.android.library", version.ref = "android-gradle-plugin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt-plugin" }

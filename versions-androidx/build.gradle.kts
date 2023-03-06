@@ -1,0 +1,1 @@
+description = "Version catalog for AndroidX libraries"

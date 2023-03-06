@@ -1,4 +1,5 @@
 [versions]
+
 activity = "1.6.1"
 ads = "1.0.0-alpha04"
 annotation = "1.6.0-dev01"
@@ -47,7 +48,6 @@ gridlayout = "1.0.0"
 health = "1.0.0-beta02"
 health-connect = "1.0.0-alpha10"
 heifwriter = "1.1.0-alpha01"
-hilt = "1.0.0"
 input = "1.0.0-alpha02"
 interpolator = "1.0.0"
 javascriptengine = "1.0.0-alpha03"
@@ -113,41 +113,7 @@ webkit = "1.6.0"
 window = "1.0.0"
 work = "2.8.0"
 
-compose-bom = "2023.01.00"
-compose-compiler = "1.4.3"
-
 [libraries]
-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-bom" }
-compose-animation = { module = "androidx.compose.animation:animation" }
-compose-animation-graphics = { module = "androidx.compose.animation:animation-graphics" }
-compose-foundation = { module = "androidx.compose.foundation:foundation" }
-compose-foundation-layout = { module = "androidx.compose.foundation:foundation-layout" }
-compose-material = { module = "androidx.compose.material:material" }
-compose-material-icons-core = { module = "androidx.compose.material:material-icons-core" }
-compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
-compose-material-ripple = { module = "androidx.compose.material:material-ripple" }
-compose-material3 = { module = "androidx.compose.material3:material3" }
-compose-material3-windowsizeclass = { module = "androidx.compose.material3:material3-window-size-class" }
-compose-runtime = { module = "androidx.compose.runtime:runtime" }
-compose-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata" }
-compose-runtime-rxjava2 = { module = "androidx.compose.runtime:runtime-rxjava2" }
-compose-runtime-rxjava3 = { module = "androidx.compose.runtime:runtime-rxjava3" }
-compose-runtime-saveable = { module = "androidx.compose.runtime:runtime-saveable" }
-compose-ui = { module = "androidx.compose.ui:ui" }
-compose-ui-geometry = { module = "androidx.compose.ui:ui-geometry" }
-compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
-compose-ui-test = { module = "androidx.compose.ui:ui-test" }
-compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
-compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
-compose-ui-text = { module = "androidx.compose.ui:ui-text" }
-compose-ui-text-googlefonts = { module = "androidx.compose.ui:ui-text-google-fonts" }
-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
-compose-ui-tooling-data = { module = "androidx.compose.ui:ui-tooling-data" }
-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
-compose-ui-unit = { module = "androidx.compose.ui:ui-unit" }
-compose-ui-util = { module = "androidx.compose.ui:ui-util" }
-compose-ui-viewbinding = { module = "androidx.compose.ui:ui-viewbinding" }
-
 activity = { module = "androidx.activity:activity", version.ref = "activity" }
 activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
@@ -272,10 +238,7 @@ health-connect-client = { module = "androidx.health.connect:connect-client", ver
 
 heifwriter = { module = "androidx.heifwriter:heifwriter", version.ref = "heifwriter" }
 
-hilt-navigation = { module = "androidx.hilt:hilt-navigation", version.ref = "hilt" }
-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt" }
-hilt-navigation-fragment = { module = "androidx.hilt:hilt-navigation-fragment", version.ref = "hilt" }
-hilt-work = { module = "androidx.hilt:hilt-work", version.ref = "hilt" }
+
 
 input-motionprediction = { module = "androidx.input:input-motionprediction", version.ref = "input" }
 
@@ -490,3 +453,4 @@ work-multiprocess = { module = "androidx.work:work-multiprocess", version.ref = 
 benchmark = { id = "androidx.benchmark", version.ref = "benchmark" }
 navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "navigation" }
 navigation-safeargs-kotlin = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
+
