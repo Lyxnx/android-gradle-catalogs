@@ -28,7 +28,7 @@ core-remoteviews = "1.0.0-beta03"
 core-role = "1.0.0"
 core-splashscreen = "1.0.0"
 core-uwb = "1.0.0-alpha04"
-credentials = "1.2.0-alpah01"
+credentials = "1.2.0-alpha01"
 cursoradapter = "1.0.0"
 customview = "1.1.0"
 datastore = "1.0.0"
@@ -134,7 +134,6 @@ arch-core-runtime = { module = "androidx.arch.core:core-runtime", version.ref = 
 arch-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "arch-core" }
 
 asynclayoutinflater = { module = "androidx.asynclayoutinflater:asynclayoutinflater", version.ref = "asynclayoutinflater" }
-asynclayoutinflater-appcompat = { module = "androidx.asynclayoutinflater:asynclayoutinflater-appcompat", version.ref = "asynclayoutinflater" }
 
 autofill = { module = "androidx.autofill:autofill", version.ref = "autofill" }
 
@@ -149,7 +148,6 @@ browser = { module = "androidx.browser:browser", version.ref = "browser" }
 camera-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "camera" }
 camera-extensions = { module = "androidx.camera:camera-extensions", version.ref = "camera" }
 camera-lifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "camera" }
-camera-mlkitvision = { module = "androidx.camera:camera-mlkit-vision", version.ref = "camera" }
 camera-video = { module = "androidx.camera:camera-video", version.ref = "camera" }
 camera-view = { module = "androidx.camera:camera-view", version.ref = "camera" }
 
@@ -176,7 +174,6 @@ coordinatorlayout = { module = "androidx.coordinatorlayout:coordinatorlayout", v
 core = { module = "androidx.core:core", version.ref = "core" }
 core-ktx = { module = "androidx.core:core-ktx", version.ref = "core" }
 core-animation = { module = "androidx.core:core-animation", version.ref = "core-animation" }
-core-animation-testing = { module = "androidx.core:core-animation-testing", version.ref = "core-animation" }
 core-performance = { module = "androidx.core:core-performance", version.ref = "core-performance" }
 core-google-shortcuts = { module = "androidx.core:core-google-shortcuts", version.ref = "core-google-shortcuts" }
 core-remoteviews = { module = "androidx.core:core-remoteviews", version.ref = "core-remoteviews" }

@@ -15,7 +15,6 @@ pager-indicators = { module = "com.google.accompanist:accompanist-pager-indicato
 permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanist" }
 placeholder = { module = "com.google.accompanist:accompanist-placeholder", version.ref = "accompanist" }
 placeholder-material = { module = "com.google.accompanist:accompanist-placeholder-material", version.ref = "accompanist" }
-placeholder-material3 = { module = "com.google.accompanist:accompanist-placeholder-material3", version.ref = "accompanist" }
 swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "accompanist" }
 systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
 testharness = { module = "com.google.accompanist:accompanist-testharness", version.ref = "accompanist" }

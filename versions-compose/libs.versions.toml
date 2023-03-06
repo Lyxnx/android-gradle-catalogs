@@ -4,6 +4,7 @@ compiler = "1.4.3"
 
 [libraries]
 bom = { module = "androidx.compose:compose-bom", version.ref = "bom" }
+
 animation = { module = "androidx.compose.animation:animation" }
 animation-graphics = { module = "androidx.compose.animation:animation-graphics" }
 foundation = { module = "androidx.compose.foundation:foundation" }
