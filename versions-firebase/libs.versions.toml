@@ -1,0 +1,63 @@
+[versions]
+firebase = "31.2.3"
+
+[libraries]
+bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase" }
+
+analytics = { module = "com.google.firebase:firebase-analytics" }
+analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx" }
+
+appcheck = { module = "com.google.firebase:firebase-appcheck" }
+appcheck-debug = { module = "com.google.firebase:firebase-appcheck-debug" }
+appcheck-debug-testing = { module = "com.google.firebase:firebase-appcheck-debug-testing" }
+appcheck-ktx = { module = "com.google.firebase:firebase-appcheck-ktx" }
+appcheck-playintegrity = { module = "com.google.firebase:firebase-appcheck-playintegrity" }
+appcheck-safetynet = { module = "com.google.firebase:firebase-appcheck-safetynet" }
+
+auth = { module = "com.google.firebase:firebase-auth" }
+auth-ktx = { module = "com.google.firebase:firebase-auth-ktx" }
+
+common = { module = "com.google.firebase:firebase-common" }
+common-ktx = { module = "com.google.firebase:firebase-common-ktx" }
+
+config = { module = "com.google.firebase:firebase-config" }
+config-ktx = { module = "com.google.firebase:firebase-config-ktx" }
+
+crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
+crashlytics-ktx = { module = "com.google.firebase:firebase-crashlytics-ktx" }
+crashlytics-ndk = { module = "com.google.firebase:firebase-crashlytics-ndk" }
+
+database = { module = "com.google.firebase:firebase-database" }
+database-ktx = { module = "com.google.firebase:firebase-database-ktx" }
+
+dyanamiclinks = { module = "com.google.firebase:firebase-dynamic-links" }
+dyanamiclinks-ktx = { module = "com.google.firebase:firebase-dynamic-links-ktx" }
+
+encoders = { module = "com.google.firebase:firebase-encoders" }
+
+firestore = { module = "com.google.firebase:firebase-firestore" }
+firestore-ktx = { module = "com.google.firebase:firebase-firestore-ktx" }
+
+functions = { module = "com.google.firebase:firebase-functions" }
+functions-ktx = { module = "com.google.firebase:firebase-functions-ktx" }
+
+inappmessaging = { module = "com.google.firebase:firebase-inappmessaging" }
+inappmessaging-ktx = { module = "com.google.firebase:firebase-inappmessaging-ktx" }
+inappmessaging-display = { module = "com.google.firebase:firebase-inappmessaging-display" }
+inappmessaging-display-ktx = { module = "com.google.firebase:firebase-inappmessaging-display-ktx" }
+
+installations = { module = "com.google.firebase:firebase-installations" }
+installations-ktx = { module = "com.google.firebase:firebase-installations-ktx" }
+
+messaging = { module = "com.google.firebase:firebase-messaging" }
+messaging-ktx = { module = "com.google.firebase:firebase-messaging-ktx" }
+messaging-directboot = { module = "com.google.firebase:firebase-messaging-directboot" }
+
+ml-modeldownloader = { module = "com.google.firebase:firebase-ml-modeldownloader" }
+ml-modeldownloader-ktx = { module = "com.google.firebase:firebase-ml-modeldownloader-ktx" }
+
+perf = { module = "com.google.firebase:firebase-perf" }
+perf-ktx = { module = "com.google.firebase:firebase-perf-ktx" }
+
+storage = { module = "com.google.firebase:firebase-storage" }
+storage-ktx = { module = "com.google.firebase:firebase-storage-ktx" }

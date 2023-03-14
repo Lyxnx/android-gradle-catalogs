@@ -1,14 +1,16 @@
 plugins {
     `version-catalog`
     `maven-publish`
+    id("net.lyxnx.android.catalog-extensions") version "1.0" apply false
 }
 
 subprojects {
     apply(plugin = "version-catalog")
     apply(plugin = "maven-publish")
+    apply(plugin = "net.lyxnx.android.catalog-extensions")
 
     group = "net.lyxnx.android"
-    version = "2023.03.08-01"
+    version = "2023.03.14"
 
     catalog {
         versionCatalog {
@@ -33,4 +35,6 @@ subprojects {
             }
         }
     }
+
+
 }
