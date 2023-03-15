@@ -15,7 +15,7 @@ robolectric = "4.9.2"
 mockk = "1.13.4"
 
 coil = "2.2.2"
-glide = "4.15.0"
+glide = "4.15.1"
 lottie = "6.0.0"
 
 gson = "2.9.0"
