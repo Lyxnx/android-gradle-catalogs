@@ -28,15 +28,36 @@ dependencyResolutionManagement {
 
 Either clone or submodule this repository to the root of the project and reference it in `settings.gradle.kts`
 
-The repository does not need to be included as the gradle files can be ignored and the catalog directories are prefixed with `versions-`
+The repository does not need to be included like a regular module, since the gradle files can be ignored 
+and only the catalog directories prefixed with `versions-` need to be referenced 
 
+For example, the project structure could be as such:
 ```
 .
 ├── app/
 ├── android-gradle-catalogs/
-│   ├──
+│   ├── versions-accompanist/
+│   ├── versions-androidx/
+│   ├── versions-common/
+│   ├── versions-compose/
+│   └── versions-firebase/ 
 ├── build.gradle.kts
 └── settings.gradle.kts
+```
+
+and within the `settings.gradle.kts` file:
+```kotlin
+dependencyResolutionManagement {
+    versionCatalogs {
+        create("common") {
+            from(files("android-gradle-catalogs/versions-common/libs.versions.toml"))
+        }
+        create("androidx") {
+            from(files("android-gradle-catalogs/versions-androidx/libs.versions.toml"))
+        }
+        // + any others
+    }
+}
 ```
 
 ### GitHub package registry
