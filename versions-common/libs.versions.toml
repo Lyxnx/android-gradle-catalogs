@@ -72,7 +72,7 @@ retrofit-converter-jackson = { module = "com.squareup.retrofit2:converter-jackso
 retrofit-converter-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
 retrofit-converter-protobuf = { module = "com.squareup.retrofit2:converter-protobuf", version.ref = "retrofit" }
 retrofit-converter-scalars = { module = "com.squareup.retrofit2:converter-scalars", version.ref = "retrofit" }
-retrofit-converter-wire = { module = "com.squareup.retrofit2:converters-wire", version.ref = "retrofit" }
+retrofit-converter-wire = { module = "com.squareup.retrofit2:converter-wire", version.ref = "retrofit" }
 okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 
 kotpref = { module = "com.chibatching.kotpref:kotpref", version.ref = "kotpref" }
