@@ -4,7 +4,7 @@ kotlinx-coroutines = "1.6.4"
 
 android-gradle-plugin = "7.4.2"
 google-gms-plugin = "4.3.14"
-ksp = "1.8.0-1.0.9"
+ksp = "1.8.10-1.0.9"
 
 hilt = "2.45"
 hilt-navigation = "1.0.0"
@@ -66,6 +66,13 @@ lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "
 
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+retrofit-converter-guava = { module = "com.squareup.retrofit2:converter-guava", version.ref = "retrofit" }
+retrofit-converter-jackson = { module = "com.squareup.retrofit2:converter-jackson", version.ref = "retrofit" }
+retrofit-converter-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
+retrofit-converter-protobuf = { module = "com.squareup.retrofit2:converter-protobuf", version.ref = "retrofit" }
+retrofit-converter-scalars = { module = "com.squareup.retrofit2:converter-scalars", version.ref = "retrofit" }
+retrofit-converter-wire = { module = "com.squareup.retrofit2:converters-wire", version.ref = "retrofit" }
 okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 
 kotpref = { module = "com.chibatching.kotpref:kotpref", version.ref = "kotpref" }

@@ -1,6 +1,6 @@
 [versions]
 
-activity = "1.6.1"
+activity = "1.7.0-rc01"
 ads = "1.0.0-alpha04"
 annotation = "1.6.0-dev01"
 appcompat = "1.6.1"
@@ -53,7 +53,7 @@ interpolator = "1.0.0"
 javascriptengine = "1.0.0-alpha03"
 leanback = "1.0.0"
 legacy = "1.0.0"
-lifecycle = "2.5.1"
+lifecycle = "2.6.0"
 loader = "1.1.0"
 localbroadcastmanager = "1.1.0"
 media = "1.6.0"
@@ -235,8 +235,6 @@ health-connect-client = { module = "androidx.health.connect:connect-client", ver
 
 heifwriter = { module = "androidx.heifwriter:heifwriter", version.ref = "heifwriter" }
 
-
-
 input-motionprediction = { module = "androidx.input:input-motionprediction", version.ref = "input" }
 
 interpolator = { module = "androidx.interpolator:interpolator", version.ref = "interpolator" }
@@ -260,6 +258,7 @@ lifecycle-reactivestreams = { module = "androidx.lifecycle:lifecycle-reactivestr
 lifecycle-reactivestreams-ktx = { module = "androidx.lifecycle:lifecycle-reactivestreams-ktx", version.ref = "lifecycle" }
 lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime", version.ref = "lifecycle" }
 lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
 lifecycle-runtime-testing = { module = "androidx.lifecycle:lifecycle-runtime-testing", version.ref = "lifecycle" }
 lifecycle-service = { module = "androidx.lifecycle:lifecycle-service", version.ref = "lifecycle" }
 lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "lifecycle" }
