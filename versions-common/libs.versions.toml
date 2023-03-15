@@ -18,7 +18,7 @@ coil = "2.2.2"
 glide = "4.15.1"
 lottie = "6.0.0"
 
-gson = "2.9.0"
+gson = "2.10.1"
 retrofit = "2.9.0"
 okhttp = "4.10.0"
 
