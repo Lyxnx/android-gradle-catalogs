@@ -22,7 +22,7 @@ gson = "2.9.0"
 retrofit = "2.9.0"
 okhttp = "4.10.0"
 
-kotpref = "2.13.1"
+kotpref = "2.13.2"
 
 [libraries]
 kotlin-bom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlin" }
