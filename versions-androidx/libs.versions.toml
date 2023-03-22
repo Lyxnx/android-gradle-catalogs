@@ -1,6 +1,6 @@
 [versions]
 
-activity = "1.7.0-rc01"
+activity = "1.7.0"
 ads = "1.0.0-alpha05"
 annotation = "1.6.0"
 appcompat = "1.6.1"
