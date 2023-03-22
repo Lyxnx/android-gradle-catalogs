@@ -111,7 +111,7 @@ wear-tiles = "1.1.0"
 wear-watchface = "1.1.1"
 webkit = "1.6.0"
 window = "1.0.0"
-work = "2.8.0"
+work = "2.8.1"
 
 [libraries]
 activity = { module = "androidx.activity:activity", version.ref = "activity" }
