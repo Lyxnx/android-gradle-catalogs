@@ -1,5 +1,5 @@
 [versions]
-accompanist = "0.30.0"
+accompanist = "0.30.1"
 
 [libraries]
 adaptive = { module = "com.google.accompanist:accompanist-adaptive", version.ref = "accompanist" }
