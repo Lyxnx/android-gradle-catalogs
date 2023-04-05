@@ -3,19 +3,13 @@ accompanist = "0.30.1"
 
 [libraries]
 adaptive = { module = "com.google.accompanist:accompanist-adaptive", version.ref = "accompanist" }
-appcompattheme = { module = "com.google.accompanist:accompanist-appcompat-theme", version.ref = "accompanist" }
 drawablepainter = { module = "com.google.accompanist:accompanist-drawablepainter", version.ref = "accompanist" }
 flowlayout = { module = "com.google.accompanist:accompanist-flowlayout", version.ref = "accompanist" }
-insets = { module = "com.google.accompanist:accompanist-insets", version.ref = "accompanist" }
-insets-ui = { module = "com.google.accompanist:accompanist-insets-ui", version.ref = "accompanist" }
 navigation-animation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "accompanist" }
 navigation-material = { module = "com.google.accompanist:accompanist-navigation-material", version.ref = "accompanist" }
-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanist" }
-pager-indicators = { module = "com.google.accompanist:accompanist-pager-indicators", version.ref = "accompanist" }
 permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanist" }
 placeholder = { module = "com.google.accompanist:accompanist-placeholder", version.ref = "accompanist" }
 placeholder-material = { module = "com.google.accompanist:accompanist-placeholder-material", version.ref = "accompanist" }
-swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "accompanist" }
 systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
 testharness = { module = "com.google.accompanist:accompanist-testharness", version.ref = "accompanist" }
 themeadapter-appcompat = { module = "com.google.accompanist:accompanist-themeadapter-appcompat", version.ref = "accompanist" }
