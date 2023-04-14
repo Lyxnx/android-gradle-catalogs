@@ -8,23 +8,26 @@ This repo contains some useful gradle version catalogs:
 - [Common Android](versions-common/libs.versions.toml) - Regular Android artifacts, such as gradle plugins, hilt
 - [Firebase](versions-firebase/libs.versions.toml) - Firebase BOM with included artifacts
 
+The `bleeding` branch receives version updates as soon as they are available and is not guaranteed to be compatible with 
+gradle/android, or other versions. Versions can be overridden in `settings.gradle.kts` though
+
+The `master` branch receives fewer version updates but is stable and versions will work together
+
 ## Using
 
-There are 2 methods of using:
-
-For both, version catalogs are created within the `dependencyResolutionManagement` block of the `settings.gradle.kts` file:
+Version catalogs are created within the `dependencyResolutionManagement` block of the `settings.gradle.kts` file:
 
 ```kotlin
 dependencyResolutionManagement {
     versionCatalogs {
         create("CATALOGNAME") {
-            from(/* either local or remote ID here */)
+            from(/* Either local or remote ID here */)
+            // If a different version is required, it can be overridden:
+            version("kotlin", "1.7.20")
         }
     }
 }
 ```
-
-### Local/submodule
 
 Either clone or submodule this repository to the root of the project and reference it in `settings.gradle.kts`
 
@@ -60,29 +63,19 @@ dependencyResolutionManagement {
 }
 ```
 
-### GitHub package registry
-
-This will require a GitHub username and personal access token added to either the project or
-global `gradle.properties` file.
-
+and then in a module's `build.gradle.kts` file:
 ```kotlin
-dependencyResolutionManagement {
-    repositories {
-        maven("https://maven.pkg.github.com/Lyxnx/android-gradle-catalogs") {
-            credentials {
-                username = providers.gradleProperty("gpr.username").get()
-                password = providers.gradleProperty("gpr.token").get()
-            }
-        }
-    }
-    versionCatalogs {
-        create("androidx") {
-            from("net.lyxnx.android:versions-androidx:2023.03.01")
-        }
-        create("compose") {
-            from("net.lyxnx.android:versions-compose:2023.03.01")
-        }
-        // + any others
-    }
+dependencies {
+    // Example for androidx.activity:activity-ktx
+    implementation(androidx.activity.ktx)
+}
+```
+
+When using plugins, alias them within the root `build.gradle.kts` file:
+```kotlin
+plugins {
+    alias(common.plugins.android.application) apply false
+    alias(common.plugins.android.library) apply false
+    alias(common.plugins.kotlin.android) apply false
 }
 ```

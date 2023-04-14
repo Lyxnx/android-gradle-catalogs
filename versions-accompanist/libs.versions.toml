@@ -7,6 +7,7 @@ drawablepainter = { module = "com.google.accompanist:accompanist-drawablepainter
 flowlayout = { module = "com.google.accompanist:accompanist-flowlayout", version.ref = "accompanist" }
 navigation-animation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "accompanist" }
 navigation-material = { module = "com.google.accompanist:accompanist-navigation-material", version.ref = "accompanist" }
+pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanist" }
 pager-indicators = { module = "com.google.accompanist:accompanist-pager-indicators", version.ref = "accompanist" }
 permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanist" }
 placeholder = { module = "com.google.accompanist:accompanist-placeholder", version.ref = "accompanist" }
