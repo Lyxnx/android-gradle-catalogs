@@ -1,6 +1,7 @@
 [versions]
 bom = "2023.04.01"
-compiler = "1.4.4"
+# The compiler is not updated by renovate as there is no corresponding module for it - so this is manual
+compiler = "1.4.6"
 
 [libraries]
 bom = { module = "androidx.compose:compose-bom", version.ref = "bom" }
