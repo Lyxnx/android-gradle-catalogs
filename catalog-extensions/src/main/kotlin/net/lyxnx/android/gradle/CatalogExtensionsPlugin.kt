@@ -13,19 +13,19 @@ import org.gradle.language.base.plugins.LifecycleBasePlugin.CHECK_TASK_NAME
 class CatalogExtensionsPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            if (!plugins.hasPlugin("org.gradle.version-catalog")) {
-                logger.warn(
-                    """
-                        Cannot apply plugin net.lyxnx.android.gradle.catalog-extensions:
-                        Plugin org.gradle.version-catalog not found but is required
-                    """.trimIndent()
-                )
-                return@with
-            }
+            pluginManager.apply("org.gradle.version-catalog")
+
+            group = "net.lyxnx.android"
+            version = "2023.04.05"
 
             apply<BasePlugin>()
 
             val extension = extensions.getByName<CatalogExtensionInternal>("catalog")
+
+            extension.versionCatalog {
+                from(files("libs.versions.toml"))
+            }
+
             val validateCatalog = tasks.register<ValidateCatalogTask>("validateCatalog") {
                 dependenciesModel.set(extension.versionCatalog)
                 dependsOn(tasks.named(GENERATE_CATALOG_FILE_TASKNAME))
