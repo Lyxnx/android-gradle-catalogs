@@ -1,12 +1,12 @@
 [versions]
-kotlin = "1.8.20"
+kotlin = "1.8.21"
 kotlinx-coroutines = "1.6.4"
 
 android-gradle-plugin = "8.0.0"
 google-gms-plugin = "4.3.15"
-ksp = "1.8.20-1.0.11"
+ksp = "1.8.21-1.0.11"
 
-hilt = "2.45"
+hilt = "2.46"
 hilt-navigation = "1.0.0"
 hilt-work = "1.0.0"
 
@@ -20,7 +20,7 @@ lottie = "6.0.0"
 
 gson = "2.10.1"
 retrofit = "2.9.0"
-okhttp = "4.10.0"
+okhttp = "4.11.0"
 
 kotpref = "2.13.2"
 
@@ -48,6 +48,7 @@ hilt-work = { module = "androidx.hilt:hilt-work", version.ref = "hilt-work" }
 
 android-gradleplugin = { module = "com.android.tools.build:gradle", version.ref = "android-gradle-plugin" }
 ksp-gradleplugin = { module = "com.google.devtools.ksp:symbol-processing-gradle-plugin", version.ref = "ksp" }
+ksp-symbolprocessingapi = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
 
 junit4 = { module = "junit:junit", version.ref = "junit4" }
 robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
