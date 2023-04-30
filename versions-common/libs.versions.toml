@@ -48,6 +48,7 @@ hilt-work = { module = "androidx.hilt:hilt-work", version.ref = "hilt-work" }
 
 android-gradleplugin = { module = "com.android.tools.build:gradle", version.ref = "android-gradle-plugin" }
 ksp-gradleplugin = { module = "com.google.devtools.ksp:symbol-processing-gradle-plugin", version.ref = "ksp" }
+ksp-symbolprocessingapi = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
 
 junit4 = { module = "junit:junit", version.ref = "junit4" }
 robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
