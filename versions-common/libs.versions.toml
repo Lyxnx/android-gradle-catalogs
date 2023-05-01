@@ -2,7 +2,7 @@
 kotlin = "1.8.21"
 kotlinx-coroutines = "1.6.4"
 
-android-gradle-plugin = "8.0.0"
+android-gradle-plugin = "8.0.1"
 google-gms-plugin = "4.3.15"
 ksp = "1.8.21-1.0.11"
 
