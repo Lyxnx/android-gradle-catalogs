@@ -1,5 +1,5 @@
 [versions]
-bom = "2023.04.01"
+bom = "2023.05.00"
 # The compiler is not updated by renovate as there is no corresponding module for it - so this is manual
 compiler = "1.4.6"
 
