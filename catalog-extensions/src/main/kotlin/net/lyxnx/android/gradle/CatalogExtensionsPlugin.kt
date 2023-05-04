@@ -16,7 +16,7 @@ class CatalogExtensionsPlugin : Plugin<Project> {
             pluginManager.apply("org.gradle.version-catalog")
 
             group = "net.lyxnx.android"
-            version = "2023.05.01"
+            version = "2023.05.04"
 
             apply<BasePlugin>()
 

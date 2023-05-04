@@ -1,5 +1,5 @@
 [versions]
-firebase = "31.5.0"
+firebase = "32.0.0"
 
 [libraries]
 bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase" }
