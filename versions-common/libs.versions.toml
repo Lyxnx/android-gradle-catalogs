@@ -11,7 +11,7 @@ hilt-navigation = "1.0.0"
 hilt-work = "1.0.0"
 
 junit4 = "4.13.2"
-robolectric = "4.10"
+robolectric = "4.10.2"
 mockk = "1.13.5"
 
 coil = "2.3.0"
