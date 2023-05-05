@@ -25,7 +25,7 @@ kotlinpoet = "1.13.2"
 
 kotpref = "2.13.2"
 
-material = "1.8.0"
+material = "1.9.0"
 
 redmadrobot = "0.18.1"
 
