@@ -25,6 +25,8 @@ kotlinpoet = "1.13.1"
 
 kotpref = "2.13.2"
 
+redmadrobot = "0.18.1"
+
 [libraries]
 kotlin-bom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlin" }
 kotlin-gradleplugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin" }
@@ -97,7 +99,13 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 
 android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
 android-library = { id = "com.android.library", version.ref = "android-gradle-plugin" }
+
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 gms = { id = "com.google.gms.google-services", version.ref = "google-gms-plugin" }
 
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+
+redmadrobot-android-config = { id = "com.redmadrobot.android-config", version.ref = "redmadrobot" }
+redmadrobot-android-application = { id = "com.redmadrobot.application", version.ref = "redmadrobot" }
+redmadrobot-android-library = { id = "com.redmadrobot.android-library", version.ref = "redmadrobot" }
+redmadrobot-kotlin-library = { id = "com.redmadrobot.kotlin-library", version.ref = "redmadrobot" }
