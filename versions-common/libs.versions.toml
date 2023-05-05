@@ -25,6 +25,8 @@ kotlinpoet = "1.13.1"
 
 kotpref = "2.13.2"
 
+material = "1.8.0"
+
 [libraries]
 kotlin-bom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlin" }
 kotlin-gradleplugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin" }
@@ -70,6 +72,8 @@ lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
 lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
 
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 retrofit-converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 retrofit-converter-guava = { module = "com.squareup.retrofit2:converter-guava", version.ref = "retrofit" }
