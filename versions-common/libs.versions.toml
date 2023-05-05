@@ -1,6 +1,6 @@
 [versions]
 kotlin = "1.8.21"
-kotlinx-coroutines = "1.6.4"
+kotlinx-coroutines = "1.7.0"
 
 android-gradle-plugin = "8.0.1"
 google-gms-plugin = "4.3.15"
