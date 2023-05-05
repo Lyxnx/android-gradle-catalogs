@@ -1,6 +1,6 @@
 [versions]
 kotlin = "1.8.21"
-kotlinx-coroutines = "1.6.4"
+kotlinx-coroutines = "1.7.0"
 
 android-gradle-plugin = "8.0.1"
 google-gms-plugin = "4.3.15"
@@ -21,9 +21,13 @@ lottie = "6.0.0"
 gson = "2.10.1"
 retrofit = "2.9.0"
 okhttp = "4.11.0"
-kotlinpoet = "1.13.1"
+kotlinpoet = "1.13.2"
 
 kotpref = "2.13.2"
+
+material = "1.9.0"
+
+redmadrobot = "0.18.1"
 
 [libraries]
 kotlin-bom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlin" }
@@ -70,6 +74,8 @@ lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
 lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
 
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 retrofit-converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 retrofit-converter-guava = { module = "com.squareup.retrofit2:converter-guava", version.ref = "retrofit" }
@@ -97,7 +103,13 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 
 android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
 android-library = { id = "com.android.library", version.ref = "android-gradle-plugin" }
+
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 gms = { id = "com.google.gms.google-services", version.ref = "google-gms-plugin" }
 
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+
+redmadrobot-android-config = { id = "com.redmadrobot.android-config", version.ref = "redmadrobot" }
+redmadrobot-android-application = { id = "com.redmadrobot.application", version.ref = "redmadrobot" }
+redmadrobot-android-library = { id = "com.redmadrobot.android-library", version.ref = "redmadrobot" }
+redmadrobot-kotlin-library = { id = "com.redmadrobot.kotlin-library", version.ref = "redmadrobot" }
