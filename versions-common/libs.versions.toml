@@ -14,7 +14,7 @@ junit4 = "4.13.2"
 robolectric = "4.10.3"
 mockk = "1.13.5"
 
-coil = "2.3.0"
+coil = "2.4.0"
 glide = "4.15.1"
 lottie = "6.0.0"
 
