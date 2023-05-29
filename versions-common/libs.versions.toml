@@ -126,3 +126,5 @@ redmadrobot-android-config = { id = "com.redmadrobot.android-config", version.re
 redmadrobot-android-application = { id = "com.redmadrobot.application", version.ref = "redmadrobot" }
 redmadrobot-android-library = { id = "com.redmadrobot.android-library", version.ref = "redmadrobot" }
 redmadrobot-kotlin-library = { id = "com.redmadrobot.kotlin-library", version.ref = "redmadrobot" }
+redmadrobot-publish = { id = "com.redmadrobot.publish", version.ref = "redmadrobot" }
+
