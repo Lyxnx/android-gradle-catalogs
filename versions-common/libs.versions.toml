@@ -21,7 +21,7 @@ lottie = "6.0.0"
 gson = "2.10.1"
 retrofit = "2.9.0"
 okhttp = "4.11.0"
-kotlinpoet = "1.13.2"
+kotlinpoet = "1.14.0"
 
 kotpref = "2.13.2"
 
