@@ -4,3 +4,10 @@ plugins {
     alias(common.plugins.android.application) apply false
     alias(common.plugins.kotlin.android) apply false
 }
+
+subprojects {
+    group = "net.lyxnx.android"
+    version = "2023.05.25"
+
+    apply(plugin = "net.lyxnx.android.catalog-extensions")
+}
