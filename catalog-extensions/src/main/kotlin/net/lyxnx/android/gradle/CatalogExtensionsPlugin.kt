@@ -15,9 +15,6 @@ class CatalogExtensionsPlugin : Plugin<Project> {
         with(target) {
             pluginManager.apply("org.gradle.version-catalog")
 
-            group = "net.lyxnx.android"
-            version = "2023.05.25"
-
             apply<BasePlugin>()
 
             val extension = extensions.getByName<CatalogExtensionInternal>("catalog")
