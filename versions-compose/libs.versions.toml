@@ -1,6 +1,5 @@
 [versions]
 bom = "2023.06.01"
-# The compiler is not updated by renovate as there is no corresponding module for it - so this is manual
 compiler = "1.4.7"
 
 [libraries]
@@ -35,3 +34,6 @@ ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 ui-unit = { module = "androidx.compose.ui:ui-unit" }
 ui-util = { module = "androidx.compose.ui:ui-util" }
 ui-viewbinding = { module = "androidx.compose.ui:ui-viewbinding" }
+
+# Not meant to be used and is just here for automatic updates
+compiler = { module = "androidx.compose.compiler:compiler", version.ref = "compiler" }
