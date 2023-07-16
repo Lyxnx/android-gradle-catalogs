@@ -16,7 +16,7 @@ mockk = "1.13.5"
 
 coil = "2.4.0"
 glide = "4.15.1"
-lottie = "6.0.1"
+lottie = "6.1.0"
 
 gson = "2.10.1"
 retrofit = "2.9.0"
