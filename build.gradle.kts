@@ -7,7 +7,7 @@ plugins {
 
 subprojects {
     group = "net.lyxnx.android"
-    version = "2023.07.20"
+    version = "2023.07.22"
 
     apply(plugin = "net.lyxnx.android.catalog-extensions")
 }
