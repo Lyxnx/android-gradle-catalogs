@@ -1,15 +1,13 @@
 [versions]
 
 activity = "1.7.2"
-ads = "1.0.0-alpha05"
 annotation = "1.6.0"
 appcompat = "1.6.1"
-appsearch = "1.1.0-alpha03"
 arch-core = "2.2.0"
 asynclayoutinflater = "1.0.0"
 autofill = "1.1.0"
 benchmark = "1.1.1"
-biometric = "1.2.0-alpha05"
+biometric = "1.1.0"
 browser = "1.5.0"
 car-app = "1.2.0"
 camera = "1.2.3"
@@ -21,14 +19,9 @@ constraintlayout-compose = "1.0.1"
 contentpager = "1.0.0"
 coordinatorlayout = "1.2.0"
 core = "1.10.1"
-core-animation = "1.0.0-beta01"
 core-google-shortcuts = "1.1.0"
-core-performance = "1.0.0-alpha02"
-core-remoteviews = "1.0.0-beta04"
 core-role = "1.0.0"
 core-splashscreen = "1.0.1"
-core-uwb = "1.0.0-alpha05"
-credentials = "1.2.0-alpha05"
 cursoradapter = "1.0.0"
 customview = "1.1.0"
 datastore = "1.0.0"
@@ -42,15 +35,8 @@ enterprise = "1.1.0"
 exifinterface = "1.3.6"
 fragment = "1.6.0"
 games = "2.0.2"
-glance = "1.0.0-beta01"
-graphics = "1.0.0-alpha04"
 gridlayout = "1.0.0"
-health = "1.0.0-beta03"
-health-connect = "1.0.0-alpha11"
-heifwriter = "1.1.0-alpha01"
-input = "1.0.0-beta01"
 interpolator = "1.0.0"
-javascriptengine = "1.0.0-alpha05"
 leanback = "1.0.0"
 legacy = "1.0.0"
 lifecycle = "2.6.1"
@@ -61,16 +47,11 @@ media2 = "1.2.1"
 media3 = "1.1.0"
 mediarouter = "1.4.0"
 multidex = "2.0.1"
-metrics = "1.0.0-alpha04"
 navigation = "2.6.0"
 paging = "3.1.1"
 palette = "1.0.0"
 percentlayout = "1.0.0"
 preference = "1.2.0"
-print = "1.1.0-beta01"
-privacysandbox-ads = "1.0.0-beta05"
-privacysandbox-sdkruntime = "1.0.0-alpha06"
-privacysandbox-tools = "1.0.0-alpha04"
 profileinstaller = "1.3.1"
 recommendation = "1.0.0"
 recyclerview = "1.3.0"
@@ -90,12 +71,8 @@ test-ext-truth = "1.5.0"
 test-monitor = "1.6.1"
 test-orchestrator = "1.4.2"
 test-runner = "1.5.2"
-test-uiautomator = "2.3.0-alpha03"
-textclassifier = "1.0.0-alpha04"
 tracing = "1.1.0"
 transition = "1.4.1"
-tv = "1.0.0-alpha07"
-tvprovider = "1.1.0-alpha01"
 vectordrawable = "1.1.0"
 versionedparcelable = "1.1.1"
 viewpager = "1.0.0"
@@ -106,7 +83,6 @@ wear-ongoing = "1.0.0"
 wear-phone-interactions = "1.0.1"
 wear-remote-interactions = "1.0.0"
 wear-compose = "1.1.2"
-wear-protolayout = "1.0.0-beta01"
 wear-tiles = "1.1.0"
 wear-watchface = "1.1.1"
 webkit = "1.7.0"
@@ -118,17 +94,10 @@ activity = { module = "androidx.activity:activity", version.ref = "activity" }
 activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
 
-ads-identifier = { module = "androidx.ads:ads-identifier", version.ref = "ads" }
-
 annotation = { module = "androidx.annotation:annotation", version.ref = "annotation" }
 
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
 appcompat-resources = { module = "androidx.appcompat:appcompat-resources", version.ref = "appcompat" }
-
-appsearch = { module = "androidx.appsearch:appsearch", version.ref = "appsearch" }
-appsearch-compiler = { module = "androidx.appsearch:appsearch-compiler", version.ref = "appsearch" }
-appsearch-localstorage = { module = "androidx.appsearch:appsearch-local-storage", version.ref = "appsearch" }
-appsearch-platformstorage = { module = "androidx.appsearch:appsearch-platform-storage", version.ref = "appsearch" }
 
 arch-core-runtime = { module = "androidx.arch.core:core-runtime", version.ref = "arch-core" }
 arch-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "arch-core" }
@@ -173,17 +142,8 @@ coordinatorlayout = { module = "androidx.coordinatorlayout:coordinatorlayout", v
 
 core = { module = "androidx.core:core", version.ref = "core" }
 core-ktx = { module = "androidx.core:core-ktx", version.ref = "core" }
-core-animation = { module = "androidx.core:core-animation", version.ref = "core-animation" }
-core-performance = { module = "androidx.core:core-performance", version.ref = "core-performance" }
 core-google-shortcuts = { module = "androidx.core:core-google-shortcuts", version.ref = "core-google-shortcuts" }
-core-remoteviews = { module = "androidx.core:core-remoteviews", version.ref = "core-remoteviews" }
 core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "core-splashscreen" }
-
-core-uwb = { module = "androidx.core.uwb:uwb", version.ref = "core-uwb" }
-core-uwb-rxjava3 = { module = "androidx.core.uwb:uwb-rxjava3", version.ref = "core-uwb" }
-
-credentials = { module = "androidx.credentials:credentials", version.ref = "credentials" }
-credentials-playservicesauth = { module = "androidx.credentials:credentials-play-services-auth", version.ref = "credentials" }
 
 cursoradapter = { module = "androidx.cursoradapter:cursoradapter", version.ref = "cursoradapter" }
 
@@ -222,24 +182,9 @@ ffragment-testing = { module = "androidx.fragment:fragment-testing", version.ref
 
 games-activity = { module = "androidx.games:games-activity", version.ref = "games" }
 
-glance-appwidget = { module = "androidx.glance:glance-appwidget", version.ref = "glance" }
-glance-weartiles = { module = "androidx.glance:glance-wear-tiles", version.ref = "glance" }
-
-graphics-core = { module = "androidx.graphics:graphics-core", version.ref = "graphics" }
-
 gridlayout = { module = "androidx.gridlayout:gridlayout", version.ref = "gridlayout" }
 
-health-servicesclient = { module = "androidx.health:health-services-client", version.ref = "health" }
-
-health-connect-client = { module = "androidx.health.connect:connect-client", version.ref = "health-connect" }
-
-heifwriter = { module = "androidx.heifwriter:heifwriter", version.ref = "heifwriter" }
-
-input-motionprediction = { module = "androidx.input:input-motionprediction", version.ref = "input" }
-
 interpolator = { module = "androidx.interpolator:interpolator", version.ref = "interpolator" }
-
-javascriptengine = { module = "androidx.javascriptengine:javascriptengine", version.ref = "javascriptengine" }
 
 leanback = { module = "androidx.leanback:leanback", version.ref = "leanback" }
 leanback-preference = { module = "androidx.leanback:leanback-preference", version.ref = "leanback" }
@@ -300,8 +245,6 @@ media3-common = { module = "androidx.media3:media3-common", version.ref = "media
 
 mediarouter = { module = "androidx.mediarouter:mediarouter", version.ref = "mediarouter" }
 
-metrics-performance = { module = "androidx.metrics:metrics-performance", version.ref = "metrics" }
-
 multidex = { module = "androidx.multidex:multidex", version.ref = "multidex" }
 
 navigation-fragment = { module = "androidx.navigation:navigation-fragment", version.ref = "navigation" }
@@ -325,19 +268,6 @@ percentlayout = { module = "androidx.percentlayout:percentlayout", version.ref =
 
 preference = { module = "androidx.preference:preference", version.ref = "preference" }
 preference-ktx = { module = "androidx.preference:preference-ktx", version.ref = "preference" }
-
-print = { module = "androidx.print:print", version.ref = "print" }
-
-privacysandbox-ads-services = { module = "androidx.privacysandbox.ads:ads-adservices", version.ref = "privacysandbox-ads" }
-privacysandbox-ads-ervices-java = { module = "androidx.privacysandbox.ads:ads-adservices-java", version.ref = "privacysandbox-ads" }
-privacysandbox-sdkruntime-client = { module = "androidx.privacysandbox.sdkruntime:sdkruntime-client", version.ref = "privacysandbox-sdkruntime" }
-privacysandbox-sdkruntime-core = { module = "androidx.privacysandbox.sdkruntime:sdkruntime-core", version.ref = "privacysandbox-sdkruntime" }
-
-privacysandbox-tools = { module = "androidx.privacysandbox.tools:tools", version.ref = "privacysandbox-tools" }
-privacysandbox-tools-apicompiler = { module = "androidx.privacysandbox.tools:tools-apicompiler", version.ref = "privacysandbox-tools" }
-privacysandbox-tools-apigenerator = { module = "androidx.privacysandbox.tools:tools-apigenerator", version.ref = "privacysandbox-tools" }
-privacysandbox-tools-apipackager = { module = "androidx.privacysandbox.tools:tools-apipackager", version.ref = "privacysandbox-tools" }
-privacysandbox-tools-core = { module = "androidx.privacysandbox.tools:tools-core", version.ref = "privacysandbox-tools" }
 
 profileinstaller = { module = "androidx.profileinstaller:profileinstaller", version.ref = "profileinstaller" }
 
@@ -381,20 +311,11 @@ test-ext-truth = { module = "androidx.test.ext:truth", version.ref = "test-ext-t
 test-runner = { module = "androidx.test:runner", version.ref = "test-runner" }
 test-orchestrator = { module = "androidx.test:orchestrator", version.ref = "test-orchestrator" }
 
-test-uiautomator = { module = "androidx.test.uiautomator:uiautomator", version.ref = "test-uiautomator" }
-
-textclassifier = { module = "androidx.textclassifier:textclassifier", version.ref = "textclassifier" }
-
 tracing = { module = "androidx.tracing:tracing", version.ref = "tracing" }
 tracing-ktx = { module = "androidx.tracing:tracing-ktx", version.ref = "tracing" }
 
 transition = { module = "androidx.transition:transition", version.ref = "transition" }
 transition-ktx = { module = "androidx.transition:transition-ktx", version.ref = "transition" }
-
-tv-foundation = { module = "androidx.tv:tv-foundation", version.ref = "tv" }
-tv-material = { module = "androidx.tv:tv-material", version.ref = "tv" }
-
-tvprovider = { module = "androidx.tvprovider:tvprovider", version.ref = "tvprovider" }
 
 vectordrawable = { module = "androidx.vectordrawable:vectordrawable", version.ref = "vectordrawable" }
 vectordrawable-animated = { module = "androidx.vectordrawable:vectordrawable-animated", version.ref = "vectordrawable" }
@@ -415,9 +336,6 @@ wear-remote-interactions = { module = "androidx.wear:wear-remote-interactions", 
 wear-compose-foundation = { module = "androidx.wear.compose:compose-foundation", version.ref = "wear-compose" }
 wear-compose-material = { module = "androidx.wear.compose:compose-material", version.ref = "wear-compose" }
 wear-compose-navigation = { module = "androidx.wear.compose:compose-navigation", version.ref = "wear-compose" }
-
-wear-protolayout-proto = { module = "androidx.wear.protolayout:protolayout-proto", version.ref = "wear-protolayout" }
-wear-protolayout-expression = { module = "androidx.wear.protolayout:protolayout-expression", version.ref = "wear-protolayout" }
 
 wear-tiles = { module = "androidx.wear.tiles:tiles", version.ref = "wear-tiles" }
 wear-tiles-material = { module = "androidx.wear.tiles:tiles-material", version.ref = "wear-tiles" }
