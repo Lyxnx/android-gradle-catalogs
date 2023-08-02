@@ -10,7 +10,7 @@ plugins {
 
 subprojects {
     group = "io.github.lyxnx"
-    version = "2023.08.01"
+    version = "2023.08.02"
 
     if (name.startsWith("versions-")) {
         apply(plugin = "net.lyxnx.android.catalog-extensions")
