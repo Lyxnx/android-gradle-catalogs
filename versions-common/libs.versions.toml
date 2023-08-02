@@ -4,7 +4,7 @@ kotlinx-coroutines = "1.7.3"
 
 android-gradle-plugin = "8.1.0"
 google-gms-plugin = "4.3.15"
-ksp = "1.9.0-1.0.12"
+ksp = "1.9.0-1.0.13"
 
 hilt = "2.47"
 hilt-navigation = "1.0.0"
