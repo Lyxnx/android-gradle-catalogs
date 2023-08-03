@@ -15,6 +15,11 @@ dependencyResolutionManagement {
         google()
         gradlePluginPortal()
     }
+    versionCatalogs {
+        create("common") {
+            from(files("versions-common/libs.versions.toml"))
+        }
+    }
 }
 
 rootProject.name = "android-gradle-catalogs"
@@ -28,3 +33,5 @@ include(
     ":versions-compose",
     ":versions-firebase"
 )
+
+include(":android-plugins")
