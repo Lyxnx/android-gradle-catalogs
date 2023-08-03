@@ -19,7 +19,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "android-gradle-catalogs"
 
-includeBuild("catalog-extensions")
+includeBuild("catalogs-plugin")
+
 include(
     ":versions-accompanist",
     ":versions-androidx",

@@ -1,4 +1,4 @@
-package net.lyxnx.android.gradle
+package io.github.lyxnx.gradle
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.artifacts.Configuration
@@ -71,6 +71,7 @@ abstract class ValidateCatalogTask : DefaultTask() {
 
     companion object {
         const val CONFIGURATION_NAME = "libraries"
+        const val NAME = "validateCatalog"
     }
 }
 
