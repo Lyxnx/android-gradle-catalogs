@@ -1,9 +1,6 @@
 plugins {
-//    id(common.plugins.android.application.get().pluginId)
-//    id(common.plugins.kotlin.android.get().pluginId)
-
-    id("com.android.application") version "8.1.0"
-//    id("org.jetbrains.kotlin.android") version "1.9.0"
+    id(common.plugins.android.application.get().pluginId)
+    id(common.plugins.kotlin.android.get().pluginId)
 
     id("io.github.lyxnx.android-room-config")
 }
@@ -15,7 +12,6 @@ android {
     defaultConfig {
         applicationId = "io.github.lyxnx.sampleapp"
         minSdk = 26
-        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
@@ -34,18 +30,17 @@ android {
     }
 }
 
-roomConfig {
-    androidxCatalog.set("asdfasdfasdf")
-}
+//roomConfig {
+//    androidxCatalog.set("asdfasdfasdf")
+//    schemaDir.set(file("asdf"))
+//}
 
-//
 dependencies {
-//    implementation(androidx.core.ktx)
-//    implementation(androidx.appcompat)
-//    implementation(common.material)
-//
-//    testImplementation(common.junit4)
-//    androidTestImplementation(androidx.test.ext.junit.ktx)
-//    androidTestImplementation(androidx.test.espresso)
+    implementation(androidx.core.ktx)
+    implementation(androidx.appcompat)
+    implementation(common.material)
 
+    testImplementation(common.junit4)
+    androidTestImplementation(androidx.test.ext.junit.ktx)
+    androidTestImplementation(androidx.test.espresso)
 }

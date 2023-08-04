@@ -18,12 +18,11 @@ dependencyResolutionManagement {
         create("common") {
             from("io.github.lyxnx:versions-common:2023.08.02")
         }
-//        create("androidx") {
-//            from("io.github.lyxnx:versions-androidx:2023.08.02")
-//        }
+        create("androidx") {
+            from("io.github.lyxnx:versions-androidx:2023.08.02")
+        }
     }
 }
 
 rootProject.name = "sampleapp"
 include(":app")
- 
