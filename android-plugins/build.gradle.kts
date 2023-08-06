@@ -1,5 +1,7 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jetbrains.kotlin.gradle.dsl.ExplicitApiMode
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import com.vanniktech.maven.publish.SonatypeHost
 
 plugins {
     `kotlin-dsl`
@@ -16,6 +18,10 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 }
 
+kotlin {
+    explicitApi = ExplicitApiMode.Strict
+}
+
 tasks.withType(KotlinCompile::class).configureEach {
     compilerOptions {
         jvmTarget.set(JvmTarget.JVM_17)
@@ -24,18 +30,75 @@ tasks.withType(KotlinCompile::class).configureEach {
 
 group = "io.github.lyxnx.gradle.android"
 version = "1.0"
+description = "Various plugins relating to the android gradle catalogs project"
 
 mavenPublishing {
+    coordinates(project.group.toString(), project.name, project.version.toString())
 
+    publishToMavenCentral(SonatypeHost.Companion.S01, true)
+    signAllPublications()
+
+    pom {
+        name.set("Android Catalogs Plugins")
+        description.set(project.description)
+        inceptionYear.set("2023")
+        url.set("https://github.com/Lyxnx/android-gradle-catalogs")
+        licenses {
+            license {
+                name.set("MIT License")
+                url.set("http://www.opensource.org/licenses/mit-license.php")
+            }
+        }
+        developers {
+            developer {
+                id.set("Lyxnx")
+                name.set("Lyxnx")
+                url.set("https://github.com/Lyxnx")
+            }
+        }
+        scm {
+            url.set("https://github.com/Lyxnx/android-gradle-catalogs")
+            connection.set("https://github.com/Lyxnx/android-gradle-catalogs.git")
+            developerConnection.set("scm:git:ssh://git@github.com/Lyxnx/android-gradle-catalogs.git")
+        }
+    }
 }
 
 gradlePlugin {
     plugins {
+        register("catalogs-config") {
+            id = "io.github.lyxnx.android-catalogs-config"
+            displayName = "Android catalogs configuration"
+            description = "Allows customising the catalog names"
+            implementationClass = "io.github.lyxnx.gradle.android.CatalogsConfigPlugin"
+        }
+
         register("room-config") {
             id = "io.github.lyxnx.android-room-config"
             displayName = "Android Room configuration plugin"
             description = "Configures RoomDB for an Android application or library"
-            implementationClass = "io.github.lyxnx.gradle.android.AndroidRoomConfigPlugin"
+            implementationClass = "io.github.lyxnx.gradle.android.room.AndroidRoomConfigPlugin"
+        }
+
+        register("compose-config") {
+            id = "io.github.lyxnx.android-compose-config"
+            displayName = "Android Compose configuration plugin"
+            description = "Configures Compose for an Android application or library"
+            implementationClass = "io.github.lyxnx.gradle.android.compose.AndroidComposeConfigPlugin"
+        }
+
+        register("hilt-config") {
+            id = "io.github.lyxnx.android-hilt-config"
+            displayName = "Android Hilt configuration plugin"
+            description = "Configures Hilt for an Android application or library"
+            implementationClass = "io.github.lyxnx.gradle.android.hilt.AndroidHiltConfigPlugin"
+        }
+
+        register("firebase-config") {
+            id = "io.github.lyxnx.android-firebase-config"
+            displayName = "Android Firebase configuration plugin"
+            description = "Configures Firebase for an Android application or library"
+            implementationClass = "io.github.lyxnx.gradle.android.firebase.AndroidFirebaseConfigPlugin"
         }
     }
 }

@@ -21,6 +21,9 @@ dependencyResolutionManagement {
         create("androidx") {
             from("io.github.lyxnx:versions-androidx:2023.08.02")
         }
+        create("compose") {
+            from("io.github.lyxnx:versions-compose:2023.08.02")
+        }
     }
 }
 

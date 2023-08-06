@@ -1,8 +1,9 @@
 plugins {
     id(common.plugins.android.application.get().pluginId)
     id(common.plugins.kotlin.android.get().pluginId)
+    id(common.plugins.ksp.get().pluginId)
 
-    id("io.github.lyxnx.android-room-config")
+    id("io.github.lyxnx.android-compose-config")
 }
 
 android {
@@ -29,11 +30,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
-
-//roomConfig {
-//    androidxCatalog.set("asdfasdfasdf")
-//    schemaDir.set(file("asdf"))
-//}
 
 dependencies {
     implementation(androidx.core.ktx)
