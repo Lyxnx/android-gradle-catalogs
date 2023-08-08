@@ -10,12 +10,16 @@ public interface AndroidCatalogsExtension {
     /**
      * The user defined name of the versions-common catalog.
      *
+     * Default: `common`
+     *
      * Not required to be set unless using a plugin that requires the use of this catalog
      */
     public val commonCatalogName: Property<String>
 
     /**
      * The user defined name of the versions-compose catalog.
+     *
+     * Default: `compose`
      *
      * Not required to be set unless using a plugin that requires the use of this catalog
      */
@@ -24,12 +28,16 @@ public interface AndroidCatalogsExtension {
     /**
      * The user defined name of the versions-androidx catalog.
      *
+     * Default: `androidx`
+     *
      * Not required to be set unless using a plugin that requires the use of this catalog
      */
     public val androidxCatalogName: Property<String>
 
     /**
      * The user defined name of the versions-firebase catalog.
+     *
+     * Default: `firebase`
      *
      * Not required to be set unless using a plugin that requires the use of this catalog
      */

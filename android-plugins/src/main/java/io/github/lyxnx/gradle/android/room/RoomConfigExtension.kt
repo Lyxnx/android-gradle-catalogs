@@ -11,6 +11,8 @@ public interface RoomConfigExtension {
     /**
      * The directory used to store database schemas
      *
+     * Default: `schemas`
+     *
      * Note this is relative to the current project
      */
     public val schemaDir: Property<File>

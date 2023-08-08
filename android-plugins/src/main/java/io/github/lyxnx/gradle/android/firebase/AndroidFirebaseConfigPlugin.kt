@@ -11,6 +11,8 @@ public class AndroidFirebaseConfigPlugin : CatalogsBasePlugin() {
     override fun Project.configure() {
         ensurePlugin("com.google.gms.google-services")
 
+        plugins.apply("com.google.gms.google-services")
+
         afterEvaluate {
             val catalog = findCatalog(baseExtension.firebaseCatalogName.get())
 
