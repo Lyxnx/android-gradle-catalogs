@@ -29,7 +29,7 @@ tasks.withType(KotlinCompile::class).configureEach {
 }
 
 group = "io.github.lyxnx.gradle.android"
-version = "1.0"
+version = project.providers.gradleProperty("CATALOGS_VERSION").get()
 description = "Various plugins relating to the android gradle catalogs project"
 
 mavenPublishing {
