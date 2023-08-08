@@ -9,8 +9,21 @@ Version catalogs and plugins to help reduce boilerplate in Android Gradle build 
 
 ---
 
-<!-- START doctoc -->
-<!-- END doctoc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Version Catalogs](#version-catalogs)
+  - [Using](#using)
+  - [Updating](#updating)
+- [Plugins](#plugins)
+  - [Catalogs Config](#catalogs-config)
+  - [Compose Config](#compose-config)
+  - [Room Config](#room-config)
+    - [Configuring](#configuring)
+  - [Hilt Config](#hilt-config)
+  - [Firebase Config](#firebase-config)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Version Catalogs
 
