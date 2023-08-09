@@ -1,5 +1,5 @@
 [versions]
-bom = "2023.06.01"
+bom = "2023.08.00"
 compiler = "1.5.1"
 
 [libraries]
