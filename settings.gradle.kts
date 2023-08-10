@@ -31,7 +31,8 @@ include(
     ":versions-androidx",
     ":versions-common",
     ":versions-compose",
-    ":versions-firebase"
+    ":versions-firebase",
+    ":versions-external"
 )
 
 include(":android-plugins")

@@ -1,0 +1,52 @@
+[versions]
+coil = "2.4.0"
+composeicons = "1.1.0"
+
+glide = "4.15.1"
+
+lottie = "6.1.0"
+
+kotlinpoet = "1.14.2"
+kotpref = "2.13.2"
+
+redmadrobot = "0.18.1"
+
+[libraries]
+coil = { module = "io.coil-kt:coil", version.ref = "coil" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+coil-gif = { module = "io.coil-kt:coil-gif", version.ref = "coil" }
+coil-svg = { module = "io.coil-kt:coil-svg", version.ref = "coil" }
+
+composeicons-cssgg = { module = "br.com.devsrsouza.compose.icons:css-gg", version.ref = "composeicons" }
+composeicons-evaicons = { module = "br.com.devsrsouza.compose.icons:eva-icons", version.ref = "composeicons" }
+composeicons-feather = { module = "br.com.devsrsouza.compose.icons:feather", version.ref = "composeicons" }
+composeicons-fontawesome = { module = "br.com.devsrsouza.compose.icons:font-awesome", version.ref = "composeicons" }
+composeicons-linea = { module = "br.com.devsrsouza.compose.icons:linea", version.ref = "composeicons" }
+composeicons-lineawesome = { module = "br.com.devsrsouza.compose.icons:line-awesome", version.ref = "composeicons" }
+composeicons-octicons = { module = "br.com.devsrsouza.compose.icons:octicons", version.ref = "composeicons" }
+composeicons-simpleicons = { module = "br.com.devsrsouza.compose.icons:simple-icons", version.ref = "composeicons" }
+composeicons-tablericons = { module = "br.com.devsrsouza.compose.icons:tabler-icons", version.ref = "composeicons" }
+composeicons-weathericons = { module = "br.com.devsrsouza.compose.icons:erikflowers-weather-icons", version.ref = "composeicons" }
+
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
+lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
+
+kotlinpoet = { module = "com.squareup:kotlinpoet", version.ref = "kotlinpoet" }
+kotlinpoet-ksp = { module = "com.squareup:kotlinpoet-ksp", version.ref = "kotlinpoet" }
+
+kotpref = { module = "com.chibatching.kotpref:kotpref", version.ref = "kotpref" }
+kotpref-initializer = { module = "com.chibatching.kotpref:initializer", version.ref = "kotpref" }
+kotpref-enums = { module = "com.chibatching.kotpref:enum-support", version.ref = "kotpref" }
+kotpref-gson = { module = "com.chibatching.kotpref:gson-support", version.ref = "kotpref" }
+kotpref-livedata = { module = "com.chibatching.kotpref:livedata-support", version.ref = "kotpref" }
+kotpref-preferencescreendsl = { module = "com.chibatching.kotpref:preference-screen-dsl", version.ref = "kotpref" }
+
+[plugins]
+redmadrobot-android-application = { id = "com.redmadrobot.application", version.ref = "redmadrobot" }
+redmadrobot-android-config = { id = "com.redmadrobot.android-config", version.ref = "redmadrobot" }
+redmadrobot-android-library = { id = "com.redmadrobot.android-library", version.ref = "redmadrobot" }
+redmadrobot-kotlin-library = { id = "com.redmadrobot.kotlin-library", version.ref = "redmadrobot" }
+redmadrobot-publish = { id = "com.redmadrobot.publish", version.ref = "redmadrobot" }
