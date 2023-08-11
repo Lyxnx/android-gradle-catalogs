@@ -82,12 +82,10 @@ slidingpanelayout = "1.2.0"
 startup = "1.1.1"
 sqlite = "2.3.1"
 swiperefreshlayout = "1.1.0"
-test-annotation = "1.0.1"
 test-core = "1.5.0"
 test-espresso = "3.5.1"
 test-ext-junit = "1.1.5"
 test-ext-truth = "1.5.0"
-test-monitor = "1.6.1"
 test-orchestrator = "1.4.2"
 test-runner = "1.5.2"
 test-uiautomator = "2.3.0-alpha04"
@@ -175,6 +173,7 @@ core = { module = "androidx.core:core", version.ref = "core" }
 core-ktx = { module = "androidx.core:core-ktx", version.ref = "core" }
 core-animation = { module = "androidx.core:core-animation", version.ref = "core-animation" }
 core-performance = { module = "androidx.core:core-performance", version.ref = "core-performance" }
+core-role = { module = "androidx.core:core-role", version.ref = "core" }
 core-google-shortcuts = { module = "androidx.core:core-google-shortcuts", version.ref = "core-google-shortcuts" }
 core-remoteviews = { module = "androidx.core:core-remoteviews", version.ref = "core-remoteviews" }
 core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "core-splashscreen" }
