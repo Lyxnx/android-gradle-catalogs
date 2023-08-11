@@ -4,81 +4,79 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [2023.08.02](#20230802)
-  - [Common](#common)
+    - [Common](#common)
 - [2023.07.27](#20230727)
-  - [AndroidX](#androidx)
-  - [Common](#common-1)
-  - [Compose](#compose)
+    - [AndroidX](#androidx)
+    - [Common](#common-1)
+    - [Compose](#compose)
 - [2023.07.22](#20230722)
-  - [Common](#common-2)
+    - [Common](#common-2)
 - [2023.07.20](#20230720)
-  - [AndroidX](#androidx-1)
-  - [Common](#common-3)
-  - [Compose](#compose-1)
-  - [Firebase](#firebase)
+    - [AndroidX](#androidx-1)
+    - [Common](#common-3)
+    - [Compose](#compose-1)
+    - [Firebase](#firebase)
 - [2023.06.30](#20230630)
-  - [Common](#common-4)
-  - [Compose](#compose-2)
+    - [Common](#common-4)
+    - [Compose](#compose-2)
 - [2023.06.26](#20230626)
-  - [AndroidX](#androidx-2)
-  - [Common](#common-5)
-  - [Compose](#compose-3)
-  - [Firebase](#firebase-1)
+    - [AndroidX](#androidx-2)
+    - [Common](#common-5)
+    - [Compose](#compose-3)
+    - [Firebase](#firebase-1)
 - [2023.06.08](#20230608)
-  - [AndroidX](#androidx-3)
-  - [Common](#common-6)
-  - [Compose](#compose-4)
-  - [Firebase](#firebase-2)
+    - [AndroidX](#androidx-3)
+    - [Common](#common-6)
+    - [Compose](#compose-4)
+    - [Firebase](#firebase-2)
 - [2023.05.25](#20230525)
-  - [AndroidX](#androidx-4)
-  - [Common](#common-7)
+    - [AndroidX](#androidx-4)
+    - [Common](#common-7)
 - [2023.05.22](#20230522)
-  - [AndroidX](#androidx-5)
-  - [Common](#common-8)
-  - [Compose](#compose-5)
+    - [AndroidX](#androidx-5)
+    - [Common](#common-8)
+    - [Compose](#compose-5)
 - [2023.05.05](#20230505)
-  - [Common](#common-9)
+    - [Common](#common-9)
 - [2023.05.04](#20230504)
-  - [AndroidX](#androidx-6)
-  - [Common](#common-10)
-  - [Compose](#compose-6)
-  - [Firebase](#firebase-3)
+    - [AndroidX](#androidx-6)
+    - [Common](#common-10)
+    - [Compose](#compose-6)
+    - [Firebase](#firebase-3)
 - [2023.05.01](#20230501)
-  - [AndroidX](#androidx-7)
-  - [Common](#common-11)
-  - [Compose](#compose-7)
+    - [AndroidX](#androidx-7)
+    - [Common](#common-11)
+    - [Compose](#compose-7)
 - [2023.04.20](#20230420)
-  - [Accompanist](#accompanist)
-  - [AndroidX](#androidx-8)
-  - [Common](#common-12)
-  - [Firebase](#firebase-4)
+    - [Accompanist](#accompanist)
+    - [AndroidX](#androidx-8)
+    - [Common](#common-12)
+    - [Firebase](#firebase-4)
 - [2023.04.07](#20230407)
-  - [Common](#common-13)
+    - [Common](#common-13)
 - [2023.04.05](#20230405)
-  - [Accompanist](#accompanist-1)
-  - [AndroidX](#androidx-9)
-  - [Compose](#compose-8)
+    - [Accompanist](#accompanist-1)
+    - [AndroidX](#androidx-9)
+    - [Compose](#compose-8)
 - [2023.04.03](#20230403)
-  - [Common](#common-14)
+    - [Common](#common-14)
 - [2023.03.30](#20230330)
-  - [Common](#common-15)
-  - [Firebase](#firebase-5)
+    - [Common](#common-15)
+    - [Firebase](#firebase-5)
 - [2023.03.26](#20230326)
-  - [Accompanist](#accompanist-2)
-  - [Common](#common-16)
-  - [Firebase](#firebase-6)
+    - [Accompanist](#accompanist-2)
+    - [Common](#common-16)
+    - [Firebase](#firebase-6)
 - [2023.03.22](#20230322)
-  - [AndroidX](#androidx-10)
-  - [Compose](#compose-9)
+    - [AndroidX](#androidx-10)
+    - [Compose](#compose-9)
 - [2023.03.21](#20230321)
-  - [Common](#common-17)
+    - [Common](#common-17)
 - [2023.03.16](#20230316)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## 2023.08.02
-
----
 
 Starting from this release, the catalogs can be found in maven central
 
@@ -87,8 +85,6 @@ Starting from this release, the catalogs can be found in maven central
 - Add [vanniktech publish plugin](https://github.com/vanniktech/gradle-maven-publish-plugin)
 
 ## 2023.07.27
-
----
 
 ### AndroidX
 
@@ -138,15 +134,11 @@ Remove libraries that don't have a stable version:
 
 ## 2023.07.22
 
----
-
 ### Common
 
 - Add mockito-core, mockito-android, mockito-kotlin dependencies
 
 ## 2023.07.20
-
----
 
 ### AndroidX
 
@@ -170,8 +162,6 @@ Remove libraries that don't have a stable version:
 
 ## 2023.06.30
 
----
-
 ### Common
 
 - Update kotlinx-coroutines to 1.7.2
@@ -181,8 +171,6 @@ Remove libraries that don't have a stable version:
 - Update compiler to 1.4.8
 
 ## 2023.06.26
-
----
 
 ### AndroidX
 
@@ -203,8 +191,6 @@ Remove libraries that don't have a stable version:
 - Update BOM to 32.1.1
 
 ## 2023.06.08
-
---- 
 
 ### AndroidX
 
@@ -235,8 +221,6 @@ Remove libraries that don't have a stable version:
 
 ## 2023.05.25
 
----
-
 ### AndroidX
 
 - Update camera to 1.2.3
@@ -254,8 +238,6 @@ Remove libraries that don't have a stable version:
 - Update AGP to 8.0.2
 
 ## 2023.05.22
-
----
 
 ### AndroidX
 
@@ -281,8 +263,6 @@ Remove libraries that don't have a stable version:
 
 ## 2023.05.05
 
----
-
 ### Common
 
 - Update kotlinx to 1.7.0
@@ -291,8 +271,6 @@ Remove libraries that don't have a stable version:
 - Update kotlinpoet to 1.13.2
 
 ## 2023.05.04
-
----
 
 ### AndroidX
 
@@ -315,8 +293,6 @@ Remove libraries that don't have a stable version:
 - Update BOM to 32.0.0
 
 ## 2023.05.01
-
----
 
 ### AndroidX
 
@@ -345,8 +321,6 @@ Remove libraries that don't have a stable version:
 
 ## 2023.04.20
 
----
-
 ### Accompanist
 
 - Add pager-indicators dependency
@@ -373,8 +347,6 @@ Remove libraries that don't have a stable version:
 
 ## 2023.04.05
 
----
-
 ### Accompanist
 
 - Update BOM to 0.30.1
@@ -396,15 +368,11 @@ Remove libraries that don't have a stable version:
 
 ## 2023.04.03
 
----
-
 ### Common
 
 - Update KSP to 1.8.20-1.0.10
 
 ## 2023.03.30
-
---- 
 
 ### Common
 
@@ -415,8 +383,6 @@ Remove libraries that don't have a stable version:
 - Update BOM to 31.4.0
 
 ## 2023.03.26
-
----
 
 ### Accompanist
 
@@ -431,8 +397,6 @@ Remove libraries that don't have a stable version:
 - Update BOM to 31.4.0
 
 ## 2023.03.22
-
----
 
 ### AndroidX
 
@@ -463,14 +427,10 @@ Remove libraries that don't have a stable version:
 
 ## 2023.03.21
 
----
-
 ### Common
 
 - Add mockk-android, mockk-agent dependencies
 
 ## 2023.03.16
-
----
 
 - Initial release
