@@ -11,6 +11,8 @@ kotpref = "2.13.2"
 
 redmadrobot = "0.18.1"
 
+catalogs-plugins = "2023.08.11"
+
 [libraries]
 coil = { module = "io.coil-kt:coil", version.ref = "coil" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
@@ -50,3 +52,9 @@ redmadrobot-android-config = { id = "com.redmadrobot.android-config", version.re
 redmadrobot-android-library = { id = "com.redmadrobot.android-library", version.ref = "redmadrobot" }
 redmadrobot-kotlin-library = { id = "com.redmadrobot.kotlin-library", version.ref = "redmadrobot" }
 redmadrobot-publish = { id = "com.redmadrobot.publish", version.ref = "redmadrobot" }
+
+catalogs-config = { id = "io.github.lyxnx.android-catalogs-config", version.ref = "catalogs-plugins" }
+catalogs-compose-config = { id = "io.github.lyxnx.android-compose-config", version.ref = "catalogs-plugins" }
+catalogs-room-config = { id = "io.github.lyxnx.android-room-config", version.ref = "catalogs-plugins" }
+catalogs-hilt-config = { id = "io.github.lyxnx.android-hilt-config", version.ref = "catalogs-plugins" }
+catalogs-firebase-config = { id = "io.github.lyxnx.android-firebase-config", version.ref = "catalogs-plugins" }
