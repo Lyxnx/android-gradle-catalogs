@@ -18,6 +18,7 @@ public class AndroidHiltConfigPlugin : CatalogsBasePlugin() {
 
             dependencies {
                 implementation(catalog.ensureLibrary("hilt"))
+                @Suppress("DEPRECATION")
                 kapt(catalog.ensureLibrary("hilt.compiler"))
             }
         }

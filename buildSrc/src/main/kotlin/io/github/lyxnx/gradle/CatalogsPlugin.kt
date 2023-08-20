@@ -92,6 +92,7 @@ class CatalogsPlugin : Plugin<Project> {
             dependsOn(tasks.named(VersionCatalogPlugin.GENERATE_CATALOG_FILE_TASKNAME))
         }
         tasks.named(LifecycleBasePlugin.CHECK_TASK_NAME).configure { dependsOn(validateCatalog) }
+        tasks.named(LifecycleBasePlugin.BUILD_TASK_NAME).configure { dependsOn(validateCatalog) }
     }
 }
 

@@ -12,5 +12,6 @@ gradlePlugin {
 }
 
 dependencies {
+    implementation(common.kotlin.gradleplugin)
     implementation(common.vanniktech.publish.plugin)
 }
