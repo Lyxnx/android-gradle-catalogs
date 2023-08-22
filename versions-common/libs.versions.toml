@@ -1,5 +1,5 @@
 [versions]
-android-gradle-plugin = "8.1.0"
+android-gradle-plugin = "8.1.1"
 
 google-gms-plugin = "4.3.15"
 gson = "2.10.1"
