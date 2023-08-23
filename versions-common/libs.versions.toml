@@ -10,7 +10,7 @@ hilt-work = "1.0.0"
 
 junit4 = "4.13.2"
 
-kotlin = "1.9.0"
+kotlin = "1.9.10"
 kotlinx-coroutines = "1.7.3"
 ksp = "1.9.0-1.0.13"
 
