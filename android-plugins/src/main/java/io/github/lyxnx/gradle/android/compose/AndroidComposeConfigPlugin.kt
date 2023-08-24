@@ -12,37 +12,38 @@ import org.gradle.kotlin.dsl.dependencies
 public class AndroidComposeConfigPlugin : CatalogsBasePlugin() {
 
     override fun Project.configure() {
-        val commonExtension = ensureAndroidExtension()
         val catalog = findCatalog(baseExtension.composeCatalogName.get())
 
-        commonExtension.apply {
-            buildFeatures {
-                compose = true
-            }
+        androidComponents.finalizeDsl {
+            it.apply {
+                buildFeatures {
+                    compose = true
+                }
 
-            packaging {
-                resources.excludes.add("META-INF/*")
-            }
+                packaging {
+                    resources.excludes.add("META-INF/*")
+                }
 
-            composeOptions {
-                kotlinCompilerExtensionVersion = catalog.ensureVersion("compiler").toString()
-            }
+                composeOptions {
+                    kotlinCompilerExtensionVersion = catalog.ensureVersion("compiler").toString()
+                }
 
-            dependencies {
-                val bom = catalog.ensureLibrary("bom")
-                implementation(platform(bom))
+                dependencies {
+                    val bom = catalog.ensureLibrary("bom")
+                    implementation(platform(bom))
 
-                implementation(catalog.ensureLibrary("runtime"))
-                implementation(catalog.ensureLibrary("ui"))
-                implementation(catalog.ensureLibrary("foundation"))
-                implementation(catalog.ensureLibrary("foundation.layout"))
+                    implementation(catalog.ensureLibrary("runtime"))
+                    implementation(catalog.ensureLibrary("ui"))
+                    implementation(catalog.ensureLibrary("foundation"))
+                    implementation(catalog.ensureLibrary("foundation.layout"))
 
-                implementation(catalog.ensureLibrary("ui.tooling.preview"))
-                debugImplementation(catalog.ensureLibrary("ui.tooling.preview"))
+                    implementation(catalog.ensureLibrary("ui.tooling.preview"))
+                    debugImplementation(catalog.ensureLibrary("ui.tooling"))
 
-                androidTestImplementation(platform(bom))
-                androidTestImplementation(catalog.ensureLibrary("ui.test.junit4"))
-                debugImplementation(catalog.ensureLibrary("ui.test.manifest"))
+                    androidTestImplementation(platform(bom))
+                    androidTestImplementation(catalog.ensureLibrary("ui.test.junit4"))
+                    debugImplementation(catalog.ensureLibrary("ui.test.manifest"))
+                }
             }
         }
     }

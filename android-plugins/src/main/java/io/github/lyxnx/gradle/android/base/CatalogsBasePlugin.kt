@@ -1,8 +1,6 @@
 package io.github.lyxnx.gradle.android.base
 
-import com.android.build.api.dsl.ApplicationExtension
-import com.android.build.api.dsl.CommonExtension
-import com.android.build.api.dsl.LibraryExtension
+import com.android.build.api.variant.AndroidComponentsExtension
 import io.github.lyxnx.gradle.android.base.internal.findByName
 import io.github.lyxnx.gradle.android.base.internal.parents
 import org.gradle.api.Plugin
@@ -44,7 +42,7 @@ public abstract class CatalogsBasePlugin : Plugin<Project> {
     protected inline fun <reified T : WithDefaults<T>> createExtension(
         name: String,
         publicType: KClass<in T>? = null,
-        constructorArgs: Array<Any>? = null
+        constructorArgs: Array<Any>? = null,
     ): T {
         val defaults = catalogExtensions
             .mapNotNull { it.extensions.findByName<T>(name) }
@@ -82,29 +80,20 @@ public abstract class CatalogsBasePlugin : Plugin<Project> {
         }
     }
 
-    protected fun Project.ensureAndroidExtension(): CommonExtension<*, *, *, *, *> {
-        val extension: CommonExtension<*, *, *, *, *>? = try {
-            extensions.getByType<ApplicationExtension>()
-        } catch (_: UnknownDomainObjectException) {
-            try {
-                extensions.getByType<LibraryExtension>()
-            } catch (_: UnknownDomainObjectException) {
-                null
-            }
+    protected val Project.androidComponents: AndroidComponentsExtension<*, *, *>
+        get() = try {
+            extensions.getByType(AndroidComponentsExtension::class.java)
+        } catch (e: UnknownDomainObjectException) {
+            error(
+                """
+                    Android Gradle Plugin not found. Make sure it is added as a build dependency to the project:
+                    Add AGP with "apply false" to the root project:
+                        plugins {
+                            id("com.android.application") version <version> apply false
+                        }
+                """.trimIndent()
+            )
         }
-
-        check(extension != null) {
-            """
-            Android Gradle Plugin not found. Make sure it is added as a build dependency to the project:
-            Add AGP with "apply false" to the root project:
-                plugins {
-                    id("com.android.application") version <version> apply false
-                }
-            """.trimIndent()
-        }
-
-        return extension
-    }
 
     protected fun Project.ensurePlugin(id: String) {
         check(pluginManager.hasPlugin(id)) {
