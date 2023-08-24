@@ -15,14 +15,15 @@ dependencyResolutionManagement {
         mavenCentral()
     }
     versionCatalogs {
+        val catalogVersion = "2023.08.19"
         create("common") {
-            from("io.github.lyxnx:versions-common:2023.08.02")
+            from("io.github.lyxnx.gradle:versions-common:$catalogVersion")
         }
         create("androidx") {
-            from("io.github.lyxnx:versions-androidx:2023.08.02")
+            from("io.github.lyxnx.gradle:versions-androidx:$catalogVersion")
         }
         create("compose") {
-            from("io.github.lyxnx:versions-compose:2023.08.02")
+            from("io.github.lyxnx.gradle:versions-compose:$catalogVersion")
         }
     }
 }

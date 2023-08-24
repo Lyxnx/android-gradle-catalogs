@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "io.github.lyxnx.sampleapp"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "io.github.lyxnx.sampleapp"
@@ -26,8 +26,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
 
@@ -35,6 +35,9 @@ dependencies {
     implementation(androidx.core.ktx)
     implementation(androidx.appcompat)
     implementation(common.material)
+
+    implementation(androidx.activity.compose)
+    implementation(compose.material3)
 
     testImplementation(common.junit4)
     androidTestImplementation(androidx.test.ext.junit.ktx)
