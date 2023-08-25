@@ -4,5 +4,5 @@ plugins {
     alias(common.plugins.kotlin.android) apply false
 
     alias(common.plugins.ksp) apply false
-    id("io.github.lyxnx.android-compose-config") version "2023.08.19" apply false
+    id("io.github.lyxnx.android-compose-config") version "2023.08.24" apply false
 }
