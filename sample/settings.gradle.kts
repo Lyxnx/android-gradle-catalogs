@@ -15,7 +15,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
     versionCatalogs {
-        val catalogVersion = "2023.08.19"
+        val catalogVersion = "2023.08.29"
         create("common") {
             from("io.github.lyxnx.gradle:versions-common:$catalogVersion")
         }
