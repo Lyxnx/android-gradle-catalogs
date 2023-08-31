@@ -1,0 +1,15 @@
+name: Validate Catalogs
+
+on:
+  push:
+
+jobs:
+  validate-catalogs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v3
+      - name: Setup gradle
+        uses: gradle/gradle-build-action@v2
+      - name: Validate catalogs
+        run: ./gradlew validateCatalog
