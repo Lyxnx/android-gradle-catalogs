@@ -13,15 +13,15 @@ Version catalogs and plugins to help reduce boilerplate in Android Gradle build 
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Version Catalogs](#version-catalogs)
-  - [Using](#using)
-  - [Updating](#updating)
+    - [Using](#using)
+    - [Updating](#updating)
 - [Plugins](#plugins)
-  - [Catalogs Config](#catalogs-config)
-  - [Compose Config](#compose-config)
-  - [Room Config](#room-config)
-    - [Configuring](#configuring)
-  - [Hilt Config](#hilt-config)
-  - [Firebase Config](#firebase-config)
+    - [Catalogs Config](#catalogs-config)
+    - [Compose Config](#compose-config)
+    - [Room Config](#room-config)
+        - [Configuring](#configuring)
+    - [Hilt Config](#hilt-config)
+    - [Firebase Config](#firebase-config)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -36,12 +36,6 @@ This repo contains some useful gradle version catalogs specific to Android:
 | [Compose](versions-compose/libs.versions.toml)         | Jetpack Compose artifacts (including the BOM) - useful with the compose config plugin below     |
 | [Accompanist](versions-accompanist/libs.versions.toml) | Google Accompanist Compose artifacts (including the BOM)                                        |
 | [Firebase](versions-firebase/libs.versions.toml)       | Firebase artifacts (including the BOM) - useful with the firebase config plugin below           |
-
-The `bleeding` branch receives version updates as soon as they are available, including unstable
-alpha versions, and is not guaranteed to be compatible with gradle/android, or other versions.
-Versions can be overridden in `settings.gradle.kts` though
-
-The `master` branch receives fewer version updates but contains no in-dev versions and only stable releases
 
 ### Using
 
@@ -71,7 +65,7 @@ For the common catalog, it would be as follows, replacing `versions-common` with
 dependencyResolutionManagement {
     versionCatalogs {
         create("common") {
-            from("io.github.lyxnx:versions-common:<version>")
+            from("io.github.lyxnx.gradle:versions-common:<version>")
         }
     }
 }
