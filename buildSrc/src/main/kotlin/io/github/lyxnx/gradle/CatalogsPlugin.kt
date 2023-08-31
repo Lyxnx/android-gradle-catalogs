@@ -9,6 +9,7 @@ import org.gradle.api.plugins.BasePlugin
 import org.gradle.api.plugins.catalog.VersionCatalogPlugin
 import org.gradle.api.plugins.catalog.internal.CatalogExtensionInternal
 import org.gradle.kotlin.dsl.apply
+import org.gradle.kotlin.dsl.create
 import org.gradle.kotlin.dsl.getByName
 import org.gradle.kotlin.dsl.getByType
 import org.gradle.kotlin.dsl.register
@@ -22,21 +23,23 @@ class CatalogsPlugin : Plugin<Project> {
         const val VERSION_PROPERTY = "CATALOGS_VERSION"
     }
 
-    override fun apply(target: Project) {
-        with(target) {
-            with(pluginManager) {
-                apply(BasePlugin::class)
-                apply(VersionCatalogPlugin::class)
-                apply(MavenPublishPlugin::class)
-            }
+    override fun apply(target: Project) = with(target) {
+        with(pluginManager) {
+            apply(BasePlugin::class)
+            apply(VersionCatalogPlugin::class)
+            apply(MavenPublishPlugin::class)
+        }
 
-            group = findStringProperty(GROUP_PROPERTY) ?: error("$GROUP_PROPERTY can not be found. Make sure it is set")
-            version =
-                findStringProperty(VERSION_PROPERTY) ?: error("$VERSION_PROPERTY can not be found. Make sure it is set")
+        val extension = extensions.create(CatalogsExtension.NAME, CatalogsExtension::class)
 
-            configureMavenPublish()
+        group = findStringProperty(GROUP_PROPERTY) ?: error("$GROUP_PROPERTY can not be found. Make sure it is set")
+        version =
+            findStringProperty(VERSION_PROPERTY) ?: error("$VERSION_PROPERTY can not be found. Make sure it is set")
 
-            configureValidateTask()
+        configureMavenPublish()
+
+        afterEvaluate {
+            configureValidateTask(extension.verificationExcludes.mapNotNull { it.normalizeAlias() })
         }
     }
 
@@ -80,7 +83,7 @@ class CatalogsPlugin : Plugin<Project> {
         }
     }
 
-    private fun Project.configureValidateTask() {
+    private fun Project.configureValidateTask(excludes: List<String>) {
         val extension = extensions.getByName<CatalogExtensionInternal>("catalog")
 
         extension.versionCatalog {
@@ -89,6 +92,7 @@ class CatalogsPlugin : Plugin<Project> {
 
         val validateCatalog = tasks.register<ValidateCatalogTask>(ValidateCatalogTask.NAME) {
             dependenciesModel.set(extension.versionCatalog)
+            this.excludes.set(excludes)
             dependsOn(tasks.named(VersionCatalogPlugin.GENERATE_CATALOG_FILE_TASKNAME))
         }
         tasks.named(LifecycleBasePlugin.CHECK_TASK_NAME).configure { dependsOn(validateCatalog) }

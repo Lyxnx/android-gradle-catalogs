@@ -1,6 +1,6 @@
 # Android Gradle Catalogs <GitHub path="Lyxnx/android-gradle-catalogs" />
 
-[![Version](https://img.shields.io/maven-central/v/io.github.lyxnx/versions-common?style=flat-square)][mavenCentral]
+[![Version](https://img.shields.io/maven-central/v/io.github.lyxnx.gradle/versions-common?style=flat-square)][mavenCentral]
 [![License](https://img.shields.io/github/license/Lyxnx/android-gradle-catalogs?style=flat-square)][license]
 
 Version catalogs and plugins to help reduce boilerplate in Android Gradle build scripts.
@@ -71,7 +71,7 @@ For the common catalog, it would be as follows, replacing `versions-common` with
 dependencyResolutionManagement {
     versionCatalogs {
         create("common") {
-            from("io.github.lyxnx:versions-common:2023.08.02")
+            from("io.github.lyxnx:versions-common:<version>")
         }
     }
 }
@@ -129,10 +129,10 @@ Ensure each required plugin is referenced in the root build file, but not applie
 ```kotlin
 // <root>/build.gradle.kts
 plugins {
-    id("io.github.lyxnx.android-compose-config") version "2023.08.02" apply false
-    id("io.github.lyxnx.android-room-config") version "2023.08.02" apply false
-    id("io.github.lyxnx.android-hilt-config") version "2023.08.02" apply false
-    id("io.github.lyxnx.android-firebase-config") version "2023.08.02" apply false
+    id("io.github.lyxnx.android-compose-config") version "<version>" apply false
+    id("io.github.lyxnx.android-room-config") version "<version>" apply false
+    id("io.github.lyxnx.android-hilt-config") version "<version>" apply false
+    id("io.github.lyxnx.android-firebase-config") version "<version>" apply false
 
     /*
     This plugin is only required for customising catalogs from the root build file and will need to 
@@ -140,7 +140,7 @@ plugins {
     
     See below for more information
      */
-    id("io.github.lyxnx.android-catalogs-config") version "2023.08.02"
+    id("io.github.lyxnx.android-catalogs-config") version "<version>"
 }
 ```
 
@@ -220,6 +220,6 @@ This plugin is simple and only performs the following:
 1. Adds the Google services plugin if needed
 2. Adds the Firebase BOM to the dependencies from the `firebase` catalog
 
-[mavenCentral]: https://search.maven.org/artifact/io.github.lyxnx/versions-common
+[mavenCentral]: https://search.maven.org/artifact/io.github.lyxnx.gradle/versions-common
 
 [license]: LICENCE
