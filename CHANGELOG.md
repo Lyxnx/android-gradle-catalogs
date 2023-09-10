@@ -3,9 +3,11 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [2023.09.10-1](#20230910-1)
+  - [External](#external)
 - [2023.09.10](#20230910)
   - [Common](#common)
-  - [External](#external)
+  - [External](#external-1)
 - [2023.09.09](#20230909)
   - [AndroidX](#androidx)
   - [Common](#common-1)
@@ -17,14 +19,14 @@
   - [Accompanist](#accompanist)
   - [Common](#common-2)
   - [Compose](#compose-2)
-  - [External](#external-1)
+  - [External](#external-2)
   - [Firebase](#firebase)
 - [2023.08.19](#20230819)
   - [AndroidX](#androidx-2)
   - [Common](#common-3)
 - [2023.08.12](#20230812)
   - [Common](#common-4)
-  - [External](#external-2)
+  - [External](#external-3)
 - [2023.08.11](#20230811)
   - [AndroidX](#androidx-3)
 - [Common](#common-5)
@@ -102,6 +104,12 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## 2023.09.10-1
+
+### External
+
+- Add [kradle plugins](https://github.com/Lyxnx/kradle) to external catalog
+
 ## 2023.09.10
 
 ### Common
@@ -130,7 +138,7 @@
 ### Compose
 
 - Update BOM to 2023.09.00
-  - Note using the compose-ui module from this BOM will require target SDK be updated to 34
+    - Note using the compose-ui module from this BOM will require target SDK be updated to 34
 
 ## 2023.08.29
 
