@@ -1,5 +1,6 @@
 [versions]
 android-gradle-plugin = "8.1.1"
+android-cache-fix-plugin = "2.7.4"
 
 google-gms-plugin = "4.3.15"
 gson = "2.10.1"
@@ -85,6 +86,7 @@ vanniktech-publish-plugin = { module = "com.vanniktech:gradle-maven-publish-plug
 [plugins]
 android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
 android-library = { id = "com.android.library", version.ref = "android-gradle-plugin" }
+android-cachefix = { id = "org.gradle.android.cache-fix", version.ref = "android-cache-fix-plugin" }
 
 gms = { id = "com.google.gms.google-services", version.ref = "google-gms-plugin" }
 
