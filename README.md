@@ -123,39 +123,28 @@ Ensure each required plugin is referenced in the root build file, but not applie
 ```kotlin
 // <root>/build.gradle.kts
 plugins {
-    id("io.github.lyxnx.android-compose-config") version "<version>" apply false
-    id("io.github.lyxnx.android-room-config") version "<version>" apply false
-    id("io.github.lyxnx.android-hilt-config") version "<version>" apply false
-    id("io.github.lyxnx.android-firebase-config") version "<version>" apply false
-
-    /*
-    This plugin is only required for customising catalogs from the root build file and will need to 
-    be applied here unlike the rest of them
-    
-    See below for more information
-     */
-    id("io.github.lyxnx.android-catalogs-config") version "<version>"
+    id("io.github.lyxnx.android.compose-config") version "<version>" apply false
+    id("io.github.lyxnx.android.room-config") version "<version>" apply false
+    id("io.github.lyxnx.android.hilt-config") version "<version>" apply false
+    id("io.github.lyxnx.android.firebase-config") version "<version>" apply false
 }
 ```
 
 As these plugins are Android specific, they require the `com.android.application`
 or `com.android.library` plugin to be added to the module, depending on the module type.
 
-### Catalogs Config
+### Customising Catalog Names
 
-This plugin has no functionality of its own and is only used to allow customisation of catalog names used by the other
-plugins from the root build file:
+Since the following plugins apply other plugins and dependencies from the version catalogs, they need to know what each
+catalog is called. This can however be customised from the `gradle.properties` file:
 
-```kotlin
-// <root>/build.gradle.kts
-/*
-For example, if you wish to change the name of the AndroidX catalog from the default "androidx" to "someothercatalog"
+*Note* that these are the default values, so if customisation is not required, these properties can be omitted
 
-Now any time a plugin, such as the Room config plugin, references the AndroidX catalog, it will use this name instead
- */
-androidCatalogPlugins {
-    androidxCatalogName.set("someothercatalog")
-}
+```properties
+catalogs.commonCatalogName=common
+catalogs.androidxCatalogName=androidx
+catalogs.composeCatalogName=compose
+catalogs.firebaseCatalogName=firebase
 ```
 
 ### Compose Config
@@ -182,10 +171,16 @@ This plugin applies RoomDB configuration options to the application or library m
 
 #### Configuring
 
-This has a section for configuring the schema directory if the default does not wish to be used:
+This has an extension function for configuring the schema directory if the default does not wish to be used:
 
 ```kotlin
 // Eg. app/build.gradle.kts
+import io.github.lyxnx.gradle.android.catalogs.room.roomSchemaDir
+
+roomSchemaDir(file("somewhere/schema_dir"))
+// OR
+roomSchemaDir("somewhere/schema_dir")
+
 androidCatalogPlugins {
     roomConfig {
         schemaDir.set(file("somewhere/schema_dir"))

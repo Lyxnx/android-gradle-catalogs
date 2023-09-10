@@ -1,7 +1,7 @@
+import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.dsl.ExplicitApiMode
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import com.vanniktech.maven.publish.SonatypeHost
 
 plugins {
     `kotlin-dsl`
@@ -66,39 +66,32 @@ mavenPublishing {
 
 gradlePlugin {
     plugins {
-        register("catalogs-config") {
-            id = "io.github.lyxnx.android-catalogs-config"
-            displayName = "Android catalogs configuration"
-            description = "Allows customising the catalog names"
-            implementationClass = "io.github.lyxnx.gradle.android.CatalogsConfigPlugin"
-        }
-
         register("room-config") {
-            id = "io.github.lyxnx.android-room-config"
+            id = "io.github.lyxnx.gradle.android.room-config"
             displayName = "Android Room configuration plugin"
             description = "Configures RoomDB for an Android application or library"
-            implementationClass = "io.github.lyxnx.gradle.android.room.AndroidRoomConfigPlugin"
+            implementationClass = "io.github.lyxnx.gradle.android.catalogs.room.AndroidRoomConfigPlugin"
         }
 
         register("compose-config") {
-            id = "io.github.lyxnx.android-compose-config"
+            id = "io.github.lyxnx.gradle.android.compose-config"
             displayName = "Android Compose configuration plugin"
             description = "Configures Compose for an Android application or library"
-            implementationClass = "io.github.lyxnx.gradle.android.compose.AndroidComposeConfigPlugin"
+            implementationClass = "io.github.lyxnx.gradle.android.catalogs.compose.AndroidComposeConfigPlugin"
         }
 
         register("hilt-config") {
-            id = "io.github.lyxnx.android-hilt-config"
+            id = "io.github.lyxnx.gradle.android.hilt-config"
             displayName = "Android Hilt configuration plugin"
             description = "Configures Hilt for an Android application or library"
-            implementationClass = "io.github.lyxnx.gradle.android.hilt.AndroidHiltConfigPlugin"
+            implementationClass = "io.github.lyxnx.gradle.android.catalogs.hilt.AndroidHiltConfigPlugin"
         }
 
         register("firebase-config") {
-            id = "io.github.lyxnx.android-firebase-config"
+            id = "io.github.lyxnx.gradle.android.firebase-config"
             displayName = "Android Firebase configuration plugin"
             description = "Configures Firebase for an Android application or library"
-            implementationClass = "io.github.lyxnx.gradle.android.firebase.AndroidFirebaseConfigPlugin"
+            implementationClass = "io.github.lyxnx.gradle.android.catalogs.firebase.AndroidFirebaseConfigPlugin"
         }
     }
 }
