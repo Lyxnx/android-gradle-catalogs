@@ -11,6 +11,7 @@ catalogs {
         "catalogs-compose-config",
         "catalogs-room-config",
         "catalogs-hilt-config",
-        "catalogs-firebase-config"
+        "catalogs-firebase-config",
+        "catalogs-androidplugins"
     )
 }
