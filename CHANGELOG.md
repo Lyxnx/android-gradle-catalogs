@@ -104,6 +104,16 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## 2023.09.12
+
+## Common
+
+- Update gradle cachefix plugin to 2.8.0
+
+### External
+
+- Remove RMR plugins
+
 ## 2023.09.10-1
 
 ### External
