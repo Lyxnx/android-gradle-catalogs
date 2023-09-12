@@ -11,13 +11,11 @@ if [[ $# -lt 1 ]]; then
   show_help
 fi
 
-properties_file="$(pwd)/gradle.properties"
+current_dir="$(pwd)"
+properties_file="$current_dir/gradle.properties"
+external_file="$current_dir/versions-external/libs.versions.toml"
 version="$1"
-
-# Will run validateCatalog task as part of build
-./gradlew clean build
 
 # Update the value in the properties file
 sed -i -E "s/CATALOGS_VERSION=.+/CATALOGS_VERSION=$version/g" "$properties_file"
-
-./gradlew publish
+sed -i -E "s/catalogs-plugins = \".+\"/catalogs-plugins = \"$version\"/g" "$external_file"
