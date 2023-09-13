@@ -39,10 +39,6 @@ public class AndroidComposeConfigPlugin : CatalogsBasePlugin() {
                 compose = true
             }
 
-            packaging {
-                resources.excludes.add("META-INF/*")
-            }
-
             composeOptions {
                 kotlinCompilerExtensionVersion = catalog.ensureVersion("compiler").toString()
             }
