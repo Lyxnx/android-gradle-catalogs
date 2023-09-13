@@ -9,7 +9,7 @@ lottie = "6.1.0"
 kotlinpoet = "1.14.2"
 kotpref = "2.13.2"
 
-catalogs-plugins = "2023.09.12"
+catalogs-plugins = "2023.09.13"
 kradle = "1.0.3"
 
 [libraries]
