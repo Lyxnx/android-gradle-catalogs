@@ -2,7 +2,7 @@
 android-gradle-plugin = "8.1.1"
 android-cache-fix-plugin = "2.8.0"
 
-google-gms-plugin = "4.3.15"
+google-gms-plugin = "4.4.0"
 gson = "2.10.1"
 
 hilt = "2.48"
