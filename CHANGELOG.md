@@ -112,7 +112,14 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## 2023.09.12
+## 2023.09.17
+
+### Common
+
+- Add protobuf plugin 
+- Add kotlinx serialization libraries and plugins
+
+## 2023.09.16
 
 ### Common
 
@@ -122,7 +129,7 @@
 
 - Update BOM to 32.3.1
 
-## 2023.09.12
+## 2023.09.13
 
 ### External
 
