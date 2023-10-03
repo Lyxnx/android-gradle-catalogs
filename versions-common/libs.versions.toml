@@ -5,7 +5,7 @@ android-cache-fix-plugin = "2.8.1"
 google-gms-plugin = "4.4.0"
 gson = "2.10.1"
 
-hilt = "2.48"
+hilt = "2.48.1"
 hilt-navigation = "1.0.0"
 hilt-work = "1.0.0"
 
