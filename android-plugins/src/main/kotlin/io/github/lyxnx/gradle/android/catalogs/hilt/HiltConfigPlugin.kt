@@ -14,7 +14,7 @@ import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.dependencies
 import javax.inject.Inject
 
-public class AndroidHiltConfigPlugin @Inject constructor(
+public class HiltConfigPlugin @Inject constructor(
     private val pluginRegistry: PluginRegistry,
 ) : CatalogsBasePlugin() {
 

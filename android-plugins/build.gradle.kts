@@ -70,28 +70,28 @@ gradlePlugin {
             id = "io.github.lyxnx.gradle.android.room-config"
             displayName = "Android Room configuration plugin"
             description = "Configures RoomDB for an Android application or library"
-            implementationClass = "io.github.lyxnx.gradle.android.catalogs.room.AndroidRoomConfigPlugin"
+            implementationClass = "io.github.lyxnx.gradle.android.catalogs.room.RoomConfigPlugin"
         }
 
         register("compose-config") {
             id = "io.github.lyxnx.gradle.android.compose-config"
             displayName = "Android Compose configuration plugin"
             description = "Configures Compose for an Android application or library"
-            implementationClass = "io.github.lyxnx.gradle.android.catalogs.compose.AndroidComposeConfigPlugin"
+            implementationClass = "io.github.lyxnx.gradle.android.catalogs.compose.ComposeConfigPlugin"
         }
 
         register("hilt-config") {
             id = "io.github.lyxnx.gradle.android.hilt-config"
             displayName = "Android Hilt configuration plugin"
             description = "Configures Hilt for an Android application or library"
-            implementationClass = "io.github.lyxnx.gradle.android.catalogs.hilt.AndroidHiltConfigPlugin"
+            implementationClass = "io.github.lyxnx.gradle.android.catalogs.hilt.HiltConfigPlugin"
         }
 
         register("firebase-config") {
             id = "io.github.lyxnx.gradle.android.firebase-config"
             displayName = "Android Firebase configuration plugin"
             description = "Configures Firebase for an Android application or library"
-            implementationClass = "io.github.lyxnx.gradle.android.catalogs.firebase.AndroidFirebaseConfigPlugin"
+            implementationClass = "io.github.lyxnx.gradle.android.catalogs.firebase.FirebaseConfigPlugin"
         }
     }
 }

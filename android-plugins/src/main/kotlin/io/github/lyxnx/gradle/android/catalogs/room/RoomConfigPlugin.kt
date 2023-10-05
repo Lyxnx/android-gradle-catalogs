@@ -23,7 +23,7 @@ import org.gradle.process.CommandLineArgumentProvider
 import java.io.File
 import javax.inject.Inject
 
-public class AndroidRoomConfigPlugin @Inject constructor(
+public class RoomConfigPlugin @Inject constructor(
     private val pluginRegistry: PluginRegistry,
 ) : CatalogsBasePlugin() {
 

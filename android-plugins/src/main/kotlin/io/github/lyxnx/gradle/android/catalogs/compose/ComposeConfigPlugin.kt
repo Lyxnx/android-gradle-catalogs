@@ -12,7 +12,7 @@ import io.github.lyxnx.gradle.android.catalogs.internal.android
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
 
-public class AndroidComposeConfigPlugin : CatalogsBasePlugin() {
+public class ComposeConfigPlugin : CatalogsBasePlugin() {
 
     override fun Project.configureCatalogPlugin() {
         val catalog = composeCatalog

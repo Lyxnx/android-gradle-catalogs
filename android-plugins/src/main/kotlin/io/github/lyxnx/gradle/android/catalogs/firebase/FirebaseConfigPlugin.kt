@@ -12,7 +12,7 @@ import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.dependencies
 import javax.inject.Inject
 
-public class AndroidFirebaseConfigPlugin @Inject constructor(
+public class FirebaseConfigPlugin @Inject constructor(
     private val pluginRegistry: PluginRegistry,
 ) : CatalogsBasePlugin() {
 
