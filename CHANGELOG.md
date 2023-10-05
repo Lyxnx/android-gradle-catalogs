@@ -3,122 +3,149 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [2023.09.29](#20230929)
+- [2023.10.05](#20231005)
+  - [AndroidX](#androidx)
   - [Common](#common)
   - [Compose](#compose)
-- [2023.09.20](#20230920)
-  - [AndroidX](#androidx)
-  - [Compose](#compose-1)
-- [2023.09.17](#20230917)
+  - [Plugins](#plugins)
+- [2023.09.29](#20230929)
   - [Common](#common-1)
-- [2023.09.16](#20230916)
+  - [Compose](#compose-1)
+- [2023.09.20](#20230920)
+  - [AndroidX](#androidx-1)
+  - [Compose](#compose-2)
+- [2023.09.17](#20230917)
   - [Common](#common-2)
+- [2023.09.16](#20230916)
+  - [Common](#common-3)
   - [Firebase](#firebase)
 - [2023.09.13](#20230913)
   - [External](#external)
 - [2023.09.12](#20230912)
-- [Common](#common-3)
+- [Common](#common-4)
   - [External](#external-1)
 - [2023.09.10-1](#20230910-1)
   - [External](#external-2)
 - [2023.09.10](#20230910)
-  - [Common](#common-4)
+  - [Common](#common-5)
   - [External](#external-3)
 - [2023.09.09](#20230909)
-  - [AndroidX](#androidx-1)
-  - [Common](#common-5)
-  - [Compose](#compose-2)
-- [2023.08.29](#20230829)
-  - [Compose](#compose-3)
-- [2023.08.24](#20230824)
   - [AndroidX](#androidx-2)
-  - [Accompanist](#accompanist)
   - [Common](#common-6)
+  - [Compose](#compose-3)
+- [2023.08.29](#20230829)
   - [Compose](#compose-4)
+- [2023.08.24](#20230824)
+  - [AndroidX](#androidx-3)
+  - [Accompanist](#accompanist)
+  - [Common](#common-7)
+  - [Compose](#compose-5)
   - [External](#external-4)
   - [Firebase](#firebase-1)
 - [2023.08.19](#20230819)
-  - [AndroidX](#androidx-3)
-  - [Common](#common-7)
-- [2023.08.12](#20230812)
+  - [AndroidX](#androidx-4)
   - [Common](#common-8)
+- [2023.08.12](#20230812)
+  - [Common](#common-9)
   - [External](#external-5)
 - [2023.08.11](#20230811)
-  - [AndroidX](#androidx-4)
-- [Common](#common-9)
-  - [Compose](#compose-5)
-- [2023.08.02](#20230802)
-  - [Common](#common-10)
-- [2023.07.27](#20230727)
   - [AndroidX](#androidx-5)
-  - [Common](#common-11)
+- [Common](#common-10)
   - [Compose](#compose-6)
-- [2023.07.22](#20230722)
-  - [Common](#common-12)
-- [2023.07.20](#20230720)
+- [2023.08.02](#20230802)
+  - [Common](#common-11)
+- [2023.07.27](#20230727)
   - [AndroidX](#androidx-6)
-  - [Common](#common-13)
+  - [Common](#common-12)
   - [Compose](#compose-7)
-  - [Firebase](#firebase-2)
-- [2023.06.30](#20230630)
+- [2023.07.22](#20230722)
+  - [Common](#common-13)
+- [2023.07.20](#20230720)
+  - [AndroidX](#androidx-7)
   - [Common](#common-14)
   - [Compose](#compose-8)
-- [2023.06.26](#20230626)
-  - [AndroidX](#androidx-7)
+  - [Firebase](#firebase-2)
+- [2023.06.30](#20230630)
   - [Common](#common-15)
   - [Compose](#compose-9)
-  - [Firebase](#firebase-3)
-- [2023.06.08](#20230608)
+- [2023.06.26](#20230626)
   - [AndroidX](#androidx-8)
   - [Common](#common-16)
   - [Compose](#compose-10)
-  - [Firebase](#firebase-4)
-- [2023.05.25](#20230525)
+  - [Firebase](#firebase-3)
+- [2023.06.08](#20230608)
   - [AndroidX](#androidx-9)
   - [Common](#common-17)
-- [2023.05.22](#20230522)
+  - [Compose](#compose-11)
+  - [Firebase](#firebase-4)
+- [2023.05.25](#20230525)
   - [AndroidX](#androidx-10)
   - [Common](#common-18)
-  - [Compose](#compose-11)
-- [2023.05.05](#20230505)
-  - [Common](#common-19)
-- [2023.05.04](#20230504)
+- [2023.05.22](#20230522)
   - [AndroidX](#androidx-11)
-  - [Common](#common-20)
+  - [Common](#common-19)
   - [Compose](#compose-12)
-  - [Firebase](#firebase-5)
-- [2023.05.01](#20230501)
+- [2023.05.05](#20230505)
+  - [Common](#common-20)
+- [2023.05.04](#20230504)
   - [AndroidX](#androidx-12)
   - [Common](#common-21)
   - [Compose](#compose-13)
-- [2023.04.20](#20230420)
-  - [Accompanist](#accompanist-1)
+  - [Firebase](#firebase-5)
+- [2023.05.01](#20230501)
   - [AndroidX](#androidx-13)
   - [Common](#common-22)
+  - [Compose](#compose-14)
+- [2023.04.20](#20230420)
+  - [Accompanist](#accompanist-1)
+  - [AndroidX](#androidx-14)
+  - [Common](#common-23)
   - [Firebase](#firebase-6)
 - [2023.04.07](#20230407)
-  - [Common](#common-23)
+  - [Common](#common-24)
 - [2023.04.05](#20230405)
   - [Accompanist](#accompanist-2)
-  - [AndroidX](#androidx-14)
-  - [Compose](#compose-14)
+  - [AndroidX](#androidx-15)
+  - [Compose](#compose-15)
 - [2023.04.03](#20230403)
-  - [Common](#common-24)
-- [2023.03.30](#20230330)
   - [Common](#common-25)
+- [2023.03.30](#20230330)
+  - [Common](#common-26)
   - [Firebase](#firebase-7)
 - [2023.03.26](#20230326)
   - [Accompanist](#accompanist-3)
-  - [Common](#common-26)
+  - [Common](#common-27)
   - [Firebase](#firebase-8)
 - [2023.03.22](#20230322)
-  - [AndroidX](#androidx-15)
-  - [Compose](#compose-15)
+  - [AndroidX](#androidx-16)
+  - [Compose](#compose-16)
 - [2023.03.21](#20230321)
-  - [Common](#common-27)
+  - [Common](#common-28)
 - [2023.03.16](#20230316)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## 2023.10.05
+
+### AndroidX
+
+- Update collection to 1.3.0
+- Update activity to 1.8.0
+- Update navigation to 2.7.4
+
+### Common
+
+- Update material to 1.10.0
+- Update hilt-android-compiler to 2.48.1
+
+### Compose
+
+- Update BOM to 2023.10.00
+
+### Plugins
+
+- Add compose-compiler-config plugin that allows configuring just the compiler and includes the runtime dependency which
+  could be used for modules that only require certain things like @Immutable or @Stable
 
 ## 2023.09.29
 
@@ -147,7 +174,7 @@
 
 ### Common
 
-- Add protobuf plugin 
+- Add protobuf plugin
 - Add kotlinx serialization libraries and plugins
 
 ## 2023.09.16
@@ -155,7 +182,8 @@
 ### Common
 
 - Update Google GMS plugin to 4.4.0
-- 
+-
+
 ### Firebase
 
 - Update BOM to 32.3.1
