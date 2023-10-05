@@ -23,3 +23,11 @@ internal fun Project.findCatalog(name: String): VersionCatalog {
         )
     }
 }
+
+internal fun Project.findStringProperty(name: String): String? {
+    return providers.gradleProperty(name).orNull
+}
+
+internal fun Project.findBooleanProperty(name: String): Boolean? {
+    return findStringProperty(name)?.toBoolean()
+}

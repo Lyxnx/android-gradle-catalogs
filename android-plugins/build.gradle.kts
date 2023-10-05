@@ -10,6 +10,7 @@ plugins {
 
 dependencies {
     compileOnly(common.android.gradleplugin)
+    compileOnly(common.kotlin.gradleplugin)
     compileOnly(common.ksp.gradleplugin)
 }
 
@@ -78,6 +79,13 @@ gradlePlugin {
             displayName = "Android Compose configuration plugin"
             description = "Configures Compose for an Android application or library"
             implementationClass = "io.github.lyxnx.gradle.android.catalogs.compose.ComposeConfigPlugin"
+        }
+
+        register("compose-compiler-config") {
+            id = "io.github.lyxnx.gradle.android.compose-compiler-config"
+            displayName = "Android Compose compiler configuration plugin"
+            description = "Configures the Compose compiler for an Android application or library"
+            implementationClass = "io.github.lyxnx.gradle.android.catalogs.compose.ComposeCompilerConfigPlugin"
         }
 
         register("hilt-config") {

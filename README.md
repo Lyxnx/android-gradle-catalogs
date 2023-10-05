@@ -13,15 +13,14 @@ Version catalogs and plugins to help reduce boilerplate in Android Gradle build 
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Version Catalogs](#version-catalogs)
-    - [Using](#using)
-    - [Updating](#updating)
+  - [Using](#using)
+  - [Updating](#updating)
 - [Plugins](#plugins)
-    - [Catalogs Config](#catalogs-config)
-    - [Compose Config](#compose-config)
-    - [Room Config](#room-config)
-        - [Configuring](#configuring)
-    - [Hilt Config](#hilt-config)
-    - [Firebase Config](#firebase-config)
+  - [Compose Config](#compose-config)
+  - [Room Config](#room-config)
+    - [Configuring](#configuring)
+  - [Hilt Config](#hilt-config)
+  - [Firebase Config](#firebase-config)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -156,6 +155,33 @@ This plugin applies Jetpack Compose configuration options to the application or 
 3. Adds the compose BOM for versioning to the dependencies
 4. Adds the compose runtime, ui, foundation, and tooling preview dependencies
 5. Sets up the dependencies for UI tests
+
+This plugin also adds the ability to generate compose compiler reports and compiler metrics by specifying a property in
+a project's properties file, or on the command line for a singular task:
+
+**For a singular task:**
+
+For compiler reports:
+`./gradlew :mymodule:assembleRelease -Pcatalogs.composeCompilerReports`
+
+or for metrics:
+`./gradlew :mymodule:assembleRelease -Pcatalogs.composeCompilerMetrics`
+
+Alternatively, both can be combined to generate both types, although compiler reports are much more useful than the
+metrics.
+
+**For a module:**
+
+To use in a singular module place the properties in each module's `gradle.properties` file or the global file to apply
+to all modules.
+
+In either way, the report/metric output directory can be configured using the `catalogs.composeCompilerReportsDir`
+property.
+
+Note that this property is relative to the current module. So placing it in the global properties file will
+result in that path being relative to the current module in the build process.
+
+If not given, it will default to `<current module>/build/compose-compiler-reports`
 
 ### Room Config
 

@@ -10,18 +10,21 @@ import io.github.lyxnx.gradle.android.catalogs.internal.implementation
 import io.github.lyxnx.gradle.android.catalogs.internal.AndroidCommonExtension
 import io.github.lyxnx.gradle.android.catalogs.internal.android
 import org.gradle.api.Project
+import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.dependencies
 
 public class ComposeConfigPlugin : CatalogsBasePlugin() {
 
     override fun Project.configureCatalogPlugin() {
+        plugins.apply(ComposeCompilerConfigPlugin::class)
+
         val catalog = composeCatalog
 
         dependencies {
             val bom = catalog.ensureLibrary("bom")
             implementation(platform(bom))
 
-            implementation(catalog.ensureLibrary("runtime"))
+            // Compiler config plugin already adds the runtime library
             implementation(catalog.ensureLibrary("ui"))
             implementation(catalog.ensureLibrary("foundation"))
             implementation(catalog.ensureLibrary("foundation.layout"))
