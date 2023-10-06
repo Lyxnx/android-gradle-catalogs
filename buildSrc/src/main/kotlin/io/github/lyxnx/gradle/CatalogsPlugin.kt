@@ -19,8 +19,9 @@ import org.gradle.language.base.plugins.LifecycleBasePlugin
 class CatalogsPlugin : Plugin<Project> {
 
     companion object {
-        const val GROUP_PROPERTY = "CATALOGS_GROUP"
-        const val VERSION_PROPERTY = "CATALOGS_VERSION"
+        const val PROP_GROUP = "catalogs.group"
+        const val PROP_VERSION = "catalogs.version"
+        const val PROP_SIGN_PUBLICATIONS = "catalogs.sign-publications"
     }
 
     override fun apply(target: Project) = with(target) {
@@ -32,9 +33,9 @@ class CatalogsPlugin : Plugin<Project> {
 
         val extension = extensions.create(CatalogsExtension.NAME, CatalogsExtension::class)
 
-        group = findStringProperty(GROUP_PROPERTY) ?: error("$GROUP_PROPERTY can not be found. Make sure it is set")
+        group = findStringProperty(PROP_GROUP) ?: error("$PROP_GROUP cannot be found. Make sure it is set")
         version =
-            findStringProperty(VERSION_PROPERTY) ?: error("$VERSION_PROPERTY can not be found. Make sure it is set")
+            findStringProperty(PROP_VERSION) ?: error("$PROP_VERSION cannot be found. Make sure it is set")
 
         configureMavenPublish()
 
@@ -50,11 +51,16 @@ class CatalogsPlugin : Plugin<Project> {
         val projectName = this.name
         val projectVersion = this.version.toString()
 
+        val signPublications = propertyOrNull(PROP_SIGN_PUBLICATIONS)?.toString()?.toBoolean() ?: true
+
         extension.apply {
             coordinates(projectGroup, projectName, projectVersion)
 
             publishToMavenCentral(SonatypeHost.Companion.S01, true)
-            signAllPublications()
+
+            if (signPublications) {
+                signAllPublications()
+            }
 
             pom {
                 name.set(projectName)
