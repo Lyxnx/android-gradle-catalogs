@@ -1,6 +1,6 @@
 [versions]
 
-catalogs-plugins = "2023.10.05"
+catalogs-plugins = "2023.10.06"
 coil = "2.4.0"
 composeicons = "1.1.0"
 
@@ -59,6 +59,7 @@ kradle-android-library = { id = "io.github.lyxnx.gradle.android-library", versio
 kradle-kotlin-config = { id = "io.github.lyxnx.gradle.kotlin-config", version.ref = "kradle" }
 kradle-kotlin-library = { id = "io.github.lyxnx.gradle.kotlin-library", version.ref = "kradle" }
 
+catalogs-compose-compiler-config = { id = "io.github.lyxnx.gradle.android.compose-compiler-config", version.ref = "catalogs-plugins" }
 catalogs-compose-config = { id = "io.github.lyxnx.gradle.android.compose-config", version.ref = "catalogs-plugins" }
 catalogs-firebase-config = { id = "io.github.lyxnx.gradle.android.firebase-config", version.ref = "catalogs-plugins" }
 catalogs-hilt-config = { id = "io.github.lyxnx.gradle.android.hilt-config", version.ref = "catalogs-plugins" }

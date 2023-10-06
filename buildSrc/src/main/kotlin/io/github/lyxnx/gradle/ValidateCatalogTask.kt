@@ -2,6 +2,8 @@ package io.github.lyxnx.gradle
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.artifacts.Configuration
+import org.gradle.api.artifacts.ResolvedConfiguration
+import org.gradle.api.artifacts.ResolvedDependency
 import org.gradle.api.attributes.Usage
 import org.gradle.api.internal.catalog.DefaultVersionCatalog
 import org.gradle.api.internal.catalog.DependencyModel
@@ -30,20 +32,32 @@ abstract class ValidateCatalogTask : DefaultTask() {
     fun validate() {
         val catalog = dependenciesModel.get()
 
-        val configuration = createConfiguration()
-        configuration.addLibraries(catalog)
-        configuration.addPlugins(catalog)
+        val mapNames = { it: ResolvedDependency -> "- ${it.name}" }
 
-        logger.info("Resolved dependencies:")
-        configuration.resolvedConfiguration
-            .firstLevelModuleDependencies
-            .forEach { logger.info("- ${it.name}") }
+        logger.lifecycle("Resolved libraries:")
+        resolveLibraries(catalog).map(mapNames).forEach(logger::lifecycle)
 
-        catalog.checkVersionsUsed()
+
+        val plugins = resolvePlugins(catalog).map(mapNames)
+
+        logger.lifecycle("")
+
+        if (plugins.isNotEmpty()) {
+            logger.lifecycle("Resolved plugins:")
+            plugins.forEach(logger::lifecycle)
+        }
+
+        catalog.getUnusedVersions().let {
+            if (it.isNotEmpty()) {
+                logger.warn("")
+                logger.warn("The following versions are unused:")
+                it.forEach { logger.warn("- $it") }
+            }
+        }
     }
 
-    private fun createConfiguration(): Configuration {
-        return project.configurations.create(CONFIGURATION_NAME) {
+    private fun createConfiguration(name: String): Configuration {
+        return project.configurations.create(name) {
             isTransitive = false
             isCanBeResolved = true
 
@@ -56,6 +70,18 @@ abstract class ValidateCatalogTask : DefaultTask() {
             }
         }
     }
+
+    private fun resolveConfiguration(name: String, block: Configuration.() -> Unit): ResolvedConfiguration =
+        createConfiguration(name).apply(block).resolvedConfiguration
+
+    private fun resolveLibraries(catalog: DefaultVersionCatalog): List<ResolvedDependency> =
+        resolveConfiguration(LIBS_CONFIGURATION_NAME) { addLibraries(catalog) }.sortDependencies()
+
+    private fun resolvePlugins(catalog: DefaultVersionCatalog): List<ResolvedDependency> =
+        resolveConfiguration(PLUGINS_CONFIGURATION_NAME) { addPlugins(catalog) }.sortDependencies()
+
+    private fun ResolvedConfiguration.sortDependencies(): List<ResolvedDependency> =
+        firstLevelModuleDependencies.sortedBy { it.name }
 
     private fun Configuration.addLibraries(catalog: DefaultVersionCatalog) {
         for ((alias, lib) in catalog.libraries) {
@@ -87,16 +113,17 @@ abstract class ValidateCatalogTask : DefaultTask() {
         }
     }
 
-    private fun DefaultVersionCatalog.checkVersionsUsed() {
-        val librariesVersions = libraries.map { it.library.versionRef }.toSet()
-        val pluginsVersions = plugins.map { it.plugin.versionRef }.toSet()
-        val unusedVersions = versionAliases - librariesVersions - pluginsVersions
+    private fun DefaultVersionCatalog.getUnusedVersions(): List<String> {
+        val librariesVersions = libraries.mapNotNull { it.library.versionRef }.toSet()
+        val pluginsVersions = plugins.mapNotNull { it.plugin.versionRef }.toSet()
 
-        if (unusedVersions.isNotEmpty()) logger.warn("[WARNING] These versions are unused: $unusedVersions")
+        return versionAliases - librariesVersions - pluginsVersions
     }
 
     companion object {
-        const val CONFIGURATION_NAME = "libraries"
+        const val LIBS_CONFIGURATION_NAME = "libraries"
+        const val PLUGINS_CONFIGURATION_NAME = "plugins"
+
         const val NAME = "validateCatalog"
     }
 }
