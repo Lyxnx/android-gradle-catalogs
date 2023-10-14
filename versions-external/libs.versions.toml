@@ -8,7 +8,7 @@ glide = "4.16.0"
 
 kotlinpoet = "1.14.2"
 kotpref = "2.13.2"
-kradle = "1.0.3"
+kradle = "1.0.4"
 
 lottie = "6.1.0"
 
