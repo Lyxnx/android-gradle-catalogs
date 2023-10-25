@@ -8,7 +8,7 @@ glide = "4.16.0"
 
 kotlinpoet = "1.14.2"
 kotpref = "2.13.2"
-kradle = "1.0.4"
+kradle = "1.0.5"
 
 lottie = "6.1.0"
 
@@ -47,6 +47,7 @@ kotpref-preferencescreendsl = { module = "com.chibatching.kotpref:preference-scr
 kradle-plugin-android = { module = "io.github.lyxnx.gradle:plugin-android", version.ref = "kradle" }
 kradle-plugin-common = { module = "io.github.lyxnx.gradle:plugin-common", version.ref = "kradle" }
 kradle-plugin-kotlin = { module = "io.github.lyxnx.gradle:plugin-kotlin", version.ref = "kradle" }
+kradle-plugin-publishing = { module = "io.github.lyxnx.gradle:plugin-publish", version.ref = "kradle" }
 
 lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
 lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
@@ -58,6 +59,8 @@ kradle-android-library = { id = "io.github.lyxnx.gradle.android-library", versio
 
 kradle-kotlin-config = { id = "io.github.lyxnx.gradle.kotlin-config", version.ref = "kradle" }
 kradle-kotlin-library = { id = "io.github.lyxnx.gradle.kotlin-library", version.ref = "kradle" }
+
+kradle-publishing = { id = "io.github.lyxnx.gradle.publishing", version.ref = "kradle" }
 
 catalogs-compose-compiler-config = { id = "io.github.lyxnx.gradle.android.compose-compiler-config", version.ref = "catalogs-plugins" }
 catalogs-compose-config = { id = "io.github.lyxnx.gradle.android.compose-config", version.ref = "catalogs-plugins" }
