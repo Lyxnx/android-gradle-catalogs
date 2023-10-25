@@ -3,15 +3,18 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [2023.10.25](#20231025)
+  - [AndroidX & Common](#androidx--common)
+  - [External](#external)
 - [2023.10.19](#20231019)
   - [AndroidX](#androidx)
   - [Common](#common)
   - [Compose](#compose)
-  - [External](#external)
+  - [External](#external-1)
   - [Firebase](#firebase)
 - [2023.10.06](#20231006)
   - [Common](#common-1)
-  - [External](#external-1)
+  - [External](#external-2)
 - [2023.10.05](#20231005)
   - [AndroidX](#androidx-1)
   - [Common](#common-2)
@@ -29,15 +32,15 @@
   - [Common](#common-5)
   - [Firebase](#firebase-1)
 - [2023.09.13](#20230913)
-  - [External](#external-2)
+  - [External](#external-3)
 - [2023.09.12](#20230912)
 - [Common](#common-6)
-  - [External](#external-3)
-- [2023.09.10-1](#20230910-1)
   - [External](#external-4)
+- [2023.09.10-1](#20230910-1)
+  - [External](#external-5)
 - [2023.09.10](#20230910)
   - [Common](#common-7)
-  - [External](#external-5)
+  - [External](#external-6)
 - [2023.09.09](#20230909)
   - [AndroidX](#androidx-3)
   - [Common](#common-8)
@@ -49,14 +52,14 @@
   - [Accompanist](#accompanist)
   - [Common](#common-9)
   - [Compose](#compose-6)
-  - [External](#external-6)
+  - [External](#external-7)
   - [Firebase](#firebase-2)
 - [2023.08.19](#20230819)
   - [AndroidX](#androidx-5)
   - [Common](#common-10)
 - [2023.08.12](#20230812)
   - [Common](#common-11)
-  - [External](#external-7)
+  - [External](#external-8)
 - [2023.08.11](#20230811)
   - [AndroidX](#androidx-6)
 - [Common](#common-12)
@@ -133,6 +136,16 @@
 - [2023.03.16](#20230316)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## 2023.10.25
+
+### AndroidX & Common
+
+- Move Hilt dependencies from common to androidx catalog
+
+### External
+
+- Refactor hilt plugin to KSP and KAPT version
 
 ## 2023.10.19
 
