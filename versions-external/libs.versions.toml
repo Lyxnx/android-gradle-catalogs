@@ -32,7 +32,8 @@ composeicons-tablericons = { module = "br.com.devsrsouza.compose.icons:tabler-ic
 composeicons-weathericons = { module = "br.com.devsrsouza.compose.icons:erikflowers-weather-icons", version.ref = "composeicons" }
 
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
-glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+glide-compiler-kapt = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+glide-compiler-ksp = { module = "com.github.bumptech.glide:ksp", version.ref = "glide" }
 
 kotlinpoet = { module = "com.squareup:kotlinpoet", version.ref = "kotlinpoet" }
 kotlinpoet-ksp = { module = "com.squareup:kotlinpoet-ksp", version.ref = "kotlinpoet" }
