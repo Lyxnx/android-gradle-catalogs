@@ -88,11 +88,18 @@ gradlePlugin {
             implementationClass = "io.github.lyxnx.gradle.android.catalogs.compose.ComposeCompilerConfigPlugin"
         }
 
-        register("hilt-config") {
-            id = "io.github.lyxnx.gradle.android.hilt-config"
-            displayName = "Android Hilt configuration plugin"
-            description = "Configures Hilt for an Android application or library"
-            implementationClass = "io.github.lyxnx.gradle.android.catalogs.hilt.HiltConfigPlugin"
+        register("hilt-config-ksp") {
+            id = "io.github.lyxnx.gradle.android.hilt-config-ksp"
+            displayName = "Android Hilt configuration plugin using KSP"
+            description = "Configures Hilt for an Android application or library using KSP"
+            implementationClass = "io.github.lyxnx.gradle.android.catalogs.hilt.HiltKSPConfigPlugin"
+        }
+
+        register("hilt-config-kapt") {
+            id = "io.github.lyxnx.gradle.android.hilt-config-kapt"
+            displayName = "Android Hilt configuration plugin using KAPT"
+            description = "Configures Hilt for an Android application or library using KAPT"
+            implementationClass = "io.github.lyxnx.gradle.android.catalogs.hilt.HiltKAPTConfigPlugin"
         }
 
         register("firebase-config") {
