@@ -6,8 +6,6 @@ google-gms-plugin = "4.4.0"
 gson = "2.10.1"
 
 hilt = "2.48.1"
-hilt-navigation = "1.0.0"
-hilt-work = "1.0.0"
 
 junit4 = "4.13.2"
 
@@ -37,10 +35,6 @@ gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 
 hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
-hilt-navigation = { module = "androidx.hilt:hilt-navigation", version.ref = "hilt-navigation" }
-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt-navigation" }
-hilt-navigation-fragment = { module = "androidx.hilt:hilt-navigation-fragment", version.ref = "hilt-navigation" }
-hilt-work = { module = "androidx.hilt:hilt-work", version.ref = "hilt-work" }
 
 junit4 = { module = "junit:junit", version.ref = "junit4" }
 

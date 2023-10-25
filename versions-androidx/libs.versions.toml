@@ -36,6 +36,7 @@ exifinterface = "1.3.6"
 fragment = "1.6.1"
 games = "2.0.2"
 gridlayout = "1.0.0"
+hilt = "1.0.0"
 interpolator = "1.0.0"
 leanback = "1.0.0"
 legacy = "1.0.0"
@@ -183,6 +184,13 @@ fragment-testing = { module = "androidx.fragment:fragment-testing", version.ref 
 games-activity = { module = "androidx.games:games-activity", version.ref = "games" }
 
 gridlayout = { module = "androidx.gridlayout:gridlayout", version.ref = "gridlayout" }
+
+hilt-common = { module = "androidx.hilt:hilt-common", version.ref = "hilt" }
+hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "hilt" }
+hilt-work = { module = "androidx.hilt:hilt-work", version.ref = "hilt" }
+hilt-navigation = { module = "androidx.hilt:hilt-navigation", version.ref = "hilt" }
+hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt" }
+hilt-navigation-fragment = { module = "androidx.hilt:hilt-navigation-fragment", version.ref = "hilt" }
 
 interpolator = { module = "androidx.interpolator:interpolator", version.ref = "interpolator" }
 
