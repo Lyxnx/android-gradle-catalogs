@@ -38,6 +38,7 @@ This repo contains some useful gradle version catalogs specific to Android:
 | [Compose](versions-compose/libs.versions.toml)         | Jetpack Compose artifacts (including the BOM) - useful with the compose config plugin below     |
 | [Accompanist](versions-accompanist/libs.versions.toml) | Google Accompanist Compose artifacts (including the BOM)                                        |
 | [Firebase](versions-firebase/libs.versions.toml)       | Firebase artifacts (including the BOM) - useful with the firebase config plugin below           |
+| [External](versions-external/libs.versions.toml)       | Artifacts that aren't standard Android but are third party                                      |
 
 ### Using
 
