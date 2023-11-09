@@ -6,6 +6,8 @@ composeicons = "1.1.0"
 
 glide = "4.16.0"
 
+javapoet = "1.13.0"
+
 kotlinpoet = "1.14.2"
 kotpref = "2.13.2"
 kradle = "1.0.5"
@@ -34,6 +36,8 @@ composeicons-weathericons = { module = "br.com.devsrsouza.compose.icons:erikflow
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 glide-compiler-kapt = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
 glide-compiler-ksp = { module = "com.github.bumptech.glide:ksp", version.ref = "glide" }
+
+javapoet = { module = "com.squareup:javapoet", version.ref = "javapoet" }
 
 kotlinpoet = { module = "com.squareup:kotlinpoet", version.ref = "kotlinpoet" }
 kotlinpoet-ksp = { module = "com.squareup:kotlinpoet-ksp", version.ref = "kotlinpoet" }
