@@ -15,7 +15,7 @@ kotpref = "2.13.2"
 kradle = "1.0.7"
 
 landscapist = "2.2.12"
-lottie = "6.1.0"
+lottie = "6.2.0"
 
 [libraries]
 catalogs-androidplugins = { module = "io.github.lyxnx.gradle.android:android-plugins", version.ref = "catalogs-plugins" }
