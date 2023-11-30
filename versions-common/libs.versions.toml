@@ -14,7 +14,7 @@ junit5 = "5.10.1"
 kotlin = "1.9.21"
 kotlinx-collections = "0.3.6"
 kotlinx-coroutines = "1.7.3"
-kotlinx-serialization = "1.6.1"
+kotlinx-serialization = "1.6.2"
 ksp = "1.9.21-1.0.15"
 
 material = "1.10.0"
