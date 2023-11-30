@@ -85,7 +85,7 @@ wear-compose = "1.2.1"
 wear-protolayout = "1.0.0"
 wear-tiles = "1.2.0"
 wear-watchface = "1.2.0"
-webkit = "1.8.0"
+webkit = "1.9.0"
 window = "1.2.0"
 work = "2.9.0"
 
