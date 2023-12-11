@@ -58,7 +58,7 @@ dependencyResolutionManagement {
 }
 ```
 
-The gradle catalogs are publishing in the Maven Central repo, so only the standard `mavenCentral()` definition in the
+The gradle catalogs are published to the Maven Central repo, so only the standard `mavenCentral()` definition in the
 repositories block is required
 
 For the common catalog, it would be as follows, replacing `versions-common` with any of the required version names:
@@ -142,7 +142,7 @@ or `com.android.library` plugin to be added to the module, depending on the modu
 Since the following plugins apply other plugins and dependencies from the version catalogs, they need to know what each
 catalog is called. This can however be customised from the `gradle.properties` file:
 
-*Note* that these are the default values, so if customisation is not required, these properties can be omitted
+*Note that these are the default values, so if customisation is not required, these properties can be omitted*
 
 ```properties
 catalogs.commonCatalogName=common
@@ -211,16 +211,10 @@ import io.github.lyxnx.gradle.android.catalogs.room.roomSchemaDir
 roomSchemaDir(file("somewhere/schema_dir"))
 // OR
 roomSchemaDir("somewhere/schema_dir")
-
-androidCatalogPlugins {
-    roomConfig {
-        schemaDir.set(file("somewhere/schema_dir"))
-    }
-}
 ```
 
 Note that this file is relative to the current build script.
-The above would result in the schema directory being `app/somewhere/schema_dir`
+The above would result in the schema directory being `app/somewhere/schema_dir` for the `:app` module
 
 ### Hilt Config
 
