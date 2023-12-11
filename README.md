@@ -13,17 +13,15 @@ Version catalogs and plugins to help reduce boilerplate in Android Gradle build 
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Version Catalogs](#version-catalogs)
-    - [Using](#using)
-    - [Updating](#updating)
+  - [Using](#using)
+  - [Updating](#updating)
 - [Plugins](#plugins)
-    - [Customising Catalog Names](#customising-catalog-names)
-    - [Compose Config](#compose-config)
-    - [Room Config](#room-config)
-        - [Configuring](#configuring)
-    - [Hilt Config](#hilt-config)
-        - [KSP](#ksp)
-        - [KAPT](#kapt)
-    - [Firebase Config](#firebase-config)
+  - [Customising Catalog Names](#customising-catalog-names)
+  - [Compose Config](#compose-config)
+  - [Room Config](#room-config)
+    - [Configuring](#configuring)
+  - [Hilt Config](#hilt-config)
+  - [Firebase Config](#firebase-config)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -128,8 +126,7 @@ Ensure each required plugin is referenced in the root build file, but not applie
 plugins {
     id("io.github.lyxnx.android.compose-config") version "<version>" apply false
     id("io.github.lyxnx.android.room-config") version "<version>" apply false
-    id("io.github.lyxnx.android.hilt-config-ksp") version "<version>" apply false
-    id("io.github.lyxnx.android.hilt-config-kapt") version "<version>" apply false
+    id("io.github.lyxnx.android.hilt-config") version "<version>" apply false
     id("io.github.lyxnx.android.firebase-config") version "<version>" apply false
 }
 ```
@@ -218,27 +215,14 @@ The above would result in the schema directory being `app/somewhere/schema_dir` 
 
 ### Hilt Config
 
-Starting from Dagger 2.48, KSP support was added and as such, this plugin comes in 2 forms: a KAPT version and a KSP
-version.
+KSP support was added to Dagger in version 2.48 (catalog 2023.09.09 onwards). This plugin used to come with a KAPT version, 
+but has been removed due to KSP being more performant.
 
-Both versions require the [Dagger Hilt](https://dagger.dev/hilt/gradle-setup.html) (ID `dagger.hilt.android.plugin`)
-plugin to be applied, and both versions will add the android hilt library from the `common` catalog to the dependencies
-
-#### KSP
-
-This is the recommended way to apply this plugin as KAPT is up to 2x slower than KSP, but for the time being does
-require use of alpha/beta versions of Hilt
+This plugin will require the [Dagger Hilt](https://dagger.dev/hilt/gradle-setup.html) (ID `dagger.hilt.android.plugin`)
+plugin to be applied, and will add the android hilt library from the `common` catalog to the dependencies
 
 To use, make sure the [KSP](https://github.com/google/ksp) (ID `com.google.devtools.ksp`) plugin is applied, and then
 apply this plugin.
-
-#### KAPT
-
-> :warning: This plugin should not be used unless KSP is not an option as KAPT is much slower and is currently in
-> maintenance mode
-
-To use, make sure the [KAPT](https://kotlinlang.org/docs/kapt.html) (ID `org.jetbrains.kotlin.kapt`) plugin is applied,
-and then apply this plugin.
 
 ### Firebase Config
 
