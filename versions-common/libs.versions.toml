@@ -6,7 +6,7 @@ android-cache-fix-plugin = "3.0"
 google-gms-plugin = "4.4.0"
 gson = "2.10.1"
 
-hilt = "2.49"
+hilt = "2.50"
 
 junit4 = "4.13.2"
 junit5 = "5.10.1"
