@@ -29,7 +29,7 @@ protobuf-plugin = "0.9.4"
 retrofit = "2.9.0"
 robolectric = "4.11.1"
 
-vanniktech-publish-plugin = "0.25.3"
+vanniktech-publish-plugin = "0.26.0"
 
 [libraries]
 android-desugar = { module = "com.android.tools:desugar_jdk_libs", version.ref = "android-desugar" }
