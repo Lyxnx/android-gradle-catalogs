@@ -14,7 +14,7 @@ kotlinpoet = "1.15.3"
 kotpref = "2.13.2"
 kradle = "1.0.8"
 
-landscapist = "2.2.12"
+landscapist = "2.2.13"
 lottie = "6.2.0"
 
 [libraries]
