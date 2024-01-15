@@ -69,6 +69,7 @@ test-espresso = "3.5.1"
 test-ext-junit = "1.1.5"
 test-ext-truth = "1.5.0"
 test-orchestrator = "1.4.2"
+test-rules = "1.5.0"
 test-runner = "1.5.2"
 tracing = "1.2.0"
 transition = "1.4.1"
@@ -316,6 +317,7 @@ test-espresso = { module = "androidx.test.espresso:espresso-core", version.ref =
 test-ext-junit = { module = "androidx.test.ext:junit", version.ref = "test-ext-junit" }
 test-ext-junit-ktx = { module = "androidx.test.ext:junit-ktx", version.ref = "test-ext-junit" }
 test-ext-truth = { module = "androidx.test.ext:truth", version.ref = "test-ext-truth" }
+test-rules = { module = "androidx.test:rules", version.ref = "test-rules" }
 test-runner = { module = "androidx.test:runner", version.ref = "test-runner" }
 test-orchestrator = { module = "androidx.test:orchestrator", version.ref = "test-orchestrator" }
 
