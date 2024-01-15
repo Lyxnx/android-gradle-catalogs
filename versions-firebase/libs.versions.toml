@@ -1,7 +1,9 @@
 [versions]
+
 firebase = "32.7.0"
 
 [libraries]
+
 bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase" }
 
 analytics = { module = "com.google.firebase:firebase-analytics" }

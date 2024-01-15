@@ -1,7 +1,9 @@
 [versions]
+
 accompanist = "0.32.0"
 
 [libraries]
+
 adaptive = { module = "com.google.accompanist:accompanist-adaptive", version.ref = "accompanist" }
 drawablepainter = { module = "com.google.accompanist:accompanist-drawablepainter", version.ref = "accompanist" }
 flowlayout = { module = "com.google.accompanist:accompanist-flowlayout", version.ref = "accompanist" }

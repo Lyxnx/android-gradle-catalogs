@@ -18,6 +18,7 @@ landscapist = "2.2.13"
 lottie = "6.3.0"
 
 [libraries]
+
 catalogs-androidplugins = { module = "io.github.lyxnx.gradle.android:android-plugins", version.ref = "catalogs-plugins" }
 
 coil = { module = "io.coil-kt:coil", version.ref = "coil" }
