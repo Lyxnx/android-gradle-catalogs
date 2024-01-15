@@ -37,6 +37,7 @@ This repo contains some useful gradle version catalogs specific to Android:
 | [Accompanist](versions-accompanist/libs.versions.toml) | Google Accompanist Compose artifacts (including the BOM)                                        |
 | [Firebase](versions-firebase/libs.versions.toml)       | Firebase artifacts (including the BOM) - useful with the firebase config plugin below           |
 | [External](versions-external/libs.versions.toml)       | Artifacts that aren't standard Android but are third party                                      |
+| [KotlinX](versions-kotlinx/libs.versions.toml)         | [KotlinX](https://github.com/Kotlin) artifacts                                                  |
 
 ### Using
 

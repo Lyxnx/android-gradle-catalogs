@@ -30,7 +30,8 @@ include(
     ":versions-common",
     ":versions-compose",
     ":versions-firebase",
-    ":versions-external"
+    ":versions-external",
+    ":versions-kotlinx"
 )
 
 include(":android-plugins")
