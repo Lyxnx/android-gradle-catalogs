@@ -87,8 +87,8 @@ kradle-kotlin-library = { id = "io.github.lyxnx.gradle.kotlin-library", version.
 
 kradle-publishing = { id = "io.github.lyxnx.gradle.publishing", version.ref = "kradle" }
 
-catalogs-compose-compiler-config = { id = "io.github.lyxnx.gradle.android.compose-compiler-config", version.ref = "catalogs-plugins" }
-catalogs-compose-config = { id = "io.github.lyxnx.gradle.android.compose-config", version.ref = "catalogs-plugins" }
-catalogs-firebase-config = { id = "io.github.lyxnx.gradle.android.firebase-config", version.ref = "catalogs-plugins" }
-catalogs-hilt-config = { id = "io.github.lyxnx.gradle.android.hilt-config", version.ref = "catalogs-plugins" }
-catalogs-room-config = { id = "io.github.lyxnx.gradle.android.room-config", version.ref = "catalogs-plugins" }
+catalogs-compose-compiler = { id = "io.github.lyxnx.gradle.android-compose-compiler", version.ref = "catalogs-plugins" }
+catalogs-compose-ui = { id = "io.github.lyxnx.gradle.android-compose-ui", version.ref = "catalogs-plugins" }
+catalogs-firebase = { id = "io.github.lyxnx.gradle.android-firebase-config", version.ref = "catalogs-plugins" }
+catalogs-hilt = { id = "io.github.lyxnx.gradle.android-hilt", version.ref = "catalogs-plugins" }
+catalogs-room = { id = "io.github.lyxnx.gradle.android-room", version.ref = "catalogs-plugins" }

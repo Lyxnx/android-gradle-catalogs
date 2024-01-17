@@ -67,39 +67,39 @@ mavenPublishing {
 
 gradlePlugin {
     plugins {
-        register("room-config") {
-            id = "io.github.lyxnx.gradle.android.room-config"
-            displayName = "Android Room configuration plugin"
-            description = "Configures RoomDB for an Android application or library"
-            implementationClass = "io.github.lyxnx.gradle.android.catalogs.room.RoomConfigPlugin"
-        }
-
-        register("compose-config") {
-            id = "io.github.lyxnx.gradle.android.compose-config"
-            displayName = "Android Compose configuration plugin"
-            description = "Configures Compose for an Android application or library"
-            implementationClass = "io.github.lyxnx.gradle.android.catalogs.compose.ComposeConfigPlugin"
-        }
-
-        register("compose-compiler-config") {
-            id = "io.github.lyxnx.gradle.android.compose-compiler-config"
+        register("compose-compiler") {
+            id = "io.github.lyxnx.gradle.android-compose-compiler"
             displayName = "Android Compose compiler configuration plugin"
             description = "Configures the Compose compiler for an Android application or library"
-            implementationClass = "io.github.lyxnx.gradle.android.catalogs.compose.ComposeCompilerConfigPlugin"
+            implementationClass = "io.github.lyxnx.gradle.android.catalogs.compose.ComposeCompilerPlugin"
         }
 
-        register("hilt-config") {
-            id = "io.github.lyxnx.gradle.android.hilt-config"
-            displayName = "Android Hilt configuration plugin using KSP"
-            description = "Configures Hilt for an Android application or library using KSP"
-            implementationClass = "io.github.lyxnx.gradle.android.catalogs.hilt.HiltConfigPlugin"
+        register("compose-ui") {
+            id = "io.github.lyxnx.gradle.android-compose-ui"
+            displayName = "Android Compose UI configuration plugin"
+            description = "Configures Compose for an Android application or library"
+            implementationClass = "io.github.lyxnx.gradle.android.catalogs.compose.ComposeUIPlugin"
         }
 
-        register("firebase-config") {
-            id = "io.github.lyxnx.gradle.android.firebase-config"
+        register("firebase") {
+            id = "io.github.lyxnx.gradle.android-firebase"
             displayName = "Android Firebase configuration plugin"
             description = "Configures Firebase for an Android application or library"
-            implementationClass = "io.github.lyxnx.gradle.android.catalogs.firebase.FirebaseConfigPlugin"
+            implementationClass = "io.github.lyxnx.gradle.android.catalogs.firebase.FirebasePlugin"
+        }
+
+        register("hilt") {
+            id = "io.github.lyxnx.gradle.android-hilt"
+            displayName = "Android Hilt configuration plugin using KSP"
+            description = "Configures Hilt for an Android application or library using KSP"
+            implementationClass = "io.github.lyxnx.gradle.android.catalogs.hilt.HiltPlugin"
+        }
+
+        register("room") {
+            id = "io.github.lyxnx.gradle.android-room"
+            displayName = "Android Room configuration plugin"
+            description = "Configures RoomDB for an Android application or library"
+            implementationClass = "io.github.lyxnx.gradle.android.catalogs.room.RoomPlugin"
         }
     }
 }

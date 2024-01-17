@@ -14,7 +14,18 @@ import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import java.io.File
 
-public class ComposeCompilerConfigPlugin : CatalogsBasePlugin() {
+/**
+ * Configures the basic Jetpack Compose compiler options
+ *
+ * Including:
+ * - Adding the BOM and runtime dependency
+ * - Enabling compose in the build features
+ * - Setting the compiler extension version
+ * - Configuring the compiler to generate reports and/or metrics
+ *
+ * This plugin should be used for a module that requires basic Compose functionality but does not need the UI side of Compose
+ */
+public class ComposeCompilerPlugin : CatalogsBasePlugin() {
 
     override fun Project.configureCatalogPlugin() {
         val catalog = composeCatalog

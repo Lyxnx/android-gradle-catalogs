@@ -19,13 +19,32 @@ import org.gradle.api.tasks.PathSensitivity
 import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
+import org.gradle.kotlin.dsl.findPlugin
 import org.gradle.process.CommandLineArgumentProvider
 import java.io.File
 import javax.inject.Inject
 
-public class RoomConfigPlugin @Inject constructor(
+/**
+ * Configures RoomDB for a project
+ *
+ * This will apply the `com.google.devtools.ksp` plugin and add the following dependencies:
+ * - `room-runtime` and `room-ktx` as `implementation` dependencies
+ * - `room-testing` as a `androidTestImplementation` dependency
+ *
+ * If [roomSchemaDir] is never explicitly called, this will default to [DEFAULT_SCHEMA_DIR]
+ */
+public class RoomPlugin @Inject constructor(
     private val pluginRegistry: PluginRegistry,
 ) : CatalogsBasePlugin() {
+
+    public companion object {
+        /**
+         * The default schema directory, relative to the project
+         */
+        public const val DEFAULT_SCHEMA_DIR: String = "schemas"
+    }
+
+    internal var addedSchema: Boolean = false
 
     override fun Project.configureCatalogPlugin() {
         pluginRegistry.ensurePlugin("KSP", KSP_PLUGIN)
@@ -38,6 +57,13 @@ public class RoomConfigPlugin @Inject constructor(
             implementation(catalog.ensureLibrary("room.ktx"))
             ksp(catalog.ensureLibrary("room.compiler"))
             androidTestImplementation(catalog.ensureLibrary("room.testing"))
+        }
+
+        afterEvaluate {
+            // Only set the default schema directory if it was never explicitly set
+            if (!addedSchema) {
+                roomSchemaDir(DEFAULT_SCHEMA_DIR)
+            }
         }
     }
 }
@@ -86,7 +112,9 @@ public fun Project.roomSchemaDir(schemaDir: File) {
 
     android<AndroidCommonExtension> {
         sourceSets {
-            getByName("androidTest").assets.srcDir(schemaDir)
+            findByName("androidTest")?.assets?.srcDir(schemaDir)
         }
     }
+
+    (plugins.findPlugin(RoomPlugin::class) ?: error("Room plugin not applied")).addedSchema = true
 }
