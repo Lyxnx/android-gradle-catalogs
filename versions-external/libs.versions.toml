@@ -1,6 +1,6 @@
 [versions]
 
-catalogs-plugins = "2024.01.12"
+catalogs-plugins = "1.0.1"
 coil = "2.5.0"
 composeicons = "1.1.0"
 

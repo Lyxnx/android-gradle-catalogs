@@ -30,14 +30,16 @@ tasks.withType(KotlinCompile::class).configureEach {
 }
 
 group = "io.github.lyxnx.gradle.android"
-version = project.providers.gradleProperty("catalogs.version").get()
+version = project.providers.gradleProperty("plugins.version").get()
 description = "Various plugins relating to the android gradle catalogs project"
 
 mavenPublishing {
     coordinates(project.group.toString(), project.name, project.version.toString())
 
     publishToMavenCentral(SonatypeHost.Companion.S01, true)
-    signAllPublications()
+    if (project.providers.gradleProperty("catalogs.sign-publications").get().toBoolean()) {
+        signAllPublications()
+    }
 
     pom {
         name.set("Android Catalogs Plugins")
