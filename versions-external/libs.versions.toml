@@ -17,6 +17,8 @@ kradle = "1.0.9"
 landscapist = "2.2.13"
 lottie = "6.3.0"
 
+turbine = "1.0.0"
+
 [libraries]
 
 catalogs-androidplugins = { module = "io.github.lyxnx.gradle.android:android-plugins", version.ref = "catalogs-plugins" }
@@ -76,6 +78,8 @@ landscapist-transformation = { module = "com.github.skydoves:landscapist-transfo
 
 lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
 lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
+
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
 
 [plugins]
 kradle-android-application = { id = "io.github.lyxnx.gradle.android-application", version.ref = "kradle" }
