@@ -12,7 +12,7 @@ javapoet = "1.13.0"
 
 kotlinpoet = "1.16.0"
 kotpref = "2.13.2"
-kradle = "1.0.9"
+kradle = "1.0.10"
 
 landscapist = "2.2.13"
 lottie = "6.3.0"
