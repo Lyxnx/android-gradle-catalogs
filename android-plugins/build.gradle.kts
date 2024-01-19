@@ -48,8 +48,8 @@ mavenPublishing {
         url.set("https://github.com/Lyxnx/android-gradle-catalogs")
         licenses {
             license {
-                name.set("MIT License")
-                url.set("http://www.opensource.org/licenses/mit-license.php")
+                name.set("Apache License, Version 2.0")
+                url.set("https://opensource.org/license/apache-2-0")
             }
         }
         developers {
