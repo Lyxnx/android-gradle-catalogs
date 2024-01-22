@@ -3,7 +3,7 @@
 benchmark = "0.4.10"
 coroutines = "1.7.3"
 datetime = "0.5.0"
-html = "0.10.1"
+html = "0.11.0"
 immutablecollections = "0.3.7"
 io = "0.3.0"
 kover = "0.7.5"
