@@ -1,7 +1,7 @@
 [versions]
 
 android-desugar = "2.0.4"
-android-gradle-plugin = "8.2.1"
+android-gradle-plugin = "8.2.2"
 android-cache-fix-plugin = "3.0"
 
 google-gms-plugin = "4.4.0"
