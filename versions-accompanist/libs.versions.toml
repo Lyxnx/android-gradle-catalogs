@@ -1,6 +1,6 @@
 [versions]
 
-accompanist = "0.32.0"
+accompanist = "0.34.0"
 
 [libraries]
 
