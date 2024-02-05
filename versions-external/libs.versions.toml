@@ -14,7 +14,7 @@ kotlinpoet = "1.16.0"
 kotpref = "2.13.2"
 kradle = "1.0.10"
 
-landscapist = "2.2.13"
+landscapist = "2.3.0"
 lottie = "6.3.0"
 
 turbine = "1.0.0"
