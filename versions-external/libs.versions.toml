@@ -93,6 +93,6 @@ kradle-publishing = { id = "io.github.lyxnx.gradle.publishing", version.ref = "k
 
 catalogs-compose-compiler = { id = "io.github.lyxnx.gradle.android-compose-compiler", version.ref = "catalogs-plugins" }
 catalogs-compose-ui = { id = "io.github.lyxnx.gradle.android-compose-ui", version.ref = "catalogs-plugins" }
-catalogs-firebase = { id = "io.github.lyxnx.gradle.android-firebase-config", version.ref = "catalogs-plugins" }
+catalogs-firebase = { id = "io.github.lyxnx.gradle.android-firebase", version.ref = "catalogs-plugins" }
 catalogs-hilt = { id = "io.github.lyxnx.gradle.android-hilt", version.ref = "catalogs-plugins" }
 catalogs-room = { id = "io.github.lyxnx.gradle.android-room", version.ref = "catalogs-plugins" }
