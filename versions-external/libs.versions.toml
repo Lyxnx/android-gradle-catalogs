@@ -12,7 +12,7 @@ javapoet = "1.13.0"
 
 kotlinpoet = "1.16.0"
 kotpref = "2.13.2"
-kradle = "1.0.10"
+kradle = "1.0.11"
 
 landscapist = "2.3.0"
 lottie = "6.3.0"
@@ -63,7 +63,6 @@ kotpref-preferencescreendsl = { module = "com.chibatching.kotpref:preference-scr
 kradle-plugin-android = { module = "io.github.lyxnx.gradle:plugin-android", version.ref = "kradle" }
 kradle-plugin-common = { module = "io.github.lyxnx.gradle:plugin-common", version.ref = "kradle" }
 kradle-plugin-kotlin = { module = "io.github.lyxnx.gradle:plugin-kotlin", version.ref = "kradle" }
-kradle-plugin-publishing = { module = "io.github.lyxnx.gradle:plugin-publish", version.ref = "kradle" }
 
 landscapist = { module = "com.github.skydoves:landscapist", version.ref = "landscapist" }
 landscapist-animation = { module = "com.github.skydoves:landscapist-animation", version.ref = "landscapist" }
@@ -88,8 +87,6 @@ kradle-android-library = { id = "io.github.lyxnx.gradle.android-library", versio
 
 kradle-kotlin-config = { id = "io.github.lyxnx.gradle.kotlin-config", version.ref = "kradle" }
 kradle-kotlin-library = { id = "io.github.lyxnx.gradle.kotlin-library", version.ref = "kradle" }
-
-kradle-publishing = { id = "io.github.lyxnx.gradle.publishing", version.ref = "kradle" }
 
 catalogs-compose-compiler = { id = "io.github.lyxnx.gradle.android-compose-compiler", version.ref = "catalogs-plugins" }
 catalogs-compose-ui = { id = "io.github.lyxnx.gradle.android-compose-ui", version.ref = "catalogs-plugins" }
