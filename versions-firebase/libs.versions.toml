@@ -1,6 +1,6 @@
 [versions]
 
-firebase = "32.7.1"
+firebase = "32.7.2"
 
 [libraries]
 
