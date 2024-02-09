@@ -9,6 +9,8 @@ gson = "2.10.1"
 
 hilt = "2.50"
 
+jsoup = "1.17.2"
+
 junit4 = "4.13.2"
 junit5 = "5.10.2"
 
@@ -42,6 +44,8 @@ gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 hilt-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "hilt" }
+
+jsoup = { module = "org.jsoup:jsoup", version.ref = "jsoup" }
 
 junit4 = { module = "junit:junit", version.ref = "junit4" }
 junit5-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit5" }
