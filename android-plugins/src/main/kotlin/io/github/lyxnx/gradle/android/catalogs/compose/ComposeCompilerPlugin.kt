@@ -1,14 +1,13 @@
 package io.github.lyxnx.gradle.android.catalogs.compose
 
 import io.github.lyxnx.gradle.android.catalogs.base.CatalogsBasePlugin
-import io.github.lyxnx.gradle.android.catalogs.base.composeCatalog
 import io.github.lyxnx.gradle.android.catalogs.internal.AndroidCommonExtension
 import io.github.lyxnx.gradle.android.catalogs.internal.android
-import io.github.lyxnx.gradle.android.catalogs.internal.ensureLibrary
-import io.github.lyxnx.gradle.android.catalogs.internal.ensureVersion
+import io.github.lyxnx.gradle.android.catalogs.internal.ensureCatalogLibrary
 import io.github.lyxnx.gradle.android.catalogs.internal.findBooleanProperty
 import io.github.lyxnx.gradle.android.catalogs.internal.implementation
 import org.gradle.api.Project
+import org.gradle.api.artifacts.Dependency
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
@@ -27,14 +26,15 @@ import java.io.File
  */
 public class ComposeCompilerPlugin : CatalogsBasePlugin() {
 
+    internal lateinit var bom: Dependency
+        private set
+
     override fun Project.configureCatalogPlugin() {
-        val catalog = composeCatalog
-
         dependencies {
-            val bom = catalog.ensureLibrary("bom")
-            implementation(platform(bom))
+            bom = platform(ensureCatalogLibrary("androidx.compose:compose-bom"))
+            implementation(bom)
 
-            implementation(catalog.ensureLibrary("runtime"))
+            implementation(ensureCatalogLibrary("androidx.compose.runtime:runtime"))
         }
 
         android<AndroidCommonExtension> {
@@ -43,7 +43,8 @@ public class ComposeCompilerPlugin : CatalogsBasePlugin() {
             }
 
             composeOptions {
-                kotlinCompilerExtensionVersion = catalog.ensureVersion("compiler").toString()
+                kotlinCompilerExtensionVersion =
+                    ensureCatalogLibrary("androidx.compose.compiler:compiler").version!!.toString()
             }
         }
 

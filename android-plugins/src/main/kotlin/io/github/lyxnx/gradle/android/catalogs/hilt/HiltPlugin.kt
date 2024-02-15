@@ -1,11 +1,10 @@
 package io.github.lyxnx.gradle.android.catalogs.hilt
 
 import io.github.lyxnx.gradle.android.catalogs.base.CatalogsBasePlugin
-import io.github.lyxnx.gradle.android.catalogs.base.commonCatalog
 import io.github.lyxnx.gradle.android.catalogs.internal.HILT_PLUGIN
 import io.github.lyxnx.gradle.android.catalogs.internal.KSP_PLUGIN
 import io.github.lyxnx.gradle.android.catalogs.internal.androidTestImplementation
-import io.github.lyxnx.gradle.android.catalogs.internal.ensureLibrary
+import io.github.lyxnx.gradle.android.catalogs.internal.ensureCatalogLibrary
 import io.github.lyxnx.gradle.android.catalogs.internal.ensurePlugin
 import io.github.lyxnx.gradle.android.catalogs.internal.implementation
 import io.github.lyxnx.gradle.android.catalogs.internal.ksp
@@ -34,14 +33,14 @@ public class HiltPlugin @Inject constructor(private val pluginRegistry: PluginRe
         apply(plugin = HILT_PLUGIN)
         apply(plugin = KSP_PLUGIN)
 
-        val catalog = commonCatalog
-
         dependencies {
-            implementation(catalog.ensureLibrary("hilt"))
-            ksp(catalog.ensureLibrary("hilt.compiler"))
+            implementation(ensureCatalogLibrary("com.google.dagger:hilt-android"))
+            ksp(ensureCatalogLibrary("com.google.dagger:hilt-android-compiler"))
 
-            testImplementation(catalog.ensureLibrary("hilt.testing"))
-            androidTestImplementation(catalog.ensureLibrary("hilt.testing"))
+            ensureCatalogLibrary("com.google.dagger:hilt-android-testing").let {
+                testImplementation(it)
+                androidTestImplementation(it)
+            }
         }
     }
 

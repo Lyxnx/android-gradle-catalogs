@@ -1,10 +1,9 @@
 package io.github.lyxnx.gradle.android.catalogs.compose
 
 import io.github.lyxnx.gradle.android.catalogs.base.CatalogsBasePlugin
-import io.github.lyxnx.gradle.android.catalogs.base.composeCatalog
 import io.github.lyxnx.gradle.android.catalogs.internal.androidTestImplementation
 import io.github.lyxnx.gradle.android.catalogs.internal.debugImplementation
-import io.github.lyxnx.gradle.android.catalogs.internal.ensureLibrary
+import io.github.lyxnx.gradle.android.catalogs.internal.ensureCatalogLibrary
 import io.github.lyxnx.gradle.android.catalogs.internal.implementation
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply
@@ -22,23 +21,20 @@ import org.gradle.kotlin.dsl.dependencies
 public class ComposeUIPlugin : CatalogsBasePlugin() {
 
     override fun Project.configureCatalogPlugin() {
-        plugins.apply(ComposeCompilerPlugin::class)
-
-        val catalog = composeCatalog
+        val config = plugins.apply(ComposeCompilerPlugin::class)
 
         dependencies {
             // Compiler plugin already adds the runtime library and BOM as regular implementation
-            implementation(catalog.ensureLibrary("ui"))
-            implementation(catalog.ensureLibrary("foundation"))
-            implementation(catalog.ensureLibrary("foundation.layout"))
+            implementation(ensureCatalogLibrary("androidx.compose.ui:ui"))
+            implementation(ensureCatalogLibrary("androidx.compose.foundation:foundation"))
+            implementation(ensureCatalogLibrary("androidx.compose.foundation:foundation-layout"))
 
-            implementation(catalog.ensureLibrary("ui.tooling.preview"))
-            debugImplementation(catalog.ensureLibrary("ui.tooling"))
+            implementation(ensureCatalogLibrary("androidx.compose.ui:ui-tooling-preview"))
+            debugImplementation(ensureCatalogLibrary("androidx.compose.ui:ui-tooling"))
 
-            val bom = catalog.ensureLibrary("bom")
-            androidTestImplementation(platform(bom))
-            androidTestImplementation(catalog.ensureLibrary("ui.test.junit4"))
-            debugImplementation(catalog.ensureLibrary("ui.test.manifest"))
+            androidTestImplementation(config.bom)
+            androidTestImplementation(ensureCatalogLibrary("androidx.compose.ui:ui-test-junit4"))
+            debugImplementation(ensureCatalogLibrary("androidx.compose.ui:ui-test-manifest"))
         }
     }
 }

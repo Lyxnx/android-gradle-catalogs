@@ -2,15 +2,15 @@ package io.github.lyxnx.gradle.android.catalogs.room
 
 import com.google.devtools.ksp.gradle.KspExtension
 import io.github.lyxnx.gradle.android.catalogs.base.CatalogsBasePlugin
-import io.github.lyxnx.gradle.android.catalogs.base.androidxCatalog
 import io.github.lyxnx.gradle.android.catalogs.internal.AndroidCommonExtension
 import io.github.lyxnx.gradle.android.catalogs.internal.KSP_PLUGIN
 import io.github.lyxnx.gradle.android.catalogs.internal.android
 import io.github.lyxnx.gradle.android.catalogs.internal.androidTestImplementation
-import io.github.lyxnx.gradle.android.catalogs.internal.ensureLibrary
+import io.github.lyxnx.gradle.android.catalogs.internal.ensureCatalogLibrary
 import io.github.lyxnx.gradle.android.catalogs.internal.ensurePlugin
 import io.github.lyxnx.gradle.android.catalogs.internal.implementation
 import io.github.lyxnx.gradle.android.catalogs.internal.ksp
+import io.github.lyxnx.gradle.android.catalogs.room.RoomPlugin.Companion.DEFAULT_SCHEMA_DIR
 import org.gradle.api.Project
 import org.gradle.api.internal.plugins.PluginRegistry
 import org.gradle.api.tasks.InputDirectory
@@ -51,12 +51,10 @@ public class RoomPlugin @Inject constructor(
         apply(plugin = KSP_PLUGIN)
 
         dependencies {
-            val catalog = androidxCatalog
-
-            implementation(catalog.ensureLibrary("room.runtime"))
-            implementation(catalog.ensureLibrary("room.ktx"))
-            ksp(catalog.ensureLibrary("room.compiler"))
-            androidTestImplementation(catalog.ensureLibrary("room.testing"))
+            implementation(ensureCatalogLibrary("androidx.room:room-runtime"))
+            implementation(ensureCatalogLibrary("androidx.room:room-ktx"))
+            ksp(ensureCatalogLibrary("androidx.room:room-compiler"))
+            androidTestImplementation(ensureCatalogLibrary("androidx.room:room-testing"))
         }
 
         afterEvaluate {
