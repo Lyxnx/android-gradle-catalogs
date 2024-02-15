@@ -4,6 +4,8 @@ android-desugar = "2.0.4"
 android-gradle-plugin = "8.2.2"
 android-cache-fix-plugin = "3.0"
 
+firebase-bom = "32.7.2"
+
 google-gms-plugin = "4.4.1"
 gson = "2.10.1"
 
@@ -38,6 +40,50 @@ vanniktech-publish-gradle-plugin = "0.27.0"
 android-desugar = { module = "com.android.tools:desugar_jdk_libs", version.ref = "android-desugar" }
 android-gradleplugin = { module = "com.android.tools.build:gradle", version.ref = "android-gradle-plugin" }
 
+# Don't include versions for Firebase libs, as the Google recommendation is to use the BOM, even if only using 1 dependency
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-bom" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx" }
+firebase-appcheck = { module = "com.google.firebase:firebase-appcheck" }
+firebase-appcheck-debug = { module = "com.google.firebase:firebase-appcheck-debug" }
+firebase-appcheck-debug-testing = { module = "com.google.firebase:firebase-appcheck-debug-testing" }
+firebase-appcheck-ktx = { module = "com.google.firebase:firebase-appcheck-ktx" }
+firebase-appcheck-playintegrity = { module = "com.google.firebase:firebase-appcheck-playintegrity" }
+firebase-appcheck-safetynet = { module = "com.google.firebase:firebase-appcheck-safetynet" }
+firebase-auth = { module = "com.google.firebase:firebase-auth" }
+firebase-auth-ktx = { module = "com.google.firebase:firebase-auth-ktx" }
+firebase-common = { module = "com.google.firebase:firebase-common" }
+firebase-common-ktx = { module = "com.google.firebase:firebase-common-ktx" }
+firebase-config = { module = "com.google.firebase:firebase-config" }
+firebase-config-ktx = { module = "com.google.firebase:firebase-config-ktx" }
+firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
+firebase-crashlytics-ktx = { module = "com.google.firebase:firebase-crashlytics-ktx" }
+firebase-crashlytics-ndk = { module = "com.google.firebase:firebase-crashlytics-ndk" }
+firebase-database = { module = "com.google.firebase:firebase-database" }
+firebase-database-ktx = { module = "com.google.firebase:firebase-database-ktx" }
+firebase-dyanamiclinks = { module = "com.google.firebase:firebase-dynamic-links" }
+firebase-dyanamiclinks-ktx = { module = "com.google.firebase:firebase-dynamic-links-ktx" }
+firebase-encoders = { module = "com.google.firebase:firebase-encoders" }
+firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
+firebase-firestore-ktx = { module = "com.google.firebase:firebase-firestore-ktx" }
+firebase-functions = { module = "com.google.firebase:firebase-functions" }
+firebase-functions-ktx = { module = "com.google.firebase:firebase-functions-ktx" }
+firebase-inappmessaging = { module = "com.google.firebase:firebase-inappmessaging" }
+firebase-inappmessaging-ktx = { module = "com.google.firebase:firebase-inappmessaging-ktx" }
+firebase-inappmessaging-display = { module = "com.google.firebase:firebase-inappmessaging-display" }
+firebase-inappmessaging-display-ktx = { module = "com.google.firebase:firebase-inappmessaging-display-ktx" }
+firebase-installations = { module = "com.google.firebase:firebase-installations" }
+firebase-installations-ktx = { module = "com.google.firebase:firebase-installations-ktx" }
+firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
+firebase-messaging-ktx = { module = "com.google.firebase:firebase-messaging-ktx" }
+firebase-messaging-directboot = { module = "com.google.firebase:firebase-messaging-directboot" }
+firebase-ml-modeldownloader = { module = "com.google.firebase:firebase-ml-modeldownloader" }
+firebase-ml-modeldownloader-ktx = { module = "com.google.firebase:firebase-ml-modeldownloader-ktx" }
+firebase-perf = { module = "com.google.firebase:firebase-perf" }
+firebase-perf-ktx = { module = "com.google.firebase:firebase-perf-ktx" }
+firebase-storage = { module = "com.google.firebase:firebase-storage" }
+firebase-storage-ktx = { module = "com.google.firebase:firebase-storage-ktx" }
+
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 
 hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
@@ -66,6 +112,7 @@ koin-androidx-compose-navigation = { module = "io.insert-koin:koin-androidx-comp
 koin-ktor = { module = "io.insert-koin:koin-ktor", version.ref = "koin" }
 koin-logger-slf4j = { module = "io.insert-koin:koin-logger-slf4j", version.ref = "koin" }
 koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koin-annotations" }
+
 kotlin-gradleplugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 kotlin-stdlib-jdk7 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk7", version.ref = "kotlin" }
@@ -78,9 +125,11 @@ ksp-gradleplugin = { module = "com.google.devtools.ksp:symbol-processing-gradle-
 ksp-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
 
 material = { module = "com.google.android.material:material", version.ref = "material" }
+
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 mockito-android = { module = "org.mockito:mockito-android", version.ref = "mockito" }
 mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockito-kotlin" }
+
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 mockk-android = { module = "io.mockk:mockk-android", version.ref = "mockk" }
 mockk-agent = { module = "io.mockk:mockk-agent", version.ref = "mockk" }

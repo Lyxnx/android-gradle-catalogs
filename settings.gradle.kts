@@ -29,7 +29,6 @@ include(
     ":versions-androidx",
     ":versions-common",
     ":versions-compose",
-    ":versions-firebase",
     ":versions-external",
     ":versions-kotlinx"
 )
