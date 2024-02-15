@@ -31,3 +31,4 @@ include(
 )
 
 include(":android-plugins")
+include(":settings-plugin")
