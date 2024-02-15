@@ -29,8 +29,7 @@ include(
     ":versions-androidx",
     ":versions-common",
     ":versions-compose",
-    ":versions-external",
-    ":versions-kotlinx"
+    ":versions-external"
 )
 
 include(":android-plugins")
