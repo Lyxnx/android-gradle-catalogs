@@ -4,13 +4,21 @@ android-desugar = "2.0.4"
 android-gradle-plugin = "8.2.2"
 android-cache-fix-plugin = "3.0"
 
-firebase-bom = "32.7.2"
+cashapp-turbine = "1.0.0"
+catalogs-plugins = "1.0.1"
+coil = "2.5.0"
+composeicons = "1.1.0"
 
+firebase-bom = "32.7.2"
+fresco = "3.1.3"
+
+glide = "4.16.0"
 google-gms-plugin = "4.4.1"
 gson = "2.10.1"
 
 hilt = "2.50"
 
+javapoet = "1.13.0"
 jsoup = "1.17.2"
 junit4 = "4.13.2"
 junit5 = "5.10.2"
@@ -18,13 +26,18 @@ junit5 = "5.10.2"
 koin = "3.5.3"
 koin-annotations = "1.3.1"
 kotlin = "1.9.22"
+kotlinpoet = "1.16.0"
 kotlinx-coroutines = "1.7.3"
 kotlinx-datetime = "0.5.0"
 kotlinx-html = "0.11.0"
 kotlinx-immutablecollections = "0.3.7"
 kotlinx-io = "0.3.1"
 kotlinx-serialization = "1.6.2"
+kradle = "1.0.11"
 ksp = "1.9.22-1.0.17"
+
+landscapist = "2.3.1"
+lottie = "6.3.0"
 
 material = "1.11.0"
 mockito = "5.10.0"
@@ -45,6 +58,23 @@ vanniktech-publish-gradle-plugin = "0.27.0"
 
 android-desugar = { module = "com.android.tools:desugar_jdk_libs", version.ref = "android-desugar" }
 android-gradleplugin = { module = "com.android.tools.build:gradle", version.ref = "android-gradle-plugin" }
+
+cashapp-turbine = { module = "app.cash.turbine:turbine", version.ref = "cashapp-turbine" }
+catalogs-androidplugins = { module = "io.github.lyxnx.gradle.android:android-plugins", version.ref = "catalogs-plugins" }
+coil = { module = "io.coil-kt:coil", version.ref = "coil" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+coil-gif = { module = "io.coil-kt:coil-gif", version.ref = "coil" }
+coil-svg = { module = "io.coil-kt:coil-svg", version.ref = "coil" }
+composeicons-cssgg = { module = "br.com.devsrsouza.compose.icons:css-gg", version.ref = "composeicons" }
+composeicons-evaicons = { module = "br.com.devsrsouza.compose.icons:eva-icons", version.ref = "composeicons" }
+composeicons-feather = { module = "br.com.devsrsouza.compose.icons:feather", version.ref = "composeicons" }
+composeicons-fontawesome = { module = "br.com.devsrsouza.compose.icons:font-awesome", version.ref = "composeicons" }
+composeicons-linea = { module = "br.com.devsrsouza.compose.icons:linea", version.ref = "composeicons" }
+composeicons-lineawesome = { module = "br.com.devsrsouza.compose.icons:line-awesome", version.ref = "composeicons" }
+composeicons-octicons = { module = "br.com.devsrsouza.compose.icons:octicons", version.ref = "composeicons" }
+composeicons-simpleicons = { module = "br.com.devsrsouza.compose.icons:simple-icons", version.ref = "composeicons" }
+composeicons-tablericons = { module = "br.com.devsrsouza.compose.icons:tabler-icons", version.ref = "composeicons" }
+composeicons-weathericons = { module = "br.com.devsrsouza.compose.icons:erikflowers-weather-icons", version.ref = "composeicons" }
 
 # Don't include versions for Firebase libs, as the Google recommendation is to use the BOM, even if only using 1 dependency
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-bom" }
@@ -90,13 +120,25 @@ firebase-perf-ktx = { module = "com.google.firebase:firebase-perf-ktx" }
 firebase-storage = { module = "com.google.firebase:firebase-storage" }
 firebase-storage-ktx = { module = "com.google.firebase:firebase-storage-ktx" }
 
+fresco = { module = "com.facebook.fresco:fresco", version.ref = "fresco" }
+fresco-animated-gif = { module = "com.facebook.fresco:animated-gif", version.ref = "fresco" }
+fresco-animated-webp = { module = "com.facebook.fresco:animated-webp", version.ref = "fresco" }
+fresco-webpsupport = { module = "com.facebook.fresco:webpsupport", version.ref = "fresco" }
+
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+glide-compiler-kapt = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+glide-compiler-ksp = { module = "com.github.bumptech.glide:ksp", version.ref = "glide" }
+
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 
 hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 hilt-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "hilt" }
 
+javapoet = { module = "com.squareup:javapoet", version.ref = "javapoet" }
+
 jsoup = { module = "org.jsoup:jsoup", version.ref = "jsoup" }
+
 junit4 = { module = "junit:junit", version.ref = "junit4" }
 junit5-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit5" }
 junit5-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit5" }
@@ -104,6 +146,19 @@ junit5-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", ver
 junit5-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit5" }
 junit5-jupiter-migrationsupport = { module = "org.junit.jupiter:junit-jupiter-migrationsupport", version.ref = "junit5" }
 junit5-vintage-engine = { module = "org.junit.vintage:junit-vintage-engine", version.ref = "junit5" }
+
+landscapist = { module = "com.github.skydoves:landscapist", version.ref = "landscapist" }
+landscapist-animation = { module = "com.github.skydoves:landscapist-animation", version.ref = "landscapist" }
+landscapist-bom = { module = "com.github.skydoves:landscapist-bom", version.ref = "landscapist" }
+landscapist-coil = { module = "com.github.skydoves:landscapist-coil", version.ref = "landscapist" }
+landscapist-fresco = { module = "com.github.skydoves:landscapist-fresco", version.ref = "landscapist" }
+landscapist-fresco-websupport = { module = "com.github.skydoves:landscapist-fresco-websupport", version.ref = "landscapist" }
+landscapist-glide = { module = "com.github.skydoves:landscapist-glide", version.ref = "landscapist" }
+landscapist-palete = { module = "com.github.skydoves:landscapist-palette", version.ref = "landscapist" }
+landscapist-placeholder = { module = "com.github.skydoves:landscapist-placeholder", version.ref = "landscapist" }
+landscapist-transformation = { module = "com.github.skydoves:landscapist-transformation", version.ref = "landscapist" }
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
+lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
 
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-core-coroutines = { module = "io.insert-koin:koin-core-coroutines", version.ref = "koin" }
@@ -128,6 +183,9 @@ kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotl
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlin" }
 
+kotlinpoet = { module = "com.squareup:kotlinpoet", version.ref = "kotlinpoet" }
+kotlinpoet-ksp = { module = "com.squareup:kotlinpoet-ksp", version.ref = "kotlinpoet" }
+
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
@@ -139,6 +197,10 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 kotlinx-serialization-cbor = { module = "org.jetbrains.kotlinx:kotlinx-serialization-cbor", version.ref = "kotlinx-serialization" }
 kotlinx-serialization-protobuf = { module = "org.jetbrains.kotlinx:kotlinx-serialization-protobuf", version.ref = "kotlinx-serialization" }
 kotlinx-serialization-properties = { module = "org.jetbrains.kotlinx:kotlinx-serialization-properties", version.ref = "kotlinx-serialization" }
+
+kradle-plugin-android = { module = "io.github.lyxnx.gradle:plugin-android", version.ref = "kradle" }
+kradle-plugin-common = { module = "io.github.lyxnx.gradle:plugin-common", version.ref = "kradle" }
+kradle-plugin-kotlin = { module = "io.github.lyxnx.gradle:plugin-kotlin", version.ref = "kradle" }
 
 ksp-gradleplugin = { module = "com.google.devtools.ksp:symbol-processing-gradle-plugin", version.ref = "ksp" }
 ksp-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
@@ -182,6 +244,12 @@ android-application = { id = "com.android.application", version.ref = "android-g
 android-library = { id = "com.android.library", version.ref = "android-gradle-plugin" }
 android-cachefix = { id = "org.gradle.android.cache-fix", version.ref = "android-cache-fix-plugin" }
 
+catalogs-compose-compiler = { id = "io.github.lyxnx.gradle.android-compose-compiler", version.ref = "catalogs-plugins" }
+catalogs-compose-ui = { id = "io.github.lyxnx.gradle.android-compose-ui", version.ref = "catalogs-plugins" }
+catalogs-firebase = { id = "io.github.lyxnx.gradle.android-firebase", version.ref = "catalogs-plugins" }
+catalogs-hilt = { id = "io.github.lyxnx.gradle.android-hilt", version.ref = "catalogs-plugins" }
+catalogs-room = { id = "io.github.lyxnx.gradle.android-room", version.ref = "catalogs-plugins" }
+
 gms = { id = "com.google.gms.google-services", version.ref = "google-gms-plugin" }
 
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
@@ -192,6 +260,11 @@ kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kradle-android-application = { id = "io.github.lyxnx.gradle.android-application", version.ref = "kradle" }
+kradle-android-config = { id = "io.github.lyxnx.gradle.android-config", version.ref = "kradle" }
+kradle-android-library = { id = "io.github.lyxnx.gradle.android-library", version.ref = "kradle" }
+kradle-kotlin-config = { id = "io.github.lyxnx.gradle.kotlin-config", version.ref = "kradle" }
+kradle-kotlin-library = { id = "io.github.lyxnx.gradle.kotlin-library", version.ref = "kradle" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 protobuf = { id = "com.google.protobuf", version.ref = "protobuf-gradle-plugin" }

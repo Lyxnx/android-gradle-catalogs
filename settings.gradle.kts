@@ -28,8 +28,7 @@ include(
     ":versions-accompanist",
     ":versions-androidx",
     ":versions-common",
-    ":versions-compose",
-    ":versions-external"
+    ":versions-compose"
 )
 
 include(":android-plugins")
