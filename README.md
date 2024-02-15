@@ -16,11 +16,12 @@ Version catalogs and plugins to help reduce boilerplate in Android Gradle build 
   - [Using](#using)
   - [Updating](#updating)
 - [Plugins](#plugins)
-  - [Customising Catalog Names](#customising-catalog-names)
-  - [Compose Config](#compose-config)
-  - [Room Config](#room-config)
+  - [Compose](#compose)
+    - [Compiler](#compiler)
+    - [UI](#ui)
+  - [Room](#room)
     - [Configuring](#configuring)
-  - [Hilt Config](#hilt-config)
+  - [Hilt](#hilt)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -28,15 +29,40 @@ Version catalogs and plugins to help reduce boilerplate in Android Gradle build 
 
 This repo contains some useful gradle version catalogs specific to Android:
 
-| Name                                                   | Description                                                                                     |
-|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| [Common](versions-common/libs.versions.toml)           | Regular Android artifacts, such as gradle plugins, and some of the most commonly used libraries |
-| [AndroidX](versions-androidx/libs.versions.toml)       | AndroidX artifacts only                                                                         |
-| [Compose](versions-compose/libs.versions.toml)         | Jetpack Compose artifacts (including the BOM) - useful with the compose config plugin below     |
+| Name                                             | Description                                                                                     |
+|--------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| [Common](versions-common/libs.versions.toml)     | Regular Android artifacts, such as gradle plugins, and some of the most commonly used libraries |
+| [AndroidX](versions-androidx/libs.versions.toml) | AndroidX artifacts only                                                                         |
+| [Compose](versions-compose/libs.versions.toml)   | Jetpack Compose artifacts (including the BOM) - useful with the compose config plugin below     |
 
 ### Using
 
-Version catalogs are created within the `dependencyResolutionManagement` block of the `settings.gradle.kts` file:
+This project comes with a plugin (`io.github.lyxnx.gradle.android-catalogs`) that can be applied to
+the `settings.gradle.kts` file and will apply the `androidx` and `common` catalogs to the project, since those are
+almost
+guaranteed to be used in any Android project
+
+```kotlin
+// <root>/settings.gradle.kts
+plugins {
+    id("io.github.lyxnx.gradle.android-catalogs") version "<version>"
+}
+```
+
+After applying the plugin, the compose catalog can be applied to the project by adding the following to
+the `settings.gradle.kts` file:
+
+```kotlin
+// <root>/settings.gradle.kts
+dependencyResolutionManagement {
+    versionCatalogs {
+        composeCatalog()
+    }
+}
+```
+
+Alternatively, catalogs can be created manually within the `dependencyResolutionManagement` block of
+the `settings.gradle.kts` file:
 
 ```kotlin
 // <root>/settings.gradle.kts
@@ -120,37 +146,33 @@ Ensure each required plugin is referenced in the root build file, but not applie
 ```kotlin
 // <root>/build.gradle.kts
 plugins {
-    id("io.github.lyxnx.android.compose-config") version "<version>" apply false
-    id("io.github.lyxnx.android.room-config") version "<version>" apply false
-    id("io.github.lyxnx.android.hilt-config") version "<version>" apply false
+    // for just the basic compiler and runtime setup - useful for modules that use Compose tools, such as state but not the full UI
+    id("io.github.lyxnx.android-compose-compiler") version "<version>" apply false
+    // for modules that use the full Compose UI, if using this, the compiler plugin is applied in addition
+    id("io.github.lyxnx.android-compose-ui") version "<version>" apply false
+    id("io.github.lyxnx.android-room") version "<version>" apply false
+    id("io.github.lyxnx.android-hilt") version "<version>" apply false
 }
 ```
 
 As these plugins are Android specific, they require the `com.android.application`
 or `com.android.library` plugin to be added to the module, depending on the module type.
 
-### Customising Catalog Names
+### Compose
 
-Since the following plugins apply other plugins and dependencies from the version catalogs, they need to know what each
-catalog is called. This can however be customised from the `gradle.properties` file:
+Compose configuration consists of 2 plugins: `io.github.lyxnx.android-compose-compiler`
+and `io.github.lyxnx.android-compose-ui`
 
-*Note that these are the default values, so if customisation is not required, these properties can be omitted*
+#### Compiler
 
-```properties
-catalogs.commonCatalogName=common
-catalogs.androidxCatalogName=androidx
-catalogs.composeCatalogName=compose
-```
-
-### Compose Config
-
-This plugin applies Jetpack Compose configuration options to the application or library module:
+This applies basic Jetpack Compose configuration options to an application or library module, although this would
+typically be used on its own in a library module:
 
 1. Enables the compose build feature
-2. Sets the compose compiler version to the same as one in the `compose` catalog
+2. Sets the compose compiler version to the same one defined by the first catalog containing
+   the `androidx.compose.compiler:compiler` artifact
 3. Adds the compose BOM for versioning to the dependencies
-4. Adds the compose runtime, ui, foundation, and tooling preview dependencies
-5. Sets up the dependencies for UI tests
+4. Adds the compose runtime dependency
 
 This plugin also adds the ability to generate compose compiler reports and compiler metrics by specifying a property in
 a project's properties file, or on the command line for a singular task:
@@ -179,7 +201,14 @@ result in that path being relative to the current module in the build process.
 
 If not given, it will default to `<current module>/build/compose-compiler-reports`
 
-### Room Config
+#### UI
+
+Applies the compiler plugin in addition to the following:
+
+1. Adds the compose ui, foundation, and tooling preview dependencies
+2. Adds the ui testing dependencies
+
+### Room
 
 This plugin requires the [KSP](https://github.com/google/ksp) (ID `com.google.devtools.ksp`) plugin to be applied to the
 module in addition to the standard Android plugins
@@ -188,7 +217,9 @@ This plugin applies RoomDB configuration options to the application or library m
 
 1. Applies the KSP plugin if needed
 2. Sets the schema directory to the configured directory (see below)
-3. Adds the Room runtime, runtime ktx, and compiler to dependencies from the `androidx` catalog
+3. Adds the Room runtime, runtime ktx, and compiler to dependencies from the first catalog containing
+   the `androidx.room:room-runtime`, `androidx.room:room-ktx`, `androidx.room:room-compiler`, and
+   the `androidx.room:room-testing` artifacts
 4. Adds the Room testing dependency
 
 #### Configuring
@@ -207,13 +238,15 @@ roomSchemaDir("somewhere/schema_dir")
 Note that this file is relative to the current build script.
 The above would result in the schema directory being `app/somewhere/schema_dir` for the `:app` module
 
-### Hilt Config
+### Hilt
 
-KSP support was added to Dagger in version 2.48 (catalog 2023.09.09 onwards). This plugin used to come with a KAPT version, 
-but has been removed due to KSP being more performant.
+KSP support was added to Dagger in version 2.48 (catalog 2023.09.09 onwards). This plugin used to come with a KAPT
+version, but has been removed due to KSP being more performant.
 
 This plugin will require the [Dagger Hilt](https://dagger.dev/hilt/gradle-setup.html) (ID `dagger.hilt.android.plugin`)
-plugin to be applied, and will add the android hilt library from the `common` catalog to the dependencies
+plugin to be applied, and will add the android hilt library from the catalog containing
+the `com.google.dagger:hilt-android`, `com.google.dagger:hilt-android-compiler`,
+and `com.google.dagger:hilt-android-testing` artifacts
 
 To use, make sure the [KSP](https://github.com/google/ksp) (ID `com.google.devtools.ksp`) plugin is applied, and then
 apply this plugin.
