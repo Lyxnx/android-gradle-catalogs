@@ -10,6 +10,7 @@ kotlin {
 }
 
 group = "io.github.lyxnx.gradle.android"
+description = "A Gradle settings plugin to automatically apply version catalogs"
 version = project.providers.gradleProperty("catalogs.version").get()
 
 gradlePlugin {
