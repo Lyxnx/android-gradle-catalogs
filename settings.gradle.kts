@@ -25,7 +25,6 @@ dependencyResolutionManagement {
 rootProject.name = "android-gradle-catalogs"
 
 include(
-    ":versions-accompanist",
     ":versions-androidx",
     ":versions-common",
     ":versions-compose"

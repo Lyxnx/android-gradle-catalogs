@@ -33,7 +33,6 @@ This repo contains some useful gradle version catalogs specific to Android:
 | [Common](versions-common/libs.versions.toml)           | Regular Android artifacts, such as gradle plugins, and some of the most commonly used libraries |
 | [AndroidX](versions-androidx/libs.versions.toml)       | AndroidX artifacts only                                                                         |
 | [Compose](versions-compose/libs.versions.toml)         | Jetpack Compose artifacts (including the BOM) - useful with the compose config plugin below     |
-| [Accompanist](versions-accompanist/libs.versions.toml) | Google Accompanist Compose artifacts (including the BOM)                                        |
 
 ### Using
 
