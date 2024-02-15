@@ -6,7 +6,7 @@ android-gradle-plugin = "8.2.2"
 android-cache-fix-plugin = "3.0.1"
 
 cashapp-turbine = "1.0.0"
-catalogs-plugins = "1.0.1"
+catalogs-plugins = "1.1.0"
 coil = "2.5.0"
 composeicons = "1.1.0"
 

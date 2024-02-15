@@ -3,6 +3,8 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [2024.02.15](#20240215)
+  - [Shared](#shared)
 - [2024.02.09](#20240209)
   - [AndroidX](#androidx)
   - [Common](#common)
@@ -199,6 +201,21 @@
 - [2023.03.16](#20230316)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## 2024.02.15
+
+Breaking:
+
+- Removed `catalogs.XCatalogName` properties; android plugins now find the required dependencies in all defined catalogs
+  instead of relying on specific catalogs
+- Removed firebase plugin
+- Merged `accompanist`, `firebase`, and `external` catalogs into a `shared` catalog (previously common)
+
+### Shared
+
+- Update android gradle cachefix plugin to 3.0.1
+- Update kotlinx-coroutines to 1.8.0
+- Update landscapist to 2.7.3
 
 ## 2024.02.09
 
