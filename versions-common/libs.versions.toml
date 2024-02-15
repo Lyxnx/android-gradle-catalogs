@@ -10,7 +10,6 @@ gson = "2.10.1"
 hilt = "2.50"
 
 jsoup = "1.17.2"
-
 junit4 = "4.13.2"
 junit5 = "5.10.2"
 
@@ -32,7 +31,7 @@ protobuf-gradle-plugin = "0.9.4"
 retrofit = "2.9.0"
 robolectric = "4.11.1"
 
-vanniktech-publish-plugin = "0.27.0"
+vanniktech-publish-gradle-plugin = "0.27.0"
 
 [libraries]
 
@@ -46,7 +45,6 @@ hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.re
 hilt-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "hilt" }
 
 jsoup = { module = "org.jsoup:jsoup", version.ref = "jsoup" }
-
 junit4 = { module = "junit:junit", version.ref = "junit4" }
 junit5-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit5" }
 junit5-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit5" }
@@ -68,8 +66,6 @@ koin-androidx-compose-navigation = { module = "io.insert-koin:koin-androidx-comp
 koin-ktor = { module = "io.insert-koin:koin-ktor", version.ref = "koin" }
 koin-logger-slf4j = { module = "io.insert-koin:koin-logger-slf4j", version.ref = "koin" }
 koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koin-annotations" }
-
-kotlin-bom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlin" }
 kotlin-gradleplugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 kotlin-stdlib-jdk7 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk7", version.ref = "kotlin" }
@@ -78,16 +74,13 @@ kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref =
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlin" }
-
 ksp-gradleplugin = { module = "com.google.devtools.ksp:symbol-processing-gradle-plugin", version.ref = "ksp" }
 ksp-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
 
 material = { module = "com.google.android.material:material", version.ref = "material" }
-
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 mockito-android = { module = "org.mockito:mockito-android", version.ref = "mockito" }
 mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockito-kotlin" }
-
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 mockk-android = { module = "io.mockk:mockk-android", version.ref = "mockk" }
 mockk-agent = { module = "io.mockk:mockk-agent", version.ref = "mockk" }
@@ -113,7 +106,7 @@ retrofit-converter-wire = { module = "com.squareup.retrofit2:converter-wire", ve
 
 robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
 
-vanniktech-publish-plugin = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "vanniktech-publish-plugin" }
+vanniktech-publish-gradleplugin = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "vanniktech-publish-gradle-plugin" }
 
 [plugins]
 
@@ -131,9 +124,8 @@ kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 protobuf = { id = "com.google.protobuf", version.ref = "protobuf-gradle-plugin" }
 
-vanniktech-publish = { id = "com.vanniktech.maven.publish", version.ref = "vanniktech-publish-plugin" }
+vanniktech-publish = { id = "com.vanniktech.maven.publish", version.ref = "vanniktech-publish-gradle-plugin" }

@@ -1,10 +1,14 @@
 [versions]
 
 coroutines = "1.7.3"
+
 datetime = "0.5.0"
+
 html = "0.11.0"
+
 immutablecollections = "0.3.7"
 io = "0.3.1"
+
 serialization = "1.6.2"
 
 [libraries]
@@ -12,10 +16,14 @@ serialization = "1.6.2"
 coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
 coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+
 datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "datetime" }
+
 html = { module = "org.jetbrains.kotlinx:kotlinx-html", version.ref = "html" }
+
 immutablecollections = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "immutablecollections" }
 io-core = { module = "org.jetbrains.kotlinx:kotlinx-io-core", version.ref = "io" }
+
 serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
 serialization-cbor = { module = "org.jetbrains.kotlinx:kotlinx-serialization-cbor", version.ref = "serialization" }
 serialization-protobuf = { module = "org.jetbrains.kotlinx:kotlinx-serialization-protobuf", version.ref = "serialization" }
