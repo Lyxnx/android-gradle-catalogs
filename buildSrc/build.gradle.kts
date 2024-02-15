@@ -12,6 +12,6 @@ gradlePlugin {
 }
 
 dependencies {
-    implementation(common.kotlin.gradleplugin)
-    implementation(common.vanniktech.publish.gradleplugin)
+    implementation(shared.kotlin.gradleplugin)
+    implementation(shared.vanniktech.publish.gradleplugin)
 }

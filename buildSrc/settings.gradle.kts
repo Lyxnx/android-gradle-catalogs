@@ -8,8 +8,8 @@ dependencyResolutionManagement {
         gradlePluginPortal()
     }
     versionCatalogs {
-        create("common") {
-            from(files("../versions-common/libs.versions.toml"))
+        create("shared") {
+            from(files("../versions-shared/libs.versions.toml"))
         }
     }
 }

@@ -2,7 +2,7 @@ import com.vanniktech.maven.publish.SonatypeHost
 
 plugins {
     `kotlin-dsl`
-    id(common.plugins.vanniktech.publish.get().pluginId)
+    id(shared.plugins.vanniktech.publish.get().pluginId)
 }
 
 kotlin {

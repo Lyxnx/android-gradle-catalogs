@@ -5,13 +5,13 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     `kotlin-dsl`
-    id(common.plugins.vanniktech.publish.get().pluginId)
+    id(shared.plugins.vanniktech.publish.get().pluginId)
 }
 
 dependencies {
-    compileOnly(common.android.gradleplugin)
-    compileOnly(common.kotlin.gradleplugin)
-    compileOnly(common.ksp.gradleplugin)
+    compileOnly(shared.android.gradleplugin)
+    compileOnly(shared.kotlin.gradleplugin)
+    compileOnly(shared.ksp.gradleplugin)
 }
 
 java {

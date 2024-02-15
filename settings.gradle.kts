@@ -16,8 +16,8 @@ dependencyResolutionManagement {
         gradlePluginPortal()
     }
     versionCatalogs {
-        create("common") {
-            from(files("versions-common/libs.versions.toml"))
+        create("shared") {
+            from(files("versions-shared/libs.versions.toml"))
         }
     }
 }
@@ -26,7 +26,7 @@ rootProject.name = "android-gradle-catalogs"
 
 include(
     ":versions-androidx",
-    ":versions-common",
+    ":versions-shared",
     ":versions-compose"
 )
 
