@@ -13,9 +13,6 @@ internal val Project.androidxCatalog: VersionCatalog
 internal val Project.composeCatalog: VersionCatalog
     get() = findCatalog("catalogs.composeCatalogName", "compose")
 
-internal val Project.firebaseCatalog: VersionCatalog
-    get() = findCatalog("catalogs.firebaseCatalogName", "firebase")
-
 private fun Project.findCatalog(property: String, default: String): VersionCatalog {
     return findCatalog(providers.gradleProperty(property).orNull ?: default)
 }

@@ -83,13 +83,6 @@ gradlePlugin {
             implementationClass = "io.github.lyxnx.gradle.android.catalogs.compose.ComposeUIPlugin"
         }
 
-        register("firebase") {
-            id = "io.github.lyxnx.gradle.android-firebase"
-            displayName = "Android Firebase configuration plugin"
-            description = "Configures Firebase for an Android application or library"
-            implementationClass = "io.github.lyxnx.gradle.android.catalogs.firebase.FirebasePlugin"
-        }
-
         register("hilt") {
             id = "io.github.lyxnx.gradle.android-hilt"
             displayName = "Android Hilt configuration plugin using KSP"

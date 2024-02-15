@@ -21,7 +21,6 @@ Version catalogs and plugins to help reduce boilerplate in Android Gradle build 
   - [Room Config](#room-config)
     - [Configuring](#configuring)
   - [Hilt Config](#hilt-config)
-  - [Firebase Config](#firebase-config)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -128,7 +127,6 @@ plugins {
     id("io.github.lyxnx.android.compose-config") version "<version>" apply false
     id("io.github.lyxnx.android.room-config") version "<version>" apply false
     id("io.github.lyxnx.android.hilt-config") version "<version>" apply false
-    id("io.github.lyxnx.android.firebase-config") version "<version>" apply false
 }
 ```
 
@@ -224,16 +222,6 @@ plugin to be applied, and will add the android hilt library from the `common` ca
 
 To use, make sure the [KSP](https://github.com/google/ksp) (ID `com.google.devtools.ksp`) plugin is applied, and then
 apply this plugin.
-
-### Firebase Config
-
-This plugin requires the [Google Services](https://developers.google.com/android/guides/google-services-plugin)
-(ID `com.google.gms.google-services`) plugin to be applied to the module in addition to the standard Android plugins
-
-This plugin is simple and only performs the following:
-
-1. Adds the Google services plugin if needed
-2. Adds the Firebase BOM to the dependencies from the `firebase` catalog
 
 [mavenCentral]: https://search.maven.org/artifact/io.github.lyxnx.gradle/versions-common
 
