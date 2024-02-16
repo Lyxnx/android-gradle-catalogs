@@ -20,8 +20,8 @@ class AndroidCatalogsPlugin : Plugin<Settings> {
 
                 // Add androidx and common version catalogs, those are required for every android project, compose is optional
                 versionCatalogs {
-                    create("common") {
-                        from("io.github.lyxnx.gradle:versions-common:$version")
+                    create("shared") {
+                        from("io.github.lyxnx.gradle:versions-shared:$version")
                     }
                     create("androidx") {
                         from("io.github.lyxnx.gradle:versions-androidx:$version")
