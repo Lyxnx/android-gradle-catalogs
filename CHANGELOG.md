@@ -3,8 +3,10 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [2024.02.15](#20240215)
+- [2024.02.16](#20240216)
   - [Shared](#shared)
+- [2024.02.15](#20240215)
+  - [Shared](#shared-1)
 - [2024.02.09](#20240209)
   - [AndroidX](#androidx)
   - [Common](#common)
@@ -201,6 +203,13 @@
 - [2023.03.16](#20230316)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## 2024.02.16
+
+### Shared
+
+- Remove firebase plugin ID
+- Update protobuf to 3.25.3
 
 ## 2024.02.15
 
