@@ -1,6 +1,6 @@
 [versions]
 
-bom = "2024.02.00"
+bom = "2024.02.01"
 compiler = "1.5.9"
 
 [libraries]
