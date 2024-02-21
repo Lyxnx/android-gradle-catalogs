@@ -43,7 +43,7 @@ fragment = "1.6.2"
 games = "2.0.2"
 gridlayout = "1.0.0"
 
-hilt = "1.1.0"
+hilt = "1.2.0"
 
 interpolator = "1.0.0"
 
