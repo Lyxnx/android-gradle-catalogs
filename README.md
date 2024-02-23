@@ -1,6 +1,6 @@
 # Android Gradle Catalogs <GitHub path="Lyxnx/android-gradle-catalogs" />
 
-[![Version](https://img.shields.io/maven-central/v/io.github.lyxnx.gradle/versions-common?style=flat-square)][mavenCentral]
+[![Version](https://img.shields.io/maven-central/v/io.github.lyxnx.gradle/versions-shared?style=flat-square)][mavenCentral]
 [![License](https://img.shields.io/github/license/Lyxnx/android-gradle-catalogs?style=flat-square)][license]
 
 Version catalogs and plugins to help reduce boilerplate in Android Gradle build scripts.
@@ -29,18 +29,17 @@ Version catalogs and plugins to help reduce boilerplate in Android Gradle build 
 
 This repo contains some useful gradle version catalogs specific to Android:
 
-| Name                                             | Description                                                                                     |
-|--------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| [Common](versions-common/libs.versions.toml)     | Regular Android artifacts, such as gradle plugins, and some of the most commonly used libraries |
-| [AndroidX](versions-androidx/libs.versions.toml) | AndroidX artifacts only                                                                         |
-| [Compose](versions-compose/libs.versions.toml)   | Jetpack Compose artifacts (including the BOM) - useful with the compose config plugin below     |
+| Name                                             | Description                                                                                                    |
+|--------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| [Shared](versions-shared/libs.versions.toml)     | All artifacts that don't belong in any of the other catalogs. This is the largest one and thus the most useful | 
+| [AndroidX](versions-androidx/libs.versions.toml) | AndroidX artifacts only                                                                                        |
+| [Compose](versions-compose/libs.versions.toml)   | Jetpack Compose artifacts (including the BOM) - useful with the compose config plugin below                    |
 
 ### Using
 
 This project comes with a plugin (`io.github.lyxnx.gradle.android-catalogs`) that can be applied to
-the `settings.gradle.kts` file and will apply the `androidx` and `common` catalogs to the project, since those are
-almost
-guaranteed to be used in any Android project
+the `settings.gradle.kts` file and will apply the `androidx` and `shared` catalogs to the project, since those are
+almost guaranteed to be used in any Android project
 
 ```kotlin
 // <root>/settings.gradle.kts
@@ -81,14 +80,14 @@ dependencyResolutionManagement {
 The gradle catalogs are published to the Maven Central repo, so only the standard `mavenCentral()` definition in the
 repositories block is required
 
-For the common catalog, it would be as follows, replacing `versions-common` with any of the required version names:
+For the common catalog, it would be as follows, replacing `versions-shared` with any of the required version names:
 
 ```kotlin
 // <root>/settings.gradle.kts
 dependencyResolutionManagement {
     versionCatalogs {
-        create("common") {
-            from("io.github.lyxnx.gradle:versions-common:<version>")
+        create("shared") {
+            from("io.github.lyxnx.gradle:versions-shared:<version>")
         }
     }
 }
@@ -100,7 +99,7 @@ To use, reference it within a build file:
 // Eg. app/build.gradle.kts
 dependencies {
     // For com.google.code.gson:gson
-    implementation(common.gson)
+    implementation(shared.gson)
 }
 ```
 
@@ -109,9 +108,9 @@ When using plugins, alias them within the root `build.gradle.kts` file:
 ```kotlin
 // <root>/build.gradle.kts
 plugins {
-    alias(common.plugins.android.application) apply false
-    alias(common.plugins.android.library) apply false
-    alias(common.plugins.kotlin.android) apply false
+    alias(shared.plugins.android.application) apply false
+    alias(shared.plugins.android.library) apply false
+    alias(shared.plugins.kotlin.android) apply false
 }
 ```
 
@@ -120,7 +119,7 @@ The plugins can then be used within another module:
 ```kotlin
 // Eg. app/build.gradle.kts
 plugins {
-    id(common.plugins.android.application.get().pluginId)
+    id(shared.plugins.android.application.get().pluginId)
     // OR
     id("com.android.application")
 }
@@ -251,6 +250,6 @@ and `com.google.dagger:hilt-android-testing` artifacts
 To use, make sure the [KSP](https://github.com/google/ksp) (ID `com.google.devtools.ksp`) plugin is applied, and then
 apply this plugin.
 
-[mavenCentral]: https://search.maven.org/artifact/io.github.lyxnx.gradle/versions-common
+[mavenCentral]: https://search.maven.org/artifact/io.github.lyxnx.gradle/versions-shared
 
 [license]: LICENCE
