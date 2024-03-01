@@ -41,7 +41,7 @@ landscapist = "2.3.1"
 lottie = "6.3.0"
 
 material = "1.11.0"
-mockito = "5.10.0"
+mockito = "5.11.0"
 mockito-kotlin = "5.2.1"
 mockk = "1.13.10"
 
