@@ -53,6 +53,9 @@ protobuf-gradle-plugin = "0.9.4"
 retrofit = "2.9.0"
 robolectric = "4.11.1"
 
+tomlj = "1.0.0"
+truth = "1.4.1"
+
 vanniktech-publish-gradle-plugin = "0.27.0"
 
 [libraries]
@@ -254,6 +257,9 @@ retrofit-converter-scalars = { module = "com.squareup.retrofit2:converter-scalar
 retrofit-converter-wire = { module = "com.squareup.retrofit2:converter-wire", version.ref = "retrofit" }
 
 robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
+
+tomlj = { module = "org.tomlj:tomlj", version.ref = "tomlj" }
+truth = { module = "com.google.truth:truth", version.ref = "truth" }
 
 vanniktech-publish-gradleplugin = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "vanniktech-publish-gradle-plugin" }
 
