@@ -207,6 +207,20 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## 2024.03.01
+
+### Shared
+
+- Add org.tomlj:tomlj
+- Add com.google.truth:truth
+- Update mockito to 5.11.0
+- Update AGP to 8.3.0
+- Update ksp to 1.9.22-1.0.18
+- Update firebase BOM to 32.7.3
+- Update mockk to 1.13.10
+- Update hilt to 2.51
+- Update coil-gif to 2.6.0
+
 ## 2024.02.23
 
 ### Compose
