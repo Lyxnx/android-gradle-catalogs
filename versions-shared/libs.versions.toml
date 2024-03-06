@@ -53,7 +53,7 @@ protobuf-gradle-plugin = "0.9.4"
 retrofit = "2.9.0"
 robolectric = "4.11.1"
 
-tomlj = "1.0.0"
+tomlj = "1.1.1"
 truth = "1.4.2"
 
 vanniktech-publish-gradle-plugin = "0.27.0"
