@@ -207,6 +207,31 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## 2024.03.08
+
+### AndroidX
+
+- Update media3 to 1.3.0
+- Update browser to 1.8.0
+- Update camera to 1.3.2
+- Update games-activity to 3.0.0
+
+### Compose 
+
+- Update BOM to 2024.02.02
+
+### Shared
+
+- Update catalog plugins to 1.1.1
+- Update ksp to 1.9.23-1.0.19
+- Update firebase BOM to 32.7.4
+- Update kotlin to 1.9.23
+- Update tomlj to 1.1.1
+- Update turbine to 1.1.0
+- Update lottie to 6.4.0
+- Update landscapist to 2.3.2
+- Update truth to 1.4.2
+
 ## 2024.03.01
 
 ### Shared
