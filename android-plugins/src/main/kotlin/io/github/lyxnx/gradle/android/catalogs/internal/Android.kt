@@ -4,7 +4,7 @@ import com.android.build.api.dsl.CommonExtension
 import com.android.build.api.variant.AndroidComponentsExtension
 import org.gradle.api.Project
 
-internal typealias AndroidCommonExtension = CommonExtension<*, *, *, *, *>
+internal typealias AndroidCommonExtension = CommonExtension<*, *, *, *, *, *>
 
 internal fun <T : AndroidCommonExtension> Project.android(configure: T.() -> Unit) {
     extensions.configure("android", configure)
