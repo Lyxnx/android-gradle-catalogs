@@ -86,6 +86,7 @@ test-ext-truth = "1.5.0"
 test-orchestrator = "1.4.2"
 test-rules = "1.5.0"
 test-runner = "1.5.2"
+test-uiautomator = "2.3.0"
 tracing = "1.2.0"
 transition = "1.4.1"
 
@@ -335,9 +336,10 @@ test-espresso = { module = "androidx.test.espresso:espresso-core", version.ref =
 test-ext-junit = { module = "androidx.test.ext:junit", version.ref = "test-ext-junit" }
 test-ext-junit-ktx = { module = "androidx.test.ext:junit-ktx", version.ref = "test-ext-junit" }
 test-ext-truth = { module = "androidx.test.ext:truth", version.ref = "test-ext-truth" }
+test-orchestrator = { module = "androidx.test:orchestrator", version.ref = "test-orchestrator" }
 test-rules = { module = "androidx.test:rules", version.ref = "test-rules" }
 test-runner = { module = "androidx.test:runner", version.ref = "test-runner" }
-test-orchestrator = { module = "androidx.test:orchestrator", version.ref = "test-orchestrator" }
+test-uiautomator = { module = "androidx.test.uiautomator:uiautomator", version.ref = "test-uiautomator" }
 
 tracing = { module = "androidx.tracing:tracing", version.ref = "tracing" }
 tracing-ktx = { module = "androidx.tracing:tracing-ktx", version.ref = "tracing" }
