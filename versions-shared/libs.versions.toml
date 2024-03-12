@@ -56,7 +56,7 @@ robolectric = "4.11.1"
 tomlj = "1.1.1"
 truth = "1.4.2"
 
-vanniktech-publish-gradle-plugin = "0.27.0"
+vanniktech-publish-gradle-plugin = "0.28.0"
 
 [libraries]
 
