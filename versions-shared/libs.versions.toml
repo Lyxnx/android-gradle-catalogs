@@ -53,6 +53,7 @@ protobuf-gradle-plugin = "0.9.4"
 retrofit = "2.9.0"
 robolectric = "4.11.1"
 
+timber = "5.0.1"
 tomlj = "1.1.1"
 truth = "1.4.2"
 
@@ -258,6 +259,7 @@ retrofit-converter-wire = { module = "com.squareup.retrofit2:converter-wire", ve
 
 robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
 
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 tomlj = { module = "org.tomlj:tomlj", version.ref = "tomlj" }
 truth = { module = "com.google.truth:truth", version.ref = "truth" }
 
