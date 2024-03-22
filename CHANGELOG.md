@@ -218,6 +218,27 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## 2024.03.22
+
+### AndroidX
+
+- Update mediarouter to 1.7.0
+- Update games-activity to 3.0.1
+
+### Compose
+
+- Update BOM to 2024.03.00
+- Update compiler to 1.5.11
+
+### Shared
+
+- Update kradle to 1.0.13
+- Update AGP to 8.3.1
+- Update retrofit to 2.10.0
+- Update kotlinx-io-core to 0.3.2
+- Add moshi 1.15.1
+- Add timber 5.0.1
+
 ## 2024.03.16
 
 ### AndroidX
