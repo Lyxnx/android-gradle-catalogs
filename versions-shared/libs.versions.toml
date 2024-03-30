@@ -34,7 +34,7 @@ kotlinx-html = "0.11.0"
 kotlinx-immutablecollections = "0.3.7"
 kotlinx-io = "0.3.2"
 kotlinx-serialization = "1.6.3"
-kradle = "1.0.13"
+kradle = "1.0.14"
 ksp = "1.9.23-1.0.19"
 
 landscapist = "2.3.2"
@@ -222,9 +222,7 @@ kotlinx-serialization-cbor = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 kotlinx-serialization-protobuf = { module = "org.jetbrains.kotlinx:kotlinx-serialization-protobuf", version.ref = "kotlinx-serialization" }
 kotlinx-serialization-properties = { module = "org.jetbrains.kotlinx:kotlinx-serialization-properties", version.ref = "kotlinx-serialization" }
 
-kradle-plugin-android = { module = "io.github.lyxnx.gradle:plugin-android", version.ref = "kradle" }
-kradle-plugin-common = { module = "io.github.lyxnx.gradle:plugin-common", version.ref = "kradle" }
-kradle-plugin-kotlin = { module = "io.github.lyxnx.gradle:plugin-kotlin", version.ref = "kradle" }
+kradle-plugin = { module = "io.github.lyxnx.gradle:kradle-plugin", version.ref = "kradle" }
 
 ksp-gradleplugin = { module = "com.google.devtools.ksp:symbol-processing-gradle-plugin", version.ref = "ksp" }
 ksp-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
