@@ -37,7 +37,7 @@ kotlinx-serialization = "1.6.3"
 kradle = "1.0.15"
 ksp = "1.9.23-1.0.20"
 
-landscapist = "2.3.2"
+landscapist = "2.3.3"
 lottie = "6.4.0"
 
 material = "1.11.0"
