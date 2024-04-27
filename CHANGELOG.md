@@ -3,43 +3,45 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [2024.04.27](#20240427)
+- [2024.04.27-1](#20240427-1)
   - [Shared](#shared)
+- [2024.04.27](#20240427)
+  - [Shared](#shared-1)
 - [2024.04.19](#20240419)
   - [AndroidX](#androidx)
   - [Compose](#compose)
-  - [Shared](#shared-1)
+  - [Shared](#shared-2)
 - [2024.04.12](#20240412)
   - [AndroidX](#androidx-1)
-  - [Shared](#shared-2)
+  - [Shared](#shared-3)
 - [2024.04.06](#20240406)
   - [AndroidX](#androidx-2)
   - [Compose](#compose-1)
-  - [Shared](#shared-3)
-- [2024.03.31](#20240331)
   - [Shared](#shared-4)
+- [2024.03.31](#20240331)
+  - [Shared](#shared-5)
 - [2024.03.22](#20240322)
   - [AndroidX](#androidx-3)
   - [Compose](#compose-2)
-  - [Shared](#shared-5)
+  - [Shared](#shared-6)
 - [2024.03.16](#20240316)
   - [AndroidX](#androidx-4)
-  - [Shared](#shared-6)
-- [2024.03.09](#20240309)
   - [Shared](#shared-7)
+- [2024.03.09](#20240309)
+  - [Shared](#shared-8)
 - [2024.03.08](#20240308)
   - [AndroidX](#androidx-5)
   - [Compose](#compose-3)
-  - [Shared](#shared-8)
-- [2024.03.01](#20240301)
   - [Shared](#shared-9)
+- [2024.03.01](#20240301)
+  - [Shared](#shared-10)
 - [2024.02.23](#20240223)
   - [Compose](#compose-4)
-  - [Shared](#shared-10)
-- [2024.02.16](#20240216)
   - [Shared](#shared-11)
-- [2024.02.15](#20240215)
+- [2024.02.16](#20240216)
   - [Shared](#shared-12)
+- [2024.02.15](#20240215)
+  - [Shared](#shared-13)
 - [2024.02.09](#20240209)
   - [AndroidX](#androidx-6)
   - [Common](#common)
@@ -236,6 +238,13 @@
 - [2023.03.16](#20230316)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## 2024.04.27-1
+
+### Shared
+
+- Update kradle to 1.1.1
+- Add kotlinx-serialization-core
 
 ## 2024.04.27
 
