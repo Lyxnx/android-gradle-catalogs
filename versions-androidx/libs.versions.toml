@@ -90,7 +90,7 @@ test-uiautomator = "2.3.0"
 tracing = "1.2.0"
 transition = "1.4.1"
 
-vectordrawable = "1.1.0"
+vectordrawable = "1.2.0"
 versionedparcelable = "1.2.0"
 viewpager = "1.0.0"
 viewpager2 = "1.0.0"
