@@ -3,50 +3,52 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [202405.03](#20240503)
+- [2024.05.11](#20240511)
+  - [Shared](#shared)
+- [2024.05.03](#20240503)
   - [AndroidX](#androidx)
   - [Compose](#compose)
   - [Firebase](#firebase)
-  - [Shared](#shared)
-- [2024.04.27-1](#20240427-1)
   - [Shared](#shared-1)
-- [2024.04.27](#20240427)
+- [2024.04.27-1](#20240427-1)
   - [Shared](#shared-2)
+- [2024.04.27](#20240427)
+  - [Shared](#shared-3)
 - [2024.04.19](#20240419)
   - [AndroidX](#androidx-1)
   - [Compose](#compose-1)
-  - [Shared](#shared-3)
+  - [Shared](#shared-4)
 - [2024.04.12](#20240412)
   - [AndroidX](#androidx-2)
-  - [Shared](#shared-4)
+  - [Shared](#shared-5)
 - [2024.04.06](#20240406)
   - [AndroidX](#androidx-3)
   - [Compose](#compose-2)
-  - [Shared](#shared-5)
-- [2024.03.31](#20240331)
   - [Shared](#shared-6)
+- [2024.03.31](#20240331)
+  - [Shared](#shared-7)
 - [2024.03.22](#20240322)
   - [AndroidX](#androidx-4)
   - [Compose](#compose-3)
-  - [Shared](#shared-7)
+  - [Shared](#shared-8)
 - [2024.03.16](#20240316)
   - [AndroidX](#androidx-5)
-  - [Shared](#shared-8)
-- [2024.03.09](#20240309)
   - [Shared](#shared-9)
+- [2024.03.09](#20240309)
+  - [Shared](#shared-10)
 - [2024.03.08](#20240308)
   - [AndroidX](#androidx-6)
   - [Compose](#compose-4)
-  - [Shared](#shared-10)
-- [2024.03.01](#20240301)
   - [Shared](#shared-11)
+- [2024.03.01](#20240301)
+  - [Shared](#shared-12)
 - [2024.02.23](#20240223)
   - [Compose](#compose-5)
-  - [Shared](#shared-12)
-- [2024.02.16](#20240216)
   - [Shared](#shared-13)
-- [2024.02.15](#20240215)
+- [2024.02.16](#20240216)
   - [Shared](#shared-14)
+- [2024.02.15](#20240215)
+  - [Shared](#shared-15)
 - [2024.02.09](#20240209)
   - [AndroidX](#androidx-7)
   - [Common](#common)
@@ -244,7 +246,20 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## 202405.03
+## 2024.05.11
+
+Allow configuring of catalogs from the settings plugin
+
+### Shared
+
+- Update mockito to 5.12.0
+- Add koin-test-junit4 and koin-test-junit5
+- Update kotlinx-coroutines-android to 1.8.1
+- Update kotlinx-io-core to 0.3.4
+- Update ksp to 1.9.24-1.0.20
+- Update kotlin to 1.9.24
+
+## 2024.05.03
 
 ### AndroidX
 
