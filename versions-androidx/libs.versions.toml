@@ -111,7 +111,6 @@ work = "2.9.0"
 [libraries]
 
 activity = { module = "androidx.activity:activity", version.ref = "activity" }
-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
 
 annotation = { module = "androidx.annotation:annotation", version.ref = "annotation" }
@@ -224,12 +223,12 @@ legacy-support-core-utils = { module = "androidx.legacy:legacy-support-core-util
 legacy-support-v13 = { module = "androidx.legacy:legacy-support-v13", version.ref = "legacy" }
 legacy-support-v4 = { module = "androidx.legacy:legacy-support-v4", version.ref = "legacy" }
 
+# TODO: Remove lifecycle-viewmodel-ktx, lifecycle-runtime-ktx, lifecycle-livedata-ktx when 2.8.0 is stable as extensions are moved into main artifact (https://developer.android.com/jetpack/androidx/releases/lifecycle#2.8.0-alpha02)
 lifecycle-commonjava8 = { module = "androidx.lifecycle:lifecycle-common-java8", version.ref = "lifecycle" }
 lifecycle-compiler = { module = "androidx.lifecycle:lifecycle-compiler", version.ref = "lifecycle" }
 lifecycle-livedata = { module = "androidx.lifecycle:lifecycle-livedata", version.ref = "lifecycle" }
 lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle" }
 lifecycle-reactivestreams = { module = "androidx.lifecycle:lifecycle-reactivestreams", version.ref = "lifecycle" }
-lifecycle-reactivestreams-ktx = { module = "androidx.lifecycle:lifecycle-reactivestreams-ktx", version.ref = "lifecycle" }
 lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime", version.ref = "lifecycle" }
 lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
 lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
@@ -277,9 +276,9 @@ mediarouter = { module = "androidx.mediarouter:mediarouter", version.ref = "medi
 multidex = { module = "androidx.multidex:multidex", version.ref = "multidex" }
 
 navigation-fragment = { module = "androidx.navigation:navigation-fragment", version.ref = "navigation" }
-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
+# TODO: Add as part of 2.8.0; still in alpha currently (https://developer.android.com/jetpack/androidx/releases/navigation#2.8.0-alpha07)
+#navigation-fragment-compose = { module = "androidx.navigation:navigation-fragment-compose", version.ref = "navigation" }
 navigation-ui = { module = "androidx.navigation:navigation-ui", version.ref = "navigation" }
-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
 navigation-dynamic-features-fragment = { module = "androidx.navigation:navigation-dynamic-features-fragment", version.ref = "navigation" }
 navigation-testing = { module = "androidx.navigation:navigation-testing", version.ref = "navigation" }
 navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
@@ -309,6 +308,7 @@ resourceinspection-processor = { module = "androidx.resourceinspection:resourcei
 
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+# TODO: Remove room-ktx when 2.7.0 is released as extensions are moved into main artifact (https://developer.android.com/jetpack/androidx/releases/room#2.7.0-alpha01)
 room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 room-rxjava2 = { module = "androidx.room:room-rxjava2", version.ref = "room" }
 room-rxjava3 = { module = "androidx.room:room-rxjava3", version.ref = "room" }
@@ -317,6 +317,7 @@ room-testing = { module = "androidx.room:room-testing", version.ref = "room" }
 room-paging = { module = "androidx.room:room-paging", version.ref = "room" }
 
 savedstate = { module = "androidx.savedstate:savedstate", version.ref = "savedstate" }
+# TODO: This will be removed eventually (https://github.com/androidx/androidx/commit/bfc9d93730a70ffa4847115913de2f7b6321b1f8), but no version has been released since
 savedstate-ktx = { module = "androidx.savedstate:savedstate-ktx", version.ref = "savedstate" }
 
 sharetarget = { module = "androidx.sharetarget:sharetarget", version.ref = "sharetarget" }
@@ -391,13 +392,13 @@ window-rxjava3 = { module = "androidx.window:window-rxjava3", version.ref = "win
 window-testing = { module = "androidx.window:window-testing", version.ref = "window" }
 
 work-runtime = { module = "androidx.work:work-runtime", version.ref = "work" }
-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "work" }
 work-rxjava2 = { module = "androidx.work:work-rxjava2", version.ref = "work" }
 work-gcm = { module = "androidx.work:work-gcm", version.ref = "work" }
 work-testing = { module = "androidx.work:work-testing", version.ref = "work" }
 work-multiprocess = { module = "androidx.work:work-multiprocess", version.ref = "work" }
 
 [plugins]
+
 benchmark = { id = "androidx.benchmark", version.ref = "benchmark" }
 navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "navigation" }
 navigation-safeargs-kotlin = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
