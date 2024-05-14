@@ -285,6 +285,9 @@ catalogs-compose-ui = { id = "io.github.lyxnx.gradle.android-compose-ui", versio
 catalogs-hilt = { id = "io.github.lyxnx.gradle.android-hilt", version.ref = "catalogs-plugins" }
 catalogs-room = { id = "io.github.lyxnx.gradle.android-room", version.ref = "catalogs-plugins" }
 
+# Compose compiler will be moved to jetbrains and synced to kotlin version from kotlin 2.0
+#compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
 gms = { id = "com.google.gms.google-services", version.ref = "google-gms-plugin" }
 
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
