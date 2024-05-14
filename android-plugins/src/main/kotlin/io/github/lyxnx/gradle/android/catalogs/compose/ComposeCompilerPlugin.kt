@@ -24,6 +24,7 @@ import java.io.File
  *
  * This plugin should be used for a module that requires basic Compose functionality but does not need the UI side of Compose
  */
+// TODO: support KMP from Kotlin 2.0 - compose compiler is moved to jetbrains repo and configuring is different
 public class ComposeCompilerPlugin : CatalogsBasePlugin() {
 
     internal lateinit var bom: Dependency

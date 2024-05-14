@@ -33,6 +33,7 @@ import javax.inject.Inject
  *
  * If [roomSchemaDir] is never explicitly called, this will default to [DEFAULT_SCHEMA_DIR]
  */
+// TODO support KMP in Room 2.7.0 (https://developer.android.com/jetpack/androidx/releases/room#2.7.0-alpha01) and https://developer.android.com/kotlin/multiplatform/room
 public class RoomPlugin @Inject constructor(
     private val pluginRegistry: PluginRegistry,
 ) : CatalogsBasePlugin() {
