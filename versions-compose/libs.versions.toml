@@ -1,7 +1,7 @@
 [versions]
 
 bom = "2024.05.00"
-compiler = "1.5.13"
+compiler = "1.5.14"
 
 [libraries]
 
