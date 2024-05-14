@@ -71,13 +71,6 @@ gradlePlugin {
             implementationClass = "io.github.lyxnx.gradle.android.catalogs.compose.ComposeUIPlugin"
         }
 
-        register("hilt") {
-            id = "io.github.lyxnx.gradle.android-hilt"
-            displayName = "Android Hilt configuration plugin using KSP"
-            description = "Configures Hilt for an Android application or library using KSP"
-            implementationClass = "io.github.lyxnx.gradle.android.catalogs.hilt.HiltPlugin"
-        }
-
         register("room") {
             id = "io.github.lyxnx.gradle.android-room"
             displayName = "Android Room configuration plugin"
