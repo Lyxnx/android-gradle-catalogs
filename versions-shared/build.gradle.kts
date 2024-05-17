@@ -10,7 +10,6 @@ catalogs {
         "catalogs-compose-compiler",
         "catalogs-compose-ui",
         "catalogs-room",
-        "catalogs-hilt",
         "catalogs-androidplugins"
     )
 }

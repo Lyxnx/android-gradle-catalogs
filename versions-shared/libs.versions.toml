@@ -6,7 +6,7 @@ android-gradle-plugin = "8.4.0"
 android-cache-fix-plugin = "3.0.1"
 
 cashapp-turbine = "1.1.0"
-catalogs-plugins = "1.1.1"
+catalogs-plugins = "1.2.0"
 coil = "2.6.0"
 composeicons = "1.1.0"
 
@@ -282,7 +282,6 @@ android-cachefix = { id = "org.gradle.android.cache-fix", version.ref = "android
 
 catalogs-compose-compiler = { id = "io.github.lyxnx.gradle.android-compose-compiler", version.ref = "catalogs-plugins" }
 catalogs-compose-ui = { id = "io.github.lyxnx.gradle.android-compose-ui", version.ref = "catalogs-plugins" }
-catalogs-hilt = { id = "io.github.lyxnx.gradle.android-hilt", version.ref = "catalogs-plugins" }
 catalogs-room = { id = "io.github.lyxnx.gradle.android-room", version.ref = "catalogs-plugins" }
 
 # Compose compiler will be moved to jetbrains and synced to kotlin version from kotlin 2.0
