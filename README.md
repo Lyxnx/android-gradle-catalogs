@@ -21,7 +21,6 @@ Version catalogs and plugins to help reduce boilerplate in Android Gradle build 
     - [UI](#ui)
   - [Room](#room)
     - [Configuring](#configuring)
-  - [Hilt](#hilt)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -55,7 +54,11 @@ the `settings.gradle.kts` file:
 // <root>/settings.gradle.kts
 dependencyResolutionManagement {
     versionCatalogs {
-        composeCatalog()
+        compose()
+        // If a catalog would like to be configured globally:
+        shared {
+            version("kotlin", "1.7.20")
+        }
     }
 }
 ```
@@ -150,7 +153,6 @@ plugins {
     // for modules that use the full Compose UI, if using this, the compiler plugin is applied in addition
     id("io.github.lyxnx.android-compose-ui") version "<version>" apply false
     id("io.github.lyxnx.android-room") version "<version>" apply false
-    id("io.github.lyxnx.android-hilt") version "<version>" apply false
 }
 ```
 
@@ -236,19 +238,6 @@ roomSchemaDir("somewhere/schema_dir")
 
 Note that this file is relative to the current build script.
 The above would result in the schema directory being `app/somewhere/schema_dir` for the `:app` module
-
-### Hilt
-
-KSP support was added to Dagger in version 2.48 (catalog 2023.09.09 onwards). This plugin used to come with a KAPT
-version, but has been removed due to KSP being more performant.
-
-This plugin will require the [Dagger Hilt](https://dagger.dev/hilt/gradle-setup.html) (ID `dagger.hilt.android.plugin`)
-plugin to be applied, and will add the android hilt library from the catalog containing
-the `com.google.dagger:hilt-android`, `com.google.dagger:hilt-android-compiler`,
-and `com.google.dagger:hilt-android-testing` artifacts
-
-To use, make sure the [KSP](https://github.com/google/ksp) (ID `com.google.devtools.ksp`) plugin is applied, and then
-apply this plugin.
 
 [mavenCentral]: https://search.maven.org/artifact/io.github.lyxnx.gradle/versions-shared
 
