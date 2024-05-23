@@ -201,6 +201,7 @@ koin-logger-slf4j = { module = "io.insert-koin:koin-logger-slf4j", version.ref =
 koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koin-annotations" }
 koin-ksp-compiler = { module = "io.insert-koin:koin-ksp-compiler", version.ref = "koin-annotations" }
 
+kotlin-compose-gradleplugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
 kotlin-gradleplugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 kotlin-stdlib-jdk7 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk7", version.ref = "kotlin" }
@@ -284,14 +285,12 @@ catalogs-compose-compiler = { id = "io.github.lyxnx.gradle.android-compose-compi
 catalogs-compose-ui = { id = "io.github.lyxnx.gradle.android-compose-ui", version.ref = "catalogs-plugins" }
 catalogs-room = { id = "io.github.lyxnx.gradle.android-room", version.ref = "catalogs-plugins" }
 
-# Compose compiler will be moved to jetbrains and synced to kotlin version from kotlin 2.0
-#compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-
 gms = { id = "com.google.gms.google-services", version.ref = "google-gms-plugin" }
 
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
@@ -302,6 +301,7 @@ kradle-android-config = { id = "io.github.lyxnx.gradle.android-config", version.
 kradle-android-library = { id = "io.github.lyxnx.gradle.android-library", version.ref = "kradle" }
 kradle-kotlin-config = { id = "io.github.lyxnx.gradle.kotlin-config", version.ref = "kradle" }
 kradle-kotlin-library = { id = "io.github.lyxnx.gradle.kotlin-library", version.ref = "kradle" }
+
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 protobuf = { id = "com.google.protobuf", version.ref = "protobuf-gradle-plugin" }

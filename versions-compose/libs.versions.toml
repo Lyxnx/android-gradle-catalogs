@@ -1,7 +1,6 @@
 [versions]
 
 bom = "2024.05.00"
-compiler = "1.5.14"
 
 [libraries]
 
@@ -36,7 +35,3 @@ ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 ui-unit = { module = "androidx.compose.ui:ui-unit" }
 ui-util = { module = "androidx.compose.ui:ui-util" }
 ui-viewbinding = { module = "androidx.compose.ui:ui-viewbinding" }
-
-# Compose compiler will be moved to shared and synced to kotlin version from kotlin 2.0
-# Not meant to be used and is just here for automatic updates
-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "compiler" }

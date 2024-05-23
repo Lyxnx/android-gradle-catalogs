@@ -3,7 +3,6 @@ package io.github.lyxnx.gradle.android.catalogs.room
 import com.google.devtools.ksp.gradle.KspExtension
 import io.github.lyxnx.gradle.android.catalogs.base.CatalogsBasePlugin
 import io.github.lyxnx.gradle.android.catalogs.internal.AndroidCommonExtension
-import io.github.lyxnx.gradle.android.catalogs.internal.KSP_PLUGIN
 import io.github.lyxnx.gradle.android.catalogs.internal.android
 import io.github.lyxnx.gradle.android.catalogs.internal.androidTestImplementation
 import io.github.lyxnx.gradle.android.catalogs.internal.ensureCatalogLibrary
@@ -23,6 +22,8 @@ import org.gradle.kotlin.dsl.findPlugin
 import org.gradle.process.CommandLineArgumentProvider
 import java.io.File
 import javax.inject.Inject
+
+private const val KSP_PLUGIN = "com.google.devtools.ksp"
 
 /**
  * Configures RoomDB for a project

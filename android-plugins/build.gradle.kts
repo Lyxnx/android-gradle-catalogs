@@ -9,6 +9,7 @@ plugins {
 dependencies {
     compileOnly(shared.android.gradleplugin)
     compileOnly(shared.kotlin.gradleplugin)
+    compileOnly(shared.kotlin.compose.gradleplugin)
     compileOnly(shared.ksp.gradleplugin)
 }
 

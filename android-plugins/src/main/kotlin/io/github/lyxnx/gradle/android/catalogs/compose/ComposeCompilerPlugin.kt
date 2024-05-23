@@ -1,17 +1,22 @@
 package io.github.lyxnx.gradle.android.catalogs.compose
 
 import io.github.lyxnx.gradle.android.catalogs.base.CatalogsBasePlugin
-import io.github.lyxnx.gradle.android.catalogs.internal.AndroidCommonExtension
-import io.github.lyxnx.gradle.android.catalogs.internal.android
 import io.github.lyxnx.gradle.android.catalogs.internal.ensureCatalogLibrary
+import io.github.lyxnx.gradle.android.catalogs.internal.ensurePlugin
 import io.github.lyxnx.gradle.android.catalogs.internal.findBooleanProperty
 import io.github.lyxnx.gradle.android.catalogs.internal.implementation
 import org.gradle.api.Project
 import org.gradle.api.artifacts.Dependency
+import org.gradle.api.internal.plugins.PluginRegistry
+import org.gradle.kotlin.dsl.apply
+import org.gradle.kotlin.dsl.assign
+import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
-import org.gradle.kotlin.dsl.withType
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jetbrains.kotlin.compose.compiler.gradle.ComposeCompilerGradlePluginExtension
 import java.io.File
+import javax.inject.Inject
+
+private const val COMPOSE_PLUGIN_ID = "org.jetbrains.kotlin.plugin.compose"
 
 /**
  * Configures the basic Jetpack Compose compiler options
@@ -24,29 +29,22 @@ import java.io.File
  *
  * This plugin should be used for a module that requires basic Compose functionality but does not need the UI side of Compose
  */
-// TODO: support KMP from Kotlin 2.0 - compose compiler is moved to jetbrains repo and configuring is different
-public class ComposeCompilerPlugin : CatalogsBasePlugin() {
+public class ComposeCompilerPlugin @Inject constructor(
+    private val pluginRegistry: PluginRegistry
+) : CatalogsBasePlugin() {
 
     internal lateinit var bom: Dependency
         private set
 
     override fun Project.configureCatalogPlugin() {
+        pluginRegistry.ensurePlugin("Compose Compiler", COMPOSE_PLUGIN_ID)
+        apply(plugin = COMPOSE_PLUGIN_ID)
+
         dependencies {
             bom = platform(ensureCatalogLibrary("androidx.compose:compose-bom"))
             implementation(bom)
 
             implementation(ensureCatalogLibrary("androidx.compose.runtime:runtime"))
-        }
-
-        android<AndroidCommonExtension> {
-            buildFeatures {
-                compose = true
-            }
-
-            composeOptions {
-                kotlinCompilerExtensionVersion =
-                    ensureCatalogLibrary("androidx.compose.compiler:compiler").version!!.toString()
-            }
         }
 
         val generateReports = shouldGenerateComposeReports()
@@ -55,20 +53,12 @@ public class ComposeCompilerPlugin : CatalogsBasePlugin() {
         if (generateReports || generateMetrics) {
             val reportsDir = getComposeReportsDir()
 
-            tasks.withType<KotlinCompile>().configureEach {
-                compilerOptions {
-                    if (generateReports) {
-                        freeCompilerArgs.addAll(
-                            "-P",
-                            "plugin:androidx.compose.compiler.plugins.kotlin:reportsDestination=${reportsDir.absolutePath}"
-                        )
-                    }
-                    if (generateMetrics) {
-                        freeCompilerArgs.addAll(
-                            "-P",
-                            "plugin:androidx.compose.compiler.plugins.kotlin:metricsDestination=${reportsDir.absolutePath}"
-                        )
-                    }
+            extensions.configure<ComposeCompilerGradlePluginExtension> {
+                if (generateReports) {
+                    reportsDestination = reportsDir
+                }
+                if (generateMetrics) {
+                    metricsDestination = reportsDir
                 }
             }
         }
