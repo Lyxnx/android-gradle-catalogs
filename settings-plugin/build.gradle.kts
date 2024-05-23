@@ -15,18 +15,25 @@ version = project.providers.gradleProperty("catalogs.version").get()
 
 gradlePlugin {
     plugins {
+        register("standard-catalogs") {
+            id = "io.github.lyxnx.gradle.catalogs"
+            displayName = "Gradle catalogs plugin"
+            description = "Applies basic gradle catalogs automatically"
+            implementationClass = "io.github.lyxnx.gradle.catalogs.CatalogsPlugin"
+        }
+
         register("android-catalogs") {
             id = "io.github.lyxnx.gradle.android-catalogs"
             displayName = "Android catalogs plugin"
             description = "Applies all android catalogs automatically"
-            implementationClass = "io.github.lyxnx.gradle.android.catalogs.AndroidCatalogsPlugin"
+            implementationClass = "io.github.lyxnx.gradle.catalogs.android.AndroidCatalogsPlugin"
         }
     }
 }
 
 val generatedResourceDir = layout.buildDirectory.dir("generated-resources")
 val writeProps = tasks.create<WriteProperties>("writeProps") {
-    destinationFile.set(generatedResourceDir.map { it.file("META-INF/android-catalogs.properties") })
+    destinationFile.set(generatedResourceDir.map { it.file("META-INF/catalogs.properties") })
     property("version", project.version)
 }
 
