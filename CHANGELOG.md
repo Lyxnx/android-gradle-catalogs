@@ -255,6 +255,18 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## 2024.05.26
+
+### Compose
+
+- Remove compose compiler - it is now included as part of the shared catalog and maintained by jetbrains
+
+### Shared
+
+- Update ksp to 2.0.0-1.0.21
+- Update kotlin to 2.0.0
+- Add kotlin-compose compiler plugin (moved from google to jetbrains repo and versioned the same as kotlin version)
+
 ## 2024.05.24
 
 ### AndroidX
