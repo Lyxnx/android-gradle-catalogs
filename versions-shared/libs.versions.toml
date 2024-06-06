@@ -35,7 +35,7 @@ kotlinx-immutablecollections = "0.3.7"
 kotlinx-io = "0.3.5"
 kotlinx-serialization = "1.6.3"
 kradle = "1.1.2"
-ksp = "2.0.0-1.0.21"
+ksp = "2.0.0-1.0.22"
 
 landscapist = "2.3.3"
 lottie = "6.4.1"
