@@ -26,8 +26,7 @@ rootProject.name = "android-gradle-catalogs"
 
 include(
     ":versions-androidx",
-    ":versions-shared",
-    ":versions-compose"
+    ":versions-shared"
 )
 
 include(":android-plugins")

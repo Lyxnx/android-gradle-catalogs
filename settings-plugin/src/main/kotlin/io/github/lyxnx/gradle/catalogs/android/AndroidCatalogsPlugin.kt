@@ -12,7 +12,6 @@ import org.gradle.api.initialization.resolve.MutableVersionCatalogContainer
 import org.gradle.kotlin.dsl.apply
 
 internal const val NAME_ANDROIDX = "androidx"
-internal const val NAME_COMPOSE = "compose"
 
 class AndroidCatalogsPlugin : Plugin<Settings> {
 
@@ -41,11 +40,3 @@ fun MutableVersionCatalogContainer.androidx(
     name: String = NAME_ANDROIDX,
     block: VersionCatalogBuilder.() -> Unit = {}
 ): VersionCatalogBuilder = createCatalog(name, "androidx", block)
-
-/**
- * Applies the compose catalog to the catalog collection with the given [name], which is `compose` by default, if it does not exist
- */
-fun MutableVersionCatalogContainer.compose(
-    name: String = NAME_COMPOSE,
-    block: VersionCatalogBuilder.() -> Unit = {}
-): VersionCatalogBuilder = createCatalog(name, "compose", block)
