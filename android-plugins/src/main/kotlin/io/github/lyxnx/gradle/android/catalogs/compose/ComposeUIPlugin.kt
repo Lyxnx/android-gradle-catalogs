@@ -5,9 +5,11 @@ import io.github.lyxnx.gradle.android.catalogs.internal.androidTestImplementatio
 import io.github.lyxnx.gradle.android.catalogs.internal.debugImplementation
 import io.github.lyxnx.gradle.android.catalogs.internal.ensureCatalogLibrary
 import io.github.lyxnx.gradle.android.catalogs.internal.implementation
+import io.github.lyxnx.gradle.android.catalogs.internal.kotlinMulitplatform
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.dependencies
+import org.jetbrains.compose.ExperimentalComposeLibrary
 
 /**
  * Configures the Jetpack Compose for UI
@@ -23,18 +25,38 @@ public class ComposeUIPlugin : CatalogsBasePlugin() {
     override fun Project.configureCatalogPlugin() {
         val config = plugins.apply(ComposeCompilerPlugin::class)
 
-        dependencies {
-            // Compiler plugin already adds the runtime library and BOM as regular implementation
-            implementation(ensureCatalogLibrary("androidx.compose.ui:ui"))
-            implementation(ensureCatalogLibrary("androidx.compose.foundation:foundation"))
-            implementation(ensureCatalogLibrary("androidx.compose.foundation:foundation-layout"))
+        if (config.isMultiplatform) {
+            val composeDeps = composeDependencies
 
-            implementation(ensureCatalogLibrary("androidx.compose.ui:ui-tooling-preview"))
-            debugImplementation(ensureCatalogLibrary("androidx.compose.ui:ui-tooling"))
+            kotlinMulitplatform {
+                sourceSets.commonMain.dependencies {
+                    // Compiler plugin already adds the runtime library
+                    implementation(composeDeps.ui)
+                    implementation(composeDeps.foundation)
+                    implementation(composeDeps.uiTooling)
+                    implementation(composeDeps.preview)
+                }
 
-            androidTestImplementation(config.bom)
-            androidTestImplementation(ensureCatalogLibrary("androidx.compose.ui:ui-test-junit4"))
-            debugImplementation(ensureCatalogLibrary("androidx.compose.ui:ui-test-manifest"))
+                @OptIn(ExperimentalComposeLibrary::class)
+                sourceSets.commonTest.dependencies {
+                    implementation(composeDeps.uiTest)
+                    implementation(composeDeps.desktop.uiTestJUnit4)
+                }
+            }
+        } else {
+            dependencies {
+                // Compiler plugin already adds the runtime library and BOM as regular implementation
+                implementation(ensureCatalogLibrary("androidx.compose.ui:ui"))
+                implementation(ensureCatalogLibrary("androidx.compose.foundation:foundation"))
+                implementation(ensureCatalogLibrary("androidx.compose.foundation:foundation-layout"))
+
+                implementation(ensureCatalogLibrary("androidx.compose.ui:ui-tooling-preview"))
+                debugImplementation(ensureCatalogLibrary("androidx.compose.ui:ui-tooling"))
+
+                androidTestImplementation(platform(ensureCatalogLibrary("androidx.compose:compose-bom")))
+                androidTestImplementation(ensureCatalogLibrary("androidx.compose.ui:ui-test-junit4"))
+                debugImplementation(ensureCatalogLibrary("androidx.compose.ui:ui-test-manifest"))
+            }
         }
     }
 }

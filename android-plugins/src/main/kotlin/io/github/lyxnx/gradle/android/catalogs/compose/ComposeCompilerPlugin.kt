@@ -5,17 +5,22 @@ import io.github.lyxnx.gradle.android.catalogs.internal.ensureCatalogLibrary
 import io.github.lyxnx.gradle.android.catalogs.internal.ensurePlugin
 import io.github.lyxnx.gradle.android.catalogs.internal.findBooleanProperty
 import io.github.lyxnx.gradle.android.catalogs.internal.implementation
+import io.github.lyxnx.gradle.android.catalogs.internal.kotlinMulitplatform
 import org.gradle.api.Project
-import org.gradle.api.artifacts.Dependency
 import org.gradle.api.internal.plugins.PluginRegistry
 import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.assign
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
+import org.gradle.kotlin.dsl.getByType
+import org.gradle.kotlin.dsl.hasPlugin
+import org.jetbrains.compose.ComposePlugin
 import org.jetbrains.kotlin.compose.compiler.gradle.ComposeCompilerGradlePluginExtension
+import org.jetbrains.kotlin.gradle.plugin.KotlinMultiplatformPluginWrapper
 import java.io.File
 import javax.inject.Inject
 
+private const val COMPOSE_DESKTOP_PLUGIN_ID = "org.jetbrains.compose"
 private const val COMPOSE_PLUGIN_ID = "org.jetbrains.kotlin.plugin.compose"
 
 /**
@@ -33,18 +38,31 @@ public class ComposeCompilerPlugin @Inject constructor(
     private val pluginRegistry: PluginRegistry
 ) : CatalogsBasePlugin() {
 
-    internal lateinit var bom: Dependency
+    internal var isMultiplatform = false
         private set
 
     override fun Project.configureCatalogPlugin() {
+        isMultiplatform = plugins.hasPlugin(KotlinMultiplatformPluginWrapper::class)
+
+        // This one is needed for both
         pluginRegistry.ensurePlugin("Compose Compiler", COMPOSE_PLUGIN_ID)
         apply(plugin = COMPOSE_PLUGIN_ID)
 
-        dependencies {
-            bom = platform(ensureCatalogLibrary("androidx.compose:compose-bom"))
-            implementation(bom)
+        if (isMultiplatform) {
+            pluginRegistry.ensurePlugin("Compose Desktop Compiler", COMPOSE_DESKTOP_PLUGIN_ID)
+            apply(plugin = COMPOSE_DESKTOP_PLUGIN_ID)
 
-            implementation(ensureCatalogLibrary("androidx.compose.runtime:runtime"))
+            kotlinMulitplatform {
+                sourceSets.commonMain.dependencies {
+                    implementation(composeDependencies.runtime)
+                }
+            }
+        } else {
+            dependencies {
+                implementation(platform(ensureCatalogLibrary("androidx.compose:compose-bom")))
+
+                implementation(ensureCatalogLibrary("androidx.compose.runtime:runtime"))
+            }
         }
 
         val generateReports = shouldGenerateComposeReports()
@@ -64,6 +82,8 @@ public class ComposeCompilerPlugin @Inject constructor(
         }
     }
 }
+
+internal val Project.composeDependencies get() = dependencies.extensions.getByType<ComposePlugin.Dependencies>()
 
 private const val DEFAULT_REPORT_DIR = "compose-compiler-reports"
 private const val PROP_REPORTS_DIR = "catalogs.composeCompilerReportsDir"
