@@ -33,14 +33,15 @@ public class ComposeUIPlugin : CatalogsBasePlugin() {
                     // Compiler plugin already adds the runtime library
                     implementation(composeDeps.ui)
                     implementation(composeDeps.foundation)
-                    implementation(composeDeps.uiTooling)
-                    implementation(composeDeps.preview)
+
+                    // Not available on ios just yet
+//                    implementation(composeDeps.uiTooling)
+//                    implementation(composeDeps.preview)
                 }
 
                 @OptIn(ExperimentalComposeLibrary::class)
                 sourceSets.commonTest.dependencies {
                     implementation(composeDeps.uiTest)
-                    implementation(composeDeps.desktop.uiTestJUnit4)
                 }
             }
         } else {
