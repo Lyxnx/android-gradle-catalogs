@@ -55,6 +55,8 @@ protobuf-gradle-plugin = "0.9.4"
 retrofit = "2.11.0"
 robolectric = "4.12.2"
 
+sqldelight = "2.0.2"
+
 timber = "5.0.1"
 tomlj = "1.1.1"
 truth = "1.4.2"
@@ -272,6 +274,13 @@ retrofit-converter-wire = { module = "com.squareup.retrofit2:converter-wire", ve
 
 robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
 
+sqldelight-driver-android = { module = "app.cash.sqldelight:android-driver", version.ref = "sqldelight" }
+sqldelight-driver-native = { module = "app.cash.sqldelight:native-driver", version.ref = "sqldelight" }
+sqldelight-driver-sqlite = { module = "app.cash.sqldelight:sqlite-driver", version.ref = "sqldelight" }
+sqldelight-extension-androidxpaging = { module = "app.cash.sqldelight:androidx-paging3-extensions", version.ref = "sqldelight" }
+sqldelight-extension-coroutines = { module = "app.cash.sqldelight:coroutines-extensions", version.ref = "sqldelight" }
+sqldelight-runtime = { module = "app.cash.sqldelight:runtime", version.ref = "sqldelight" }
+
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 tomlj = { module = "org.tomlj:tomlj", version.ref = "tomlj" }
 truth = { module = "com.google.truth:truth", version.ref = "truth" }
@@ -310,5 +319,7 @@ kradle-kotlin-library = { id = "io.github.lyxnx.gradle.kotlin-library", version.
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 protobuf = { id = "com.google.protobuf", version.ref = "protobuf-gradle-plugin" }
+
+sqldeligh = { id = "app.cash.sqldelight", version.ref = "sqldelight" }
 
 vanniktech-publish = { id = "com.vanniktech.maven.publish", version.ref = "vanniktech-publish-gradle-plugin" }

@@ -1,10 +1,11 @@
 package io.github.lyxnx.gradle
 
+import com.android.build.api.attributes.BuildTypeAttr
 import org.gradle.api.DefaultTask
 import org.gradle.api.artifacts.Configuration
 import org.gradle.api.artifacts.ResolvedConfiguration
 import org.gradle.api.artifacts.ResolvedDependency
-import org.gradle.api.attributes.Usage
+import org.gradle.api.attributes.Category
 import org.gradle.api.internal.catalog.DefaultVersionCatalog
 import org.gradle.api.internal.catalog.DependencyModel
 import org.gradle.api.internal.catalog.PluginModel
@@ -12,7 +13,6 @@ import org.gradle.api.provider.ListProperty
 import org.gradle.api.provider.Property
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.TaskAction
-import org.gradle.kotlin.dsl.named
 import org.gradle.language.base.plugins.LifecycleBasePlugin
 
 abstract class ValidateCatalogTask : DefaultTask() {
@@ -62,7 +62,9 @@ abstract class ValidateCatalogTask : DefaultTask() {
             isCanBeResolved = true
 
             attributes {
-                attribute(Usage.USAGE_ATTRIBUTE, project.objects.named(Usage.JAVA_API))
+//                attribute(Usage.USAGE_ATTRIBUTE, project.objects.named(Usage.JAVA_API))
+                attribute(BuildTypeAttr.ATTRIBUTE, project.objects.named(BuildTypeAttr::class.java, "release"))
+                attribute(Category.CATEGORY_ATTRIBUTE, project.objects.named(Category::class.java, "library"))
             }
 
             resolutionStrategy.capabilitiesResolution.all {
