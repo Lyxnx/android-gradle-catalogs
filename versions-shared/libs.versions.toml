@@ -320,6 +320,6 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 protobuf = { id = "com.google.protobuf", version.ref = "protobuf-gradle-plugin" }
 
-sqldeligh = { id = "app.cash.sqldelight", version.ref = "sqldelight" }
+sqldelight = { id = "app.cash.sqldelight", version.ref = "sqldelight" }
 
 vanniktech-publish = { id = "com.vanniktech.maven.publish", version.ref = "vanniktech-publish-gradle-plugin" }
