@@ -25,11 +25,8 @@ description = "Various plugins relating to the android gradle catalogs project"
 
 mavenPublishing {
     coordinates(project.group.toString(), project.name, project.version.toString())
-
     publishToMavenCentral(SonatypeHost.Companion.S01, true)
-    if (project.providers.gradleProperty("catalogs.sign-publications").get().toBoolean()) {
-        signAllPublications()
-    }
+    signAllPublications()
 
     pom {
         name.set("Android Catalogs Plugins")

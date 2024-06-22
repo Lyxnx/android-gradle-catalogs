@@ -49,16 +49,10 @@ sourceSets {
     }
 }
 
-val signPublications = property("catalogs.sign-publications")?.toString()?.toBoolean() ?: false
-
 mavenPublishing {
     coordinates(project.group.toString(), project.name, project.version.toString())
-
     publishToMavenCentral(SonatypeHost.Companion.S01, true)
-
-    if (signPublications) {
-        signAllPublications()
-    }
+    signAllPublications()
 
     pom {
         name.set(project.name)

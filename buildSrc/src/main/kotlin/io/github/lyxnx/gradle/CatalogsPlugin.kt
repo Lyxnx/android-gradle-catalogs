@@ -15,13 +15,11 @@ import org.gradle.kotlin.dsl.getByType
 import org.gradle.kotlin.dsl.register
 import org.gradle.language.base.plugins.LifecycleBasePlugin
 
-@Suppress("UnstableApiUsage")
 class CatalogsPlugin : Plugin<Project> {
 
     companion object {
         const val PROP_GROUP = "catalogs.group"
         const val PROP_VERSION = "catalogs.version"
-        const val PROP_SIGN_PUBLICATIONS = "catalogs.sign-publications"
     }
 
     override fun apply(target: Project) = with(target) {
@@ -51,16 +49,10 @@ class CatalogsPlugin : Plugin<Project> {
         val projectName = this.name
         val projectVersion = this.version.toString()
 
-        val signPublications = propertyOrNull(PROP_SIGN_PUBLICATIONS)?.toString()?.toBoolean() ?: true
-
         extension.apply {
             coordinates(projectGroup, projectName, projectVersion)
-
             publishToMavenCentral(SonatypeHost.Companion.S01, true)
-
-            if (signPublications) {
-                signAllPublications()
-            }
+            signAllPublications()
 
             pom {
                 name.set(projectName)
