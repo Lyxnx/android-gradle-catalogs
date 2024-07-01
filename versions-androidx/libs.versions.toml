@@ -49,7 +49,7 @@ hilt = "1.2.0"
 interpolator = "1.0.0"
 
 leanback = "1.0.0"
-lifecycle = "2.8.2"
+lifecycle = "2.8.3"
 loader = "1.1.0"
 localbroadcastmanager = "1.1.0"
 
