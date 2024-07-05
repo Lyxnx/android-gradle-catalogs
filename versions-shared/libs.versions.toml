@@ -85,6 +85,7 @@ accompanist-themeadapter-material3 = { module = "com.google.accompanist:accompan
 accompanist-webview = { module = "com.google.accompanist:accompanist-webview", version.ref = "accompanist" }
 
 android-desugar = { module = "com.android.tools:desugar_jdk_libs", version.ref = "android-desugar" }
+android-desugar-nio = { module = "com.android.tools:desugar_jdk_libs_nio", version.ref = "android-desugar" }
 android-gradleplugin = { module = "com.android.tools.build:gradle", version.ref = "android-gradle-plugin" }
 
 assertk = { module = "com.willowtreeapps.assertk:assertk", version.ref = "assertk" }
