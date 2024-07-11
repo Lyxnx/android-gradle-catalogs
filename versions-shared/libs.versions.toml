@@ -2,7 +2,7 @@
 
 accompanist = "0.34.0"
 android-desugar = "2.0.4"
-android-gradle-plugin = "8.5.0"
+android-gradle-plugin = "8.5.1"
 android-cache-fix-plugin = "3.0.1"
 assertk = "0.28.1"
 
