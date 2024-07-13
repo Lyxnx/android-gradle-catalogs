@@ -61,7 +61,7 @@ sqldelight = "2.0.2"
 
 timber = "5.0.1"
 tomlj = "1.1.1"
-truth = "1.4.3"
+truth = "1.4.4"
 
 vanniktech-publish-gradle-plugin = "0.29.0"
 
