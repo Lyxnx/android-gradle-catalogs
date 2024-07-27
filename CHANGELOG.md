@@ -276,7 +276,20 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## 2024.07.12
+## 2024.07.26
+
+### AndroidX
+
+- Update media3 to 1.4.0
+- Update annotation to 1.8.1
+- Update paging to 3.3.1
+- Update lifecycle to 2.8.4
+- Update collection to 1.4.2
+- Update transition to 1.5.1
+- Update fragment to 1.8.2
+- Update activity to 1.9.1
+
+## 2024.07.19
 
 ### Shared
 
