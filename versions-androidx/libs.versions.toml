@@ -1,7 +1,7 @@
 [versions]
 
 activity = "1.9.1"
-annotation = "1.8.1"
+annotation = "1.8.2"
 appcompat = "1.7.0"
 arch-core = "2.2.0"
 asynclayoutinflater = "1.0.0"
