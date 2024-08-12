@@ -14,7 +14,6 @@ Version catalogs and plugins to help reduce boilerplate in Android Gradle build 
 
 - [Version Catalogs](#version-catalogs)
   - [Using](#using)
-  - [Updating](#updating)
 - [Plugins](#plugins)
   - [Compose](#compose)
     - [Compiler](#compiler)
@@ -32,7 +31,6 @@ This repo contains some useful gradle version catalogs specific to Android:
 |--------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | [Shared](versions-shared/libs.versions.toml)     | All artifacts that don't belong in any of the other catalogs. This is the largest one and thus the most useful | 
 | [AndroidX](versions-androidx/libs.versions.toml) | AndroidX artifacts only                                                                                        |
-| [Compose](versions-compose/libs.versions.toml)   | Jetpack Compose artifacts (including the BOM) - useful with the compose config plugin below                    |
 
 ### Using
 
@@ -131,14 +129,6 @@ plugins {
 For more information on version catalogs, see
 the [Gradle User Guide](https://docs.gradle.org/current/userguide/platforms.html)
 
-### Updating
-
-The artifact versions within each catalog are updated automatically by
-the [Renovate Bot](https://github.com/renovatebot/renovate) as soon as they become available to
-the [bleeding](https://github.com/Lyxnx/android-gradle-catalogs/tree/bleeding) branch
-
-As such, no manual intervention is needed and any new artifacts or catalogs added will be automatically updated too
-
 ## Plugins
 
 This repository comes with a few Gradle plugins for Android that use the catalogs
@@ -181,10 +171,10 @@ a project's properties file, or on the command line for a singular task:
 **For a singular task:**
 
 For compiler reports:
-`./gradlew :mymodule:assembleRelease -Pcatalogs.composeCompilerReports`
+`./gradlew :mymodule:assembleRelease -Pcatalogs.composeCompilerReports=true`
 
 or for metrics:
-`./gradlew :mymodule:assembleRelease -Pcatalogs.composeCompilerMetrics`
+`./gradlew :mymodule:assembleRelease -Pcatalogs.composeCompilerMetrics=true`
 
 Alternatively, both can be combined to generate both types, although compiler reports are much more useful than the
 metrics.
