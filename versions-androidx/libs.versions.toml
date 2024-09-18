@@ -74,7 +74,7 @@ room = "2.6.1"
 savedstate = "1.2.1"
 sharetarget = "1.2.0"
 slidingpanelayout = "1.2.0"
-startup = "1.1.1"
+startup = "1.2.0"
 sqlite = "2.4.0"
 swiperefreshlayout = "1.1.0"
 
