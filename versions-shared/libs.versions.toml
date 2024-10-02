@@ -41,6 +41,7 @@ kradle = "2.0.2"
 ksp = "2.0.20-1.0.25"
 
 landscapist = "2.4.0"
+leakcanary = "2.14"
 lottie = "6.5.2"
 
 material = "1.12.0"
@@ -191,6 +192,9 @@ landscapist-glide = { module = "com.github.skydoves:landscapist-glide", version.
 landscapist-palete = { module = "com.github.skydoves:landscapist-palette", version.ref = "landscapist" }
 landscapist-placeholder = { module = "com.github.skydoves:landscapist-placeholder", version.ref = "landscapist" }
 landscapist-transformation = { module = "com.github.skydoves:landscapist-transformation", version.ref = "landscapist" }
+
+leakcanary = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakcanary" }
+
 lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
 lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
 
