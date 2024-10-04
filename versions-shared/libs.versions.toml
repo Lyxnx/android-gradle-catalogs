@@ -24,7 +24,7 @@ javapoet = "1.13.0"
 jetbrains-compose = "1.6.11"
 jsoup = "1.18.1"
 junit4 = "4.13.2"
-junit5 = "5.11.1"
+junit5 = "5.11.2"
 
 koin = "4.0.0"
 koin-annotations = "1.3.1"
