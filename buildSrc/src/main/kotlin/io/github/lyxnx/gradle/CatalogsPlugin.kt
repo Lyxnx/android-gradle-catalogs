@@ -8,6 +8,7 @@ import org.gradle.api.Project
 import org.gradle.api.plugins.BasePlugin
 import org.gradle.api.plugins.catalog.VersionCatalogPlugin
 import org.gradle.api.plugins.catalog.internal.CatalogExtensionInternal
+import org.gradle.api.publish.maven.tasks.PublishToMavenRepository
 import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.create
 import org.gradle.kotlin.dsl.getByName
@@ -39,6 +40,12 @@ class CatalogsPlugin : Plugin<Project> {
 
         afterEvaluate {
             configureValidateTask(extension.verificationExcludes.mapNotNull { it.normalizeAlias() })
+        }
+
+        tasks.withType(PublishToMavenRepository::class.java).configureEach {
+            if (name.endsWith("ToMavenCentralRepository")) {
+                dependsOn(tasks.getByName("${name.removeSuffix("ToMavenCentralRepository")}ToMavenLocal"))
+            }
         }
     }
 
