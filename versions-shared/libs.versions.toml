@@ -18,7 +18,7 @@ glide = "4.16.0"
 google-gms-plugin = "4.4.2"
 gson = "2.11.0"
 
-hilt = "2.52"
+hilt = "2.53"
 
 javapoet = "1.13.0"
 jetbrains-compose = "1.7.1"
