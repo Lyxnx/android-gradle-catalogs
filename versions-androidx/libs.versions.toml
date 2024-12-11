@@ -61,7 +61,7 @@ multidex = "2.0.1"
 
 navigation = "2.8.4"
 
-paging = "3.3.4"
+paging = "3.3.5"
 palette = "1.0.0"
 preference = "1.2.1"
 profileinstaller = "1.4.1"
