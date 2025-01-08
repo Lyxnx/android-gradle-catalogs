@@ -36,7 +36,7 @@ kotlinx-datetime = "0.6.1"
 kotlinx-html = "0.11.0"
 kotlinx-immutablecollections = "0.3.8"
 kotlinx-io = "0.6.0"
-kotlinx-serialization = "1.7.3"
+kotlinx-serialization = "1.8.0"
 kradle = "2.0.2"
 ksp = "2.1.0-1.0.29"
 
