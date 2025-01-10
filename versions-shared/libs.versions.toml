@@ -40,7 +40,7 @@ kotlinx-serialization = "1.8.0"
 kradle = "2.0.2"
 ksp = "2.1.0-1.0.29"
 
-landscapist = "2.4.4"
+landscapist = "2.4.6"
 leakcanary = "2.14"
 lottie = "6.6.2"
 
