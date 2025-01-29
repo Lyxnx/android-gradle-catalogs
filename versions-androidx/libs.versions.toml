@@ -90,7 +90,7 @@ tracing = "1.2.0"
 transition = "1.5.1"
 
 vectordrawable = "1.2.0"
-versionedparcelable = "1.2.0"
+versionedparcelable = "1.2.1"
 viewpager2 = "1.1.0"
 
 wear = "1.3.0"
