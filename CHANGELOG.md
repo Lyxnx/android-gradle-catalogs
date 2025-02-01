@@ -325,6 +325,22 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## 2025.01.31
+
+### AndroidX
+
+- Update navigation to 2.8.6
+- Update compose BOM to 2025.01.01
+- Update versionedparcelable to 1.2.1
+- Add annotation-experimental, arch-core-common, benchmark-common, camera-core, camera-effects, camera-mlkit-vision, datastore-core, datastore-preferences-core, datastore-preferences-proto, graphics-core, graphics-path, lifecycle-common, navigation-fragment-compose, window-core
+- Remove lifecycle-livedata-ktx, collection-ktx
+
+### Shared
+
+- Update gson to 2.12.1
+- Update kotlin to 2.1.10
+- Update koin to 4.0.2
+
 ## 2025.01.17
 
 ### AndroidX
