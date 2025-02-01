@@ -32,7 +32,7 @@ gradlePlugin {
 }
 
 val generatedResourceDir = layout.buildDirectory.dir("generated-resources")
-val writeProps = tasks.create<WriteProperties>("writeProps") {
+val writeProps = tasks.register<WriteProperties>("writeProps") {
     destinationFile.set(generatedResourceDir.map { it.file("META-INF/catalogs.properties") })
     property("version", project.version)
 }
