@@ -42,7 +42,7 @@ exifinterface = "1.3.7"
 
 fragment = "1.8.5"
 
-games = "3.0.5"
+games = "4.0.0"
 graphics-core = "1.0.2"
 graphics-path = "1.0.1"
 # TODO uncomment when shapes 1.1.0 is stable (1.1.0-alpha01 atm)
