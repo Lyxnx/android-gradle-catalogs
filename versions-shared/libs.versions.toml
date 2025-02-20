@@ -1,6 +1,6 @@
 [versions]
 
-accompanist = "0.37.1"
+accompanist = "0.37.2"
 android-desugar = "2.1.4"
 android-gradle-plugin = "8.8.1"
 android-cache-fix-plugin = "3.0.1"
