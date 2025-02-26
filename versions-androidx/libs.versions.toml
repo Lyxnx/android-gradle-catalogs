@@ -29,7 +29,7 @@ core-splashscreen = "1.0.1"
 cursoradapter = "1.0.0"
 customview = "1.1.0"
 
-datastore = "1.1.2"
+datastore = "1.1.3"
 documentfile = "1.0.1"
 draganddrop = "1.0.0"
 drawerlayout = "1.2.0"
