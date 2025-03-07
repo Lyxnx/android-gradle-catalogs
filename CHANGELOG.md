@@ -333,6 +333,34 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## 2025.03.07
+
+### Androidx
+
+- Update constraintlayout-compose to 1.1.1
+- Update activity to 1.10.1
+- Update navigation to 2.8.8
+- Update coordinatorlayout to 1.3.0
+- Update exifinterface to 1.4.0
+- Update wear=phone-interactions to 1.1.0
+- Update datastore to 1.1.3
+- Update constraintlayout to 2.2.1 
+
+### Shared
+
+- Update vanniktech-maven-publish-plugin to 0.31.0
+- Update protobuf to 4.30.0
+- Update koin-annotations to 2.0.0
+- Update jsoup to 1.19.1
+- Update lottie to 6.6.3
+- Update firebase BOM to 33.10.0
+- Update KSP to 2.1.10-1.0.31
+- Update mockk-android to 1.13.17
+- Update kotlinx-io-core to 0.7.0
+- Update AGP to 8.9.0
+- Update kotlinpoet to 2.1.0
+- Update android-desugar to 2.1.5
+
 ## 2025.02.21
 
 ### Shared
