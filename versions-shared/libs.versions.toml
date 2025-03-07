@@ -152,6 +152,7 @@ gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 
 hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+hilt-core = { module = "com.google.dagger:hilt-core", version.ref = "hilt" }
 hilt-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "hilt" }
 
 javapoet = { module = "com.squareup:javapoet", version.ref = "javapoet" }
