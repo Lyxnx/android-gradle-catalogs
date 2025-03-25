@@ -26,7 +26,7 @@ jsoup = "1.19.1"
 junit4 = "4.13.2"
 junit5 = "5.12.1"
 
-koin = "4.0.2"
+koin = "4.0.3"
 koin-annotations = "2.0.0"
 kotlin = "2.1.20"
 kotlinpoet = "2.1.0"
