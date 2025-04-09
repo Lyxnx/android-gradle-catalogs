@@ -33,7 +33,7 @@ datastore = "1.1.4"
 documentfile = "1.0.1"
 draganddrop = "1.0.0"
 drawerlayout = "1.2.0"
-dynamicanimation = "1.0.0"
+dynamicanimation = "1.1.0"
 
 emoji = "1.1.0"
 emoji2 = "1.5.0"
