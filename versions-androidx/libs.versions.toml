@@ -47,7 +47,7 @@ graphics-core = "1.0.3"
 graphics-path = "1.0.1"
 # TODO uncomment when shapes 1.1.0 is stable (1.1.0-alpha01 atm)
 #graphics-shapes = "1.1.0"
-gridlayout = "1.0.0"
+gridlayout = "1.1.0"
 
 hilt = "1.2.0"
 
