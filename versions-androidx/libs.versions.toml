@@ -74,7 +74,7 @@ profileinstaller = "1.4.1"
 recommendation = "1.0.0"
 recyclerview = "1.4.0"
 resourceinspection = "1.0.1"
-room = "2.6.1"
+room = "2.7.0"
 
 savedstate = "1.2.1"
 sharetarget = "1.2.0"
