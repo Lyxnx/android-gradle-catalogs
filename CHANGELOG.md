@@ -345,6 +345,18 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## 2025.04.18
+
+### AndroidX
+
+- Update media3 to 1.6.1
+
+### Shared
+
+- Update hilt to 2.56.2
+- update gson to 2.13.0
+- update junit5 to 5.12.2
+
 ## 2025.04.11
 
 ### AndroidX
