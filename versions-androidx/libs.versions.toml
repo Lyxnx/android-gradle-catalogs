@@ -91,7 +91,7 @@ test-orchestrator = "1.5.1"
 test-rules = "1.6.1"
 test-runner = "1.6.2"
 test-uiautomator = "2.3.0"
-tracing = "1.2.0"
+tracing = "1.3.0"
 transition = "1.5.1"
 
 vectordrawable = "1.2.0"
