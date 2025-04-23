@@ -27,7 +27,7 @@ core-google-shortcuts = "1.1.0"
 core-role = "1.1.0"
 core-splashscreen = "1.0.1"
 cursoradapter = "1.0.0"
-customview = "1.1.0"
+customview = "1.2.0"
 
 datastore = "1.1.4"
 documentfile = "1.0.1"
