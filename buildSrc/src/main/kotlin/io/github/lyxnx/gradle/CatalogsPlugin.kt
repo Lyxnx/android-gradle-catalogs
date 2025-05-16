@@ -58,7 +58,7 @@ class CatalogsPlugin : Plugin<Project> {
 
         extension.apply {
             coordinates(projectGroup, projectName, projectVersion)
-            publishToMavenCentral(SonatypeHost.Companion.S01, true)
+            publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, true)
             signAllPublications()
 
             pom {
