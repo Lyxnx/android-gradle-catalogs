@@ -363,6 +363,27 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## 2025.06.20
+
+### AndroidX
+
+- Update compose BOM to 2025.06.01
+- Update sqlite to 2.5.2
+- Update room to 2.7.2
+- Update work to 2.10.2
+
+### Shared
+
+- Update robolectric to 4.15
+- Update jetbrains-compose to 1.8.2
+- Update lottie to 6.6.7
+- Update koin-annotations to 2.1.0
+- Update landscapist to 2.5.0
+- Update cash-app turbine to 1.2.1
+- Update ksp to 2.1.21-2.0.2
+- Update koin to 4.1.0
+- Update junit5 to 5.13.1
+
 ## 2025.06.06
 
 ### AndroidX
