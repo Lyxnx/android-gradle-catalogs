@@ -64,7 +64,7 @@ timber = "5.0.1"
 tomlj = "1.1.1"
 truth = "1.4.4"
 
-vanniktech-publish-gradle-plugin = "0.32.0"
+vanniktech-publish-gradle-plugin = "0.33.0"
 
 [libraries]
 
