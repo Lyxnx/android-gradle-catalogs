@@ -1,4 +1,3 @@
-import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.dsl.ExplicitApiMode
 
 plugins {
@@ -25,7 +24,7 @@ description = "Various plugins relating to the android gradle catalogs project"
 
 mavenPublishing {
     coordinates(project.group.toString(), project.name, project.version.toString())
-    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, true)
+    publishToMavenCentral(true)
     signAllPublications()
 
     pom {

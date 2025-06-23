@@ -1,5 +1,3 @@
-import com.vanniktech.maven.publish.SonatypeHost
-
 plugins {
     `kotlin-dsl`
     id(shared.plugins.vanniktech.publish.get().pluginId)
@@ -51,7 +49,7 @@ sourceSets {
 
 mavenPublishing {
     coordinates(project.group.toString(), project.name, project.version.toString())
-    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, true)
+    publishToMavenCentral(true)
     signAllPublications()
 
     pom {

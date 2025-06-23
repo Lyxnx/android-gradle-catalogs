@@ -2,7 +2,6 @@ package io.github.lyxnx.gradle
 
 import com.vanniktech.maven.publish.MavenPublishBaseExtension
 import com.vanniktech.maven.publish.MavenPublishPlugin
-import com.vanniktech.maven.publish.SonatypeHost
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.BasePlugin
@@ -58,7 +57,7 @@ class CatalogsPlugin : Plugin<Project> {
 
         extension.apply {
             coordinates(projectGroup, projectName, projectVersion)
-            publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, true)
+            publishToMavenCentral(true)
             signAllPublications()
 
             pom {
