@@ -28,7 +28,7 @@ junit5 = "5.13.1"
 
 koin = "4.1.0"
 koin-annotations = "2.1.0"
-kotlin = "2.1.21"
+kotlin = "2.2.0"
 kotlinpoet = "2.2.0"
 kotlinx-bcv = "0.17.0"
 kotlinx-coroutines = "1.10.2"
