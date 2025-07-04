@@ -169,22 +169,6 @@ junit5-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", ver
 junit5-jupiter-migrationsupport = { module = "org.junit.jupiter:junit-jupiter-migrationsupport", version.ref = "junit5" }
 junit5-vintage-engine = { module = "org.junit.vintage:junit-vintage-engine", version.ref = "junit5" }
 
-landscapist = { module = "com.github.skydoves:landscapist", version.ref = "landscapist" }
-landscapist-animation = { module = "com.github.skydoves:landscapist-animation", version.ref = "landscapist" }
-landscapist-bom = { module = "com.github.skydoves:landscapist-bom", version.ref = "landscapist" }
-landscapist-coil = { module = "com.github.skydoves:landscapist-coil", version.ref = "landscapist" }
-landscapist-fresco = { module = "com.github.skydoves:landscapist-fresco", version.ref = "landscapist" }
-landscapist-fresco-websupport = { module = "com.github.skydoves:landscapist-fresco-websupport", version.ref = "landscapist" }
-landscapist-glide = { module = "com.github.skydoves:landscapist-glide", version.ref = "landscapist" }
-landscapist-palete = { module = "com.github.skydoves:landscapist-palette", version.ref = "landscapist" }
-landscapist-placeholder = { module = "com.github.skydoves:landscapist-placeholder", version.ref = "landscapist" }
-landscapist-transformation = { module = "com.github.skydoves:landscapist-transformation", version.ref = "landscapist" }
-
-leakcanary = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakcanary" }
-
-lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
-lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
-
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 koin-android-compat = { module = "io.insert-koin:koin-android-compat", version.ref = "koin" }
 koin-android-test = { module = "io.insert-koin:koin-android-test", version.ref = "koin" }
@@ -244,6 +228,22 @@ kradle-kotlin-gradleplugin = { module = "io.github.lyxnx.kradle:kradle-kotlin", 
 
 ksp-gradleplugin = { module = "com.google.devtools.ksp:symbol-processing-gradle-plugin", version.ref = "ksp" }
 ksp-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
+
+landscapist = { module = "com.github.skydoves:landscapist", version.ref = "landscapist" }
+landscapist-animation = { module = "com.github.skydoves:landscapist-animation", version.ref = "landscapist" }
+landscapist-bom = { module = "com.github.skydoves:landscapist-bom", version.ref = "landscapist" }
+landscapist-coil = { module = "com.github.skydoves:landscapist-coil", version.ref = "landscapist" }
+landscapist-fresco = { module = "com.github.skydoves:landscapist-fresco", version.ref = "landscapist" }
+landscapist-fresco-websupport = { module = "com.github.skydoves:landscapist-fresco-websupport", version.ref = "landscapist" }
+landscapist-glide = { module = "com.github.skydoves:landscapist-glide", version.ref = "landscapist" }
+landscapist-palete = { module = "com.github.skydoves:landscapist-palette", version.ref = "landscapist" }
+landscapist-placeholder = { module = "com.github.skydoves:landscapist-placeholder", version.ref = "landscapist" }
+landscapist-transformation = { module = "com.github.skydoves:landscapist-transformation", version.ref = "landscapist" }
+
+leakcanary = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakcanary" }
+
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
+lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
 
 material = { module = "com.google.android.material:material", version.ref = "material" }
 
