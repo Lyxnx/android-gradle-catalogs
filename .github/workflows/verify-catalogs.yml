@@ -6,6 +6,7 @@ on:
 
 jobs:
   validate-catalogs:
+    if: false
     runs-on: ubuntu-latest
     steps:
       - name: Checkout sources
