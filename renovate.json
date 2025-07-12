@@ -14,6 +14,10 @@
     {
       "matchDepTypes": ["devDependencies"],
       "automerge": true
+    },
+    {
+      "matchPackageNames": "org.jetbrains.kotlinx:kotlinx-datetime",
+      "allowedVersions": "!/^.+-compat$/"
     }
   ],
   "platformAutomerge": true
