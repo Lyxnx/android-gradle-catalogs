@@ -84,7 +84,7 @@ sqlite = "2.5.2"
 swiperefreshlayout = "1.1.0"
 
 test-core = "1.6.1"
-test-espresso = "3.6.1"
+test-espresso = "3.7.0"
 test-ext-junit = "1.2.1"
 test-ext-truth = "1.6.0"
 test-orchestrator = "1.6.0"
