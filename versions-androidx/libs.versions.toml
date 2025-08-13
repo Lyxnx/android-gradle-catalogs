@@ -40,7 +40,7 @@ emoji2 = "1.5.0"
 enterprise = "1.1.0"
 exifinterface = "1.4.1"
 
-fragment = "1.8.8"
+fragment = "1.8.9"
 
 games = "4.0.0"
 graphics-core = "1.0.3"
