@@ -52,7 +52,7 @@ moshi = "1.15.2"
 
 okhttp = "5.1.0"
 
-protobuf = "4.31.1"
+protobuf = "4.32.0"
 protobuf-gradle-plugin = "0.9.5"
 
 retrofit = "3.0.0"
