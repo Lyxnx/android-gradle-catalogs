@@ -20,5 +20,6 @@
       "allowedVersions": "!/^.+-compat$/"
     }
   ],
-  "platformAutomerge": true
+  "platformAutomerge": true,
+  "labels": [ "{{parentDir}}" ]
 }
