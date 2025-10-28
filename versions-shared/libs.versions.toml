@@ -42,7 +42,7 @@ ksp = "2.3.0"
 
 landscapist = "2.6.1"
 leakcanary = "2.14"
-lottie = "6.6.10"
+lottie = "6.7.0"
 
 material = "1.13.0"
 mockito = "5.20.0"
