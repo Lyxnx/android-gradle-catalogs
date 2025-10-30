@@ -21,7 +21,7 @@ gson = "2.13.2"
 hilt = "2.57.2"
 
 javapoet = "1.13.0"
-jetbrains-compose = "1.9.1"
+jetbrains-compose = "1.9.2"
 jsoup = "1.21.2"
 junit4 = "4.13.2"
 junit5 = "6.0.0"
