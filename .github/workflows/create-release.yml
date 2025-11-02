@@ -1,0 +1,32 @@
+name: Create release
+
+on:
+  push:
+    tags:
+      - v*
+
+permissions:
+  contents: write
+
+env:
+  TAG: ${{ github.ref_name }}
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Get latest version
+        id: latest_release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "LATEST_TAG=$(gh release view --json tagName --jq '.tagName')" >> $GITHUB_ENV
+      - name: Release pushed tag
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${TAG#v}" \
+              --title="${TAG#v}" \
+              --generate-notes \
+              --notes-start-tag "$LATEST_TAG"
