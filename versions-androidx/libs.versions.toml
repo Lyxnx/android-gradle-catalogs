@@ -64,7 +64,7 @@ media3 = "1.8.0"
 mediarouter = "1.8.1"
 multidex = "2.0.1"
 
-navigation = "2.9.5"
+navigation = "2.9.6"
 
 paging = "3.3.6"
 palette = "1.0.0"
