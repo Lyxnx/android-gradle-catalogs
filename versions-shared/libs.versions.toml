@@ -3,7 +3,7 @@
 accompanist = "0.37.3"
 android-desugar = "2.1.5"
 android-gradle-plugin = "8.13.1"
-android-cache-fix-plugin = "3.0.2"
+android-cache-fix-plugin = "3.0.3"
 assertk = "0.28.1"
 
 cashapp-turbine = "1.2.1"
