@@ -57,7 +57,7 @@ class CatalogsPlugin : Plugin<Project> {
 
         extension.apply {
             coordinates(projectGroup, projectName, projectVersion)
-            publishToMavenCentral(true)
+            publishToMavenCentral(automaticRelease = true, validateDeployment = false)
             signAllPublications()
 
             pom {
