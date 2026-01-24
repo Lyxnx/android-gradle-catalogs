@@ -1,5 +1,6 @@
 package io.github.lyxnx.gradle
 
+import com.vanniktech.maven.publish.DeploymentValidation
 import com.vanniktech.maven.publish.MavenPublishBaseExtension
 import com.vanniktech.maven.publish.MavenPublishPlugin
 import org.gradle.api.Plugin
@@ -57,7 +58,7 @@ class CatalogsPlugin : Plugin<Project> {
 
         extension.apply {
             coordinates(projectGroup, projectName, projectVersion)
-            publishToMavenCentral(automaticRelease = true, validateDeployment = false)
+            publishToMavenCentral(automaticRelease = true, validateDeployment = DeploymentValidation.VALIDATED)
             signAllPublications()
 
             pom {

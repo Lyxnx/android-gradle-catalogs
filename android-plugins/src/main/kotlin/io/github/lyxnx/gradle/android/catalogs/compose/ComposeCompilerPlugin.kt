@@ -14,6 +14,7 @@ import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
 import org.gradle.kotlin.dsl.hasPlugin
+import org.jetbrains.compose.ComposeBuildConfig
 import org.jetbrains.compose.ComposePlugin
 import org.jetbrains.kotlin.compose.compiler.gradle.ComposeCompilerGradlePluginExtension
 import org.jetbrains.kotlin.gradle.plugin.KotlinMultiplatformPluginWrapper
@@ -54,7 +55,7 @@ public class ComposeCompilerPlugin @Inject constructor(
 
             kotlinMulitplatform {
                 sourceSets.commonMain.dependencies {
-                    implementation(composeDependencies.runtime)
+                    implementation("org.jetbrains.compose.runtime:runtime:${ComposeBuildConfig.composeVersion}")
                 }
             }
         } else {
