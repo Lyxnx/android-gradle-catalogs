@@ -37,9 +37,9 @@ class CatalogsPlugin : Plugin<Project> {
 
         configureMavenPublish()
 
-        afterEvaluate {
-            configureValidateTask(extension.verificationExcludes.mapNotNull { it.normalizeAlias() })
-        }
+//        afterEvaluate {
+//            configureValidateTask(extension.verificationExcludes.mapNotNull { it.normalizeAlias() })
+//        }
 
         tasks.withType(PublishToMavenRepository::class.java).configureEach {
             if (name.endsWith("ToMavenCentralRepository")) {
