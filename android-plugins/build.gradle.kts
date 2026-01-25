@@ -15,7 +15,7 @@ dependencies {
 
 kotlin {
     explicitApi = ExplicitApiMode.Strict
-    jvmToolchain(17)
+    jvmToolchain(21)
 }
 
 group = "io.github.lyxnx.gradle.android"

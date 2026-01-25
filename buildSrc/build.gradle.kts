@@ -2,6 +2,10 @@ plugins {
     `kotlin-dsl`
 }
 
+kotlin {
+    jvmToolchain(21)
+}
+
 gradlePlugin {
     plugins {
         create("catalogs") {
