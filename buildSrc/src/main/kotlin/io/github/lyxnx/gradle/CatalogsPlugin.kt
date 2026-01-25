@@ -5,6 +5,7 @@ import com.vanniktech.maven.publish.MavenPublishBaseExtension
 import com.vanniktech.maven.publish.MavenPublishPlugin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.internal.catalog.DefaultVersionCatalog
 import org.gradle.api.plugins.BasePlugin
 import org.gradle.api.plugins.catalog.VersionCatalogPlugin
 import org.gradle.api.plugins.catalog.internal.CatalogExtensionInternal
@@ -38,9 +39,10 @@ class CatalogsPlugin : Plugin<Project> {
 
         configureMavenPublish()
 
-//        afterEvaluate {
+        afterEvaluate {
+            configureCatalog()
 //            configureValidateTask(extension.verificationExcludes.mapNotNull { it.normalizeAlias() })
-//        }
+        }
 
         tasks.withType(PublishToMavenRepository::class.java).configureEach {
             if (name.endsWith("ToMavenCentralRepository")) {
@@ -88,15 +90,18 @@ class CatalogsPlugin : Plugin<Project> {
         }
     }
 
-    private fun Project.configureValidateTask(excludes: List<String>) {
+    private fun Project.configureCatalog() {
         val extension = extensions.getByName<CatalogExtensionInternal>("catalog")
 
         extension.versionCatalog {
             from(files("libs.versions.toml"))
         }
+    }
 
+    private fun Project.configureValidateTask(excludes: List<String>) {
+        val versionCatalog = extensions.getByName<CatalogExtensionInternal>("catalog").versionCatalog.get()
         val validateCatalog = tasks.register<ValidateCatalogTask>(ValidateCatalogTask.NAME) {
-            dependenciesModel.set(extension.versionCatalog)
+            dependenciesModel.set(versionCatalog)
             this.excludes.set(excludes)
             dependsOn(tasks.named(VersionCatalogPlugin.GENERATE_CATALOG_FILE_TASKNAME))
         }
