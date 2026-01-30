@@ -332,6 +332,7 @@ kotlinx-binarycompatibilityvalidator = { id = "org.jetbrains.kotlinx.binary-comp
 kradle-android-application = { id = "io.github.lyxnx.kradle.android-application", version.ref = "kradle" }
 kradle-android-config = { id = "io.github.lyxnx.kradle.android-config", version.ref = "kradle" }
 kradle-android-library = { id = "io.github.lyxnx.kradle.android-library", version.ref = "kradle" }
+kradle-android-multiplatform = { id = "io.github.lyxnx.kradle.android-multiplatform-library", version.ref = "kradle" }
 kradle-kotlin-config = { id = "io.github.lyxnx.kradle.kotlin-config", version.ref = "kradle" }
 kradle-kotlin-library = { id = "io.github.lyxnx.kradle.kotlin-library", version.ref = "kradle" }
 
