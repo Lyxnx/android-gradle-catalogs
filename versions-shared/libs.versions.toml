@@ -47,7 +47,7 @@ lottie = "6.7.1"
 material = "1.13.0"
 mockito = "5.21.0"
 mockito-kotlin = "6.2.3"
-mockk = "1.14.7"
+mockk = "1.14.9"
 moshi = "1.15.2"
 
 okhttp = "5.3.2"
