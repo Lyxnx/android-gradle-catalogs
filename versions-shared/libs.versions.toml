@@ -24,7 +24,7 @@ javapoet = "1.13.0"
 jetbrains-compose = "1.10.2"
 jsoup = "1.22.1"
 junit4 = "4.13.2"
-junit5 = "6.0.3"
+junit = "6.0.3"
 
 koin = "4.1.1"
 koin-annotations = "2.3.1"
@@ -147,12 +147,12 @@ jetbrains-compose-gradleplugin = { module = "org.jetbrains.compose:org.jetbrains
 jsoup = { module = "org.jsoup:jsoup", version.ref = "jsoup" }
 
 junit4 = { module = "junit:junit", version.ref = "junit4" }
-junit5-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit5" }
-junit5-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit5" }
-junit5-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit5" }
-junit5-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit5" }
-junit5-jupiter-migrationsupport = { module = "org.junit.jupiter:junit-jupiter-migrationsupport", version.ref = "junit5" }
-junit5-vintage-engine = { module = "org.junit.vintage:junit-vintage-engine", version.ref = "junit5" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
+junit-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit" }
+junit-jupiter-migrationsupport = { module = "org.junit.jupiter:junit-jupiter-migrationsupport", version.ref = "junit" }
+junit-vintage-engine = { module = "org.junit.vintage:junit-vintage-engine", version.ref = "junit" }
 
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 koin-android-compat = { module = "io.insert-koin:koin-android-compat", version.ref = "koin" }
