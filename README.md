@@ -45,14 +45,12 @@ plugins {
 }
 ```
 
-After applying the plugin, the compose catalog can be applied to the project by adding the following to
-the `settings.gradle.kts` file:
+After applying the plugin, a version can be overridden adding the following to the `settings.gradle.kts` file:
 
 ```kotlin
 // <root>/settings.gradle.kts
 dependencyResolutionManagement {
     versionCatalogs {
-        compose()
         // If a catalog would like to be configured globally:
         shared {
             version("kotlin", "1.7.20")
