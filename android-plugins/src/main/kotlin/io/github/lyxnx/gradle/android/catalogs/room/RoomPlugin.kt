@@ -1,9 +1,8 @@
 package io.github.lyxnx.gradle.android.catalogs.room
 
+import com.android.build.api.dsl.CommonExtension
 import com.google.devtools.ksp.gradle.KspExtension
 import io.github.lyxnx.gradle.android.catalogs.base.CatalogsBasePlugin
-import io.github.lyxnx.gradle.android.catalogs.internal.AndroidCommonExtension
-import io.github.lyxnx.gradle.android.catalogs.internal.android
 import io.github.lyxnx.gradle.android.catalogs.internal.androidTestImplementation
 import io.github.lyxnx.gradle.android.catalogs.internal.ensureCatalogLibrary
 import io.github.lyxnx.gradle.android.catalogs.internal.ensurePlugin
@@ -110,10 +109,8 @@ public fun Project.roomSchemaDir(schemaDir: File) {
         arg(RoomSchemeArgProvider(schemaDir))
     }
 
-    android<AndroidCommonExtension> {
-        sourceSets {
-            findByName("androidTest")?.assets?.srcDir(schemaDir)
-        }
+    extensions.configure<CommonExtension> {
+        sourceSets.findByName("androidTest")?.assets?.directories?.add(schemaDir.absolutePath)
     }
 
     (plugins.findPlugin(RoomPlugin::class) ?: error("Room plugin not applied")).addedSchema = true

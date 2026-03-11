@@ -5,11 +5,11 @@ import io.github.lyxnx.gradle.android.catalogs.internal.androidTestImplementatio
 import io.github.lyxnx.gradle.android.catalogs.internal.debugImplementation
 import io.github.lyxnx.gradle.android.catalogs.internal.ensureCatalogLibrary
 import io.github.lyxnx.gradle.android.catalogs.internal.implementation
-import io.github.lyxnx.gradle.android.catalogs.internal.kotlinMulitplatform
+import io.github.lyxnx.gradle.android.catalogs.internal.kotlinMultiplatform
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.dependencies
-import org.jetbrains.compose.ExperimentalComposeLibrary
+import org.jetbrains.compose.ComposeBuildConfig
 
 /**
  * Configures the Jetpack Compose for UI
@@ -26,22 +26,20 @@ public class ComposeUIPlugin : CatalogsBasePlugin() {
         val config = plugins.apply(ComposeCompilerPlugin::class)
 
         if (config.isMultiplatform) {
-            val composeDeps = composeDependencies
-
-            kotlinMulitplatform {
+            kotlinMultiplatform {
                 sourceSets.commonMain.dependencies {
                     // Compiler plugin already adds the runtime library
-                    implementation(composeDeps.ui)
-                    implementation(composeDeps.foundation)
+                    implementation("org.jetbrains.compose.ui:ui:${ComposeBuildConfig.composeVersion}")
+                    implementation("org.jetbrains.compose.foundation:foundation:${ComposeBuildConfig.composeVersion}")
 
                     // Not available on ios just yet
 //                    implementation(composeDeps.uiTooling)
 //                    implementation(composeDeps.preview)
                 }
 
-                @OptIn(ExperimentalComposeLibrary::class)
+//                @OptIn(ExperimentalComposeLibrary::class)
                 sourceSets.commonTest.dependencies {
-                    implementation(composeDeps.uiTest)
+                    implementation("org.jetbrains.compose.ui:ui-test:${ComposeBuildConfig.composeVersion}")
                 }
             }
         } else {

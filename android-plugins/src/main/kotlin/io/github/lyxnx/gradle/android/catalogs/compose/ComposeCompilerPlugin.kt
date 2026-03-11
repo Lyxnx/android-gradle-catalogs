@@ -5,17 +5,15 @@ import io.github.lyxnx.gradle.android.catalogs.internal.ensureCatalogLibrary
 import io.github.lyxnx.gradle.android.catalogs.internal.ensurePlugin
 import io.github.lyxnx.gradle.android.catalogs.internal.findBooleanProperty
 import io.github.lyxnx.gradle.android.catalogs.internal.implementation
-import io.github.lyxnx.gradle.android.catalogs.internal.kotlinMulitplatform
+import io.github.lyxnx.gradle.android.catalogs.internal.kotlinMultiplatform
 import org.gradle.api.Project
 import org.gradle.api.internal.plugins.PluginRegistry
 import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.assign
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
-import org.gradle.kotlin.dsl.getByType
 import org.gradle.kotlin.dsl.hasPlugin
 import org.jetbrains.compose.ComposeBuildConfig
-import org.jetbrains.compose.ComposePlugin
 import org.jetbrains.kotlin.compose.compiler.gradle.ComposeCompilerGradlePluginExtension
 import org.jetbrains.kotlin.gradle.plugin.KotlinMultiplatformPluginWrapper
 import java.io.File
@@ -53,7 +51,7 @@ public class ComposeCompilerPlugin @Inject constructor(
             pluginRegistry.ensurePlugin("Compose Desktop Compiler", COMPOSE_DESKTOP_PLUGIN_ID)
             apply(plugin = COMPOSE_DESKTOP_PLUGIN_ID)
 
-            kotlinMulitplatform {
+            kotlinMultiplatform {
                 sourceSets.commonMain.dependencies {
                     implementation("org.jetbrains.compose.runtime:runtime:${ComposeBuildConfig.composeVersion}")
                 }
@@ -83,8 +81,6 @@ public class ComposeCompilerPlugin @Inject constructor(
         }
     }
 }
-
-internal val Project.composeDependencies get() = dependencies.extensions.getByType<ComposePlugin.Dependencies>()
 
 private const val DEFAULT_REPORT_DIR = "compose-compiler-reports"
 private const val PROP_REPORTS_DIR = "catalogs.composeCompilerReportsDir"
