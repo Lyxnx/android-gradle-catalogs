@@ -98,47 +98,31 @@ composeicons-weathericons = { module = "br.com.devsrsouza.compose.icons:erikflow
 
 # Don't include versions for Firebase libs, as the Google recommendation is to use the BOM, even if only using 1 dependency
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-bom" }
+firebase-ai = { module = "com.google.firebase:firebase-ai" }
+firebase-ai-kspprocessor = { module = "com.google.firebase:firebase-ai-ksp-processor" }
 firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
-firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx" }
 firebase-appcheck = { module = "com.google.firebase:firebase-appcheck" }
 firebase-appcheck-debug = { module = "com.google.firebase:firebase-appcheck-debug" }
 firebase-appcheck-debug-testing = { module = "com.google.firebase:firebase-appcheck-debug-testing" }
-firebase-appcheck-ktx = { module = "com.google.firebase:firebase-appcheck-ktx" }
 firebase-appcheck-playintegrity = { module = "com.google.firebase:firebase-appcheck-playintegrity" }
-firebase-appcheck-safetynet = { module = "com.google.firebase:firebase-appcheck-safetynet" }
 firebase-auth = { module = "com.google.firebase:firebase-auth" }
-firebase-auth-ktx = { module = "com.google.firebase:firebase-auth-ktx" }
 firebase-common = { module = "com.google.firebase:firebase-common" }
-firebase-common-ktx = { module = "com.google.firebase:firebase-common-ktx" }
 firebase-config = { module = "com.google.firebase:firebase-config" }
-firebase-config-ktx = { module = "com.google.firebase:firebase-config-ktx" }
 firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
-firebase-crashlytics-ktx = { module = "com.google.firebase:firebase-crashlytics-ktx" }
 firebase-crashlytics-ndk = { module = "com.google.firebase:firebase-crashlytics-ndk" }
 firebase-database = { module = "com.google.firebase:firebase-database" }
-firebase-database-ktx = { module = "com.google.firebase:firebase-database-ktx" }
-firebase-dyanamiclinks = { module = "com.google.firebase:firebase-dynamic-links" }
-firebase-dyanamiclinks-ktx = { module = "com.google.firebase:firebase-dynamic-links-ktx" }
+firebase-dataconnect = { module = "com.google.firebase:firebase-dataconnect" }
 firebase-encoders = { module = "com.google.firebase:firebase-encoders" }
 firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
-firebase-firestore-ktx = { module = "com.google.firebase:firebase-firestore-ktx" }
 firebase-functions = { module = "com.google.firebase:firebase-functions" }
-firebase-functions-ktx = { module = "com.google.firebase:firebase-functions-ktx" }
 firebase-inappmessaging = { module = "com.google.firebase:firebase-inappmessaging" }
-firebase-inappmessaging-ktx = { module = "com.google.firebase:firebase-inappmessaging-ktx" }
 firebase-inappmessaging-display = { module = "com.google.firebase:firebase-inappmessaging-display" }
-firebase-inappmessaging-display-ktx = { module = "com.google.firebase:firebase-inappmessaging-display-ktx" }
 firebase-installations = { module = "com.google.firebase:firebase-installations" }
-firebase-installations-ktx = { module = "com.google.firebase:firebase-installations-ktx" }
 firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
-firebase-messaging-ktx = { module = "com.google.firebase:firebase-messaging-ktx" }
 firebase-messaging-directboot = { module = "com.google.firebase:firebase-messaging-directboot" }
 firebase-ml-modeldownloader = { module = "com.google.firebase:firebase-ml-modeldownloader" }
-firebase-ml-modeldownloader-ktx = { module = "com.google.firebase:firebase-ml-modeldownloader-ktx" }
 firebase-perf = { module = "com.google.firebase:firebase-perf" }
-firebase-perf-ktx = { module = "com.google.firebase:firebase-perf-ktx" }
 firebase-storage = { module = "com.google.firebase:firebase-storage" }
-firebase-storage-ktx = { module = "com.google.firebase:firebase-storage-ktx" }
 
 fresco = { module = "com.facebook.fresco:fresco", version.ref = "fresco" }
 fresco-animated-gif = { module = "com.facebook.fresco:animated-gif", version.ref = "fresco" }
