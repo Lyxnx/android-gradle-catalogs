@@ -65,6 +65,7 @@ mediarouter = "1.8.1"
 multidex = "2.0.1"
 
 navigation = "2.9.7"
+navigation3 = "1.0.1"
 
 paging = "3.4.1"
 palette = "1.0.0"
@@ -281,6 +282,7 @@ lifecycle-runtime-testing = { module = "androidx.lifecycle:lifecycle-runtime-tes
 lifecycle-service = { module = "androidx.lifecycle:lifecycle-service", version.ref = "lifecycle" }
 lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "lifecycle" }
 lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+lifecycle-viewmodel-navigation3 = { module = "androidx.lifecycle:lifecycle-viewmodel-navigation3", version.ref = "lifecycle" }
 lifecycle-viewmodel-savedstate = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "lifecycle" }
 
 loader = { module = "androidx.loader:loader", version.ref = "loader" }
@@ -325,6 +327,9 @@ navigation-ui = { module = "androidx.navigation:navigation-ui", version.ref = "n
 navigation-dynamic-features-fragment = { module = "androidx.navigation:navigation-dynamic-features-fragment", version.ref = "navigation" }
 navigation-testing = { module = "androidx.navigation:navigation-testing", version.ref = "navigation" }
 navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
+
+navigation3-runtime = { module = "androidx.navigation3:navigation3-runtime", version.ref = "navigation3" }
+navigation3-ui = { module = "androidx.navigation3:navigation3-ui", version.ref = "navigation3" }
 
 paging-common = { module = "androidx.paging:paging-common", version.ref = "paging" }
 paging-runtime = { module = "androidx.paging:paging-runtime", version.ref = "paging" }
