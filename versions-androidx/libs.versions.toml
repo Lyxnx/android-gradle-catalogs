@@ -106,7 +106,8 @@ wear-remote-interactions = "1.2.0"
 wear-compose = "1.6.0"
 wear-protolayout = "1.4.0"
 wear-tiles = "1.6.0"
-wear-watchface = "1.3.0"
+wear-watchface = "1.2.1"
+wear-watchface-complications = "1.3.0"
 webkit = "1.15.0"
 window = "1.5.1"
 work = "2.11.2"
@@ -420,9 +421,10 @@ wear-tiles-material = { module = "androidx.wear.tiles:tiles-material", version.r
 wear-tiles-renderer = { module = "androidx.wear.tiles:tiles-renderer", version.ref = "wear-tiles" }
 wear-tiles-testing = { module = "androidx.wear.tiles:tiles-testing", version.ref = "wear-tiles" }
 
+wear-watchface-complications-data-source = { module = "androidx.wear.watchface:watchface-complications-data-source", version.ref = "wear-watchface-complications" }
+wear-watchface-complications-data-source-ktx = { module = "androidx.wear.watchface:watchface-complications-data-source-ktx", version.ref = "wear-watchface-complications" }
+# Deprecated and due for removal from androidx soon https://developer.android.com/jetpack/androidx/releases/wear-watchface#1.3.0
 wear-watchface = { module = "androidx.wear.watchface:watchface", version.ref = "wear-watchface" }
-wear-watchface-complications-data-source = { module = "androidx.wear.watchface:watchface-complications-data-source", version.ref = "wear-watchface" }
-wear-watchface-complications-data-source-ktx = { module = "androidx.wear.watchface:watchface-complications-data-source-ktx", version.ref = "wear-watchface" }
 wear-watchface-complications-rendering = { module = "androidx.wear.watchface:watchface-complications-rendering", version.ref = "wear-watchface" }
 wear-watchface-editor = { module = "androidx.wear.watchface:watchface-editor", version.ref = "wear-watchface" }
 
