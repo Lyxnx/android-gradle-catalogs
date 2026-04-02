@@ -1,3 +1,9 @@
+plugins {
+    alias(shared.plugins.kotlin.jvm) apply false
+    alias(shared.plugins.vanniktech.publish) apply false
+    alias(shared.plugins.android.library) apply false
+}
+
 tasks.register("publishPlugins") {
     group = "Publishing"
     description = "Publishes all Android plugins to Maven Central"
