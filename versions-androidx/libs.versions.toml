@@ -354,8 +354,6 @@ resourceinspection-processor = { module = "androidx.resourceinspection:resourcei
 
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
-# TODO: Remove room-ktx when 2.7.0 is released as extensions are moved into main artifact (https://developer.android.com/jetpack/androidx/releases/room#2.7.0-alpha01)
-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 room-rxjava2 = { module = "androidx.room:room-rxjava2", version.ref = "room" }
 room-rxjava3 = { module = "androidx.room:room-rxjava3", version.ref = "room" }
 room-guava = { module = "androidx.room:room-guava", version.ref = "room" }
@@ -363,8 +361,6 @@ room-testing = { module = "androidx.room:room-testing", version.ref = "room" }
 room-paging = { module = "androidx.room:room-paging", version.ref = "room" }
 
 savedstate = { module = "androidx.savedstate:savedstate", version.ref = "savedstate" }
-# TODO: This will be removed eventually (https://github.com/androidx/androidx/commit/bfc9d93730a70ffa4847115913de2f7b6321b1f8), but no version has been released since
-savedstate-ktx = { module = "androidx.savedstate:savedstate-ktx", version.ref = "savedstate" }
 
 sharetarget = { module = "androidx.sharetarget:sharetarget", version.ref = "sharetarget" }
 
