@@ -157,6 +157,7 @@ cardview = { module = "androidx.cardview:cardview", version.ref = "cardview" }
 
 collection = { module = "androidx.collection:collection", version.ref = "collection" }
 
+#@bom
 compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-bom" }
 compose-animation = { module = "androidx.compose.animation:animation" }
 compose-animation-graphics = { module = "androidx.compose.animation:animation-graphics" }
