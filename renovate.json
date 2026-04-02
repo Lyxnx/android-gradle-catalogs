@@ -27,6 +27,14 @@
     {
       "matchPackageNames": "org.jetbrains.kotlinx:kotlinx-datetime",
       "allowedVersions": "!/^.+-compat$/"
+    },
+    {
+      "description": "Allow beta and rc for androidx libraries as these are considered stable",
+      "matchPackageNames": [
+        "androidx.*"
+      ],
+      "ignoreUnstable": false,
+      "allowedVersions": "/^[0-9]+\\.[0-9]+(\\.[0-9]+)?(-(?:beta|rc)[0-9]+)?$/"
     }
   ],
   "platformAutomerge": true,
