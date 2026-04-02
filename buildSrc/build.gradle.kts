@@ -19,4 +19,5 @@ dependencies {
     implementation(shared.kotlin.gradleplugin)
     implementation(shared.vanniktech.publish.gradleplugin)
     implementation(shared.android.gradleplugin)
+    implementation(shared.tomlj)
 }

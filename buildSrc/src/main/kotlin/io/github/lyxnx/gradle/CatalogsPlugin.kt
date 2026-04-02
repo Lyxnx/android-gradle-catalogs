@@ -5,16 +5,17 @@ import com.vanniktech.maven.publish.MavenPublishBaseExtension
 import com.vanniktech.maven.publish.MavenPublishPlugin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.internal.catalog.DefaultVersionCatalog
-import org.gradle.api.plugins.BasePlugin
+import org.gradle.api.plugins.JvmEcosystemPlugin
+import org.gradle.api.plugins.catalog.CatalogPluginExtension
 import org.gradle.api.plugins.catalog.VersionCatalogPlugin
-import org.gradle.api.plugins.catalog.internal.CatalogExtensionInternal
+import org.gradle.api.provider.Provider
 import org.gradle.api.publish.maven.tasks.PublishToMavenRepository
 import org.gradle.kotlin.dsl.apply
+import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.create
-import org.gradle.kotlin.dsl.getByName
 import org.gradle.kotlin.dsl.getByType
 import org.gradle.kotlin.dsl.register
+import org.gradle.kotlin.dsl.withType
 import org.gradle.language.base.plugins.LifecycleBasePlugin
 
 class CatalogsPlugin : Plugin<Project> {
@@ -26,9 +27,11 @@ class CatalogsPlugin : Plugin<Project> {
 
     override fun apply(target: Project) = with(target) {
         with(pluginManager) {
-            apply(BasePlugin::class)
-            apply(VersionCatalogPlugin::class)
-            apply(MavenPublishPlugin::class)
+            // Required for dependency resolution task as it doesn't resolve with just the normal version-catalog plugin
+            // This is the lowest level plugin required and doesn't interfere with publication autodetection
+            apply<JvmEcosystemPlugin>()
+            apply<VersionCatalogPlugin>()
+            apply<MavenPublishPlugin>()
         }
 
         val extension = extensions.create(CatalogsExtension.NAME, CatalogsExtension::class)
@@ -39,14 +42,14 @@ class CatalogsPlugin : Plugin<Project> {
 
         configureMavenPublish()
 
-        afterEvaluate {
-            configureCatalog()
-//            configureValidateTask(extension.verificationExcludes.mapNotNull { it.normalizeAlias() })
-        }
+        configureCatalog()
 
-        tasks.withType(PublishToMavenRepository::class.java).configureEach {
-            if (name.endsWith("ToMavenCentralRepository")) {
-                dependsOn(tasks.getByName("${name.removeSuffix("ToMavenCentralRepository")}ToMavenLocal"))
+        configureValidateTask(extension.verificationExcludes.map { it.mapNotNull { it.normalizeAlias() } })
+
+        tasks.withType<PublishToMavenRepository>().configureEach {
+            val suffix = "ToMavenCentralRepository"
+            if (name.endsWith(suffix)) {
+                dependsOn(tasks.getByName("${name.removeSuffix(suffix)}ToMavenLocal"))
             }
         }
     }
@@ -91,17 +94,16 @@ class CatalogsPlugin : Plugin<Project> {
     }
 
     private fun Project.configureCatalog() {
-        val extension = extensions.getByName<CatalogExtensionInternal>("catalog")
-
-        extension.versionCatalog {
-            from(files("libs.versions.toml"))
+        extensions.configure<CatalogPluginExtension> {
+            versionCatalog {
+                from(files("libs.versions.toml"))
+            }
         }
     }
 
-    private fun Project.configureValidateTask(excludes: List<String>) {
-        val versionCatalog = extensions.getByName<CatalogExtensionInternal>("catalog").versionCatalog.get()
+    private fun Project.configureValidateTask(excludes: Provider<List<String>>) {
         val validateCatalog = tasks.register<ValidateCatalogTask>(ValidateCatalogTask.NAME) {
-            dependenciesModel.set(versionCatalog)
+            inputFile.set(project.layout.projectDirectory.file("libs.versions.toml"))
             this.excludes.set(excludes)
             dependsOn(tasks.named(VersionCatalogPlugin.GENERATE_CATALOG_FILE_TASKNAME))
         }
