@@ -5,7 +5,10 @@ on:
     types:
       - opened
       - reopened
-      - synchronize
+  push:
+    branches:
+      - bleeding
+      - master
 
 jobs:
   validate-catalogs:
