@@ -50,7 +50,7 @@ exifinterface = "1.4.2"
 
 fragment = "1.8.9"
 
-games = "4.4.0"
+games = "4.4.1"
 graphics-core = "1.0.4"
 graphics-path = "1.1.0-rc01"
 graphics-shapes = "1.1.0"
