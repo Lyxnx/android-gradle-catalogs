@@ -27,7 +27,7 @@ junit = "6.0.3"
 
 koin = "4.2.1"
 koin-compiler = "0.6.2"
-kotlin = "2.3.20"
+kotlin = "2.3.21"
 kotlinpoet = "2.3.0"
 kotlinx-bcv = "0.18.1"
 kotlinx-coroutines = "1.10.2"
