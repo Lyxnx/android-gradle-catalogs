@@ -285,6 +285,7 @@ vanniktech-publish-gradleplugin = { module = "com.vanniktech:gradle-maven-publis
 
 android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
 android-library = { id = "com.android.library", version.ref = "android-gradle-plugin" }
+android-library-multiplatform = { id = "com.android.kotlin.multiplatform.library", version.ref = "android-gradle-plugin" }
 android-cachefix = { id = "org.gradle.android.cache-fix", version.ref = "android-cache-fix-plugin" }
 
 catalogs-compose-compiler = { id = "io.github.lyxnx.gradle.android-compose-compiler", version.ref = "catalogs-plugins" }
