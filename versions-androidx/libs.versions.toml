@@ -116,7 +116,7 @@ wear-protolayout = "1.4.0"
 wear-tiles = "1.6.0"
 wear-watchface = "1.2.1"
 wear-watchface-complications = "1.3.0"
-webkit = "1.16.0-rc01"
+webkit = "1.16.0"
 window = "1.5.1"
 work = "2.11.2"
 
