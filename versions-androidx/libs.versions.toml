@@ -13,7 +13,7 @@ biometric = "1.1.0"
 browser = "1.10.0"
 
 car-app = "1.8.0-beta01"
-camera = "1.6.0"
+camera = "1.6.1"
 cardview = "1.0.0"
 collection = "1.6.0"
 compose-bom = "2026.04.01"
