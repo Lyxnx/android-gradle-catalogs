@@ -15,14 +15,12 @@
         "patch",
         "pin",
         "digest"
-      ],
-      "automerge": true
+      ]
     },
     {
       "matchDepTypes": [
         "devDependencies"
-      ],
-      "automerge": true
+      ]
     },
     {
       "matchPackageNames": "org.jetbrains.kotlinx:kotlinx-datetime",
@@ -37,7 +35,6 @@
       "allowedVersions": "/^[0-9]+\\.[0-9]+(\\.[0-9]+)?(-(?:beta|rc)[0-9]+)?$/"
     }
   ],
-  "platformAutomerge": true,
   "labels": [
     "{{parentDir}}"
   ]
