@@ -37,7 +37,6 @@ public class ComposeUIPlugin : CatalogsBasePlugin() {
 //                    implementation(composeDeps.preview)
                 }
 
-//                @OptIn(ExperimentalComposeLibrary::class)
                 sourceSets.commonTest.dependencies {
                     implementation("org.jetbrains.compose.ui:ui-test:${ComposeBuildConfig.composeVersion}")
                 }

@@ -6,11 +6,9 @@ plugins {
 }
 
 dependencies {
-    compileOnly(shared.android.gradleplugin)
     compileOnly(shared.kotlin.gradleplugin)
     compileOnly(shared.kotlin.compose.gradleplugin)
     compileOnly(shared.jetbrains.compose.gradleplugin)
-    compileOnly(shared.ksp.gradleplugin)
 }
 
 kotlin {
@@ -67,13 +65,6 @@ gradlePlugin {
             displayName = "Android Compose UI configuration plugin"
             description = "Configures Compose for an Android application or library"
             implementationClass = "io.github.lyxnx.gradle.android.catalogs.compose.ComposeUIPlugin"
-        }
-
-        register("room") {
-            id = "io.github.lyxnx.gradle.android-room"
-            displayName = "Android Room configuration plugin"
-            description = "Configures RoomDB for an Android application or library"
-            implementationClass = "io.github.lyxnx.gradle.android.catalogs.room.RoomPlugin"
         }
     }
 }

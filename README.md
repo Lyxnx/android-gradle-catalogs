@@ -18,8 +18,6 @@ Version catalogs and plugins to help reduce boilerplate in Android Gradle build 
   - [Compose](#compose)
     - [Compiler](#compiler)
     - [UI](#ui)
-  - [Room](#room)
-    - [Configuring](#configuring)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -140,7 +138,6 @@ plugins {
     id("io.github.lyxnx.android-compose-compiler") version "<version>" apply false
     // for modules that use the full Compose UI, if using this, the compiler plugin is applied in addition
     id("io.github.lyxnx.android-compose-ui") version "<version>" apply false
-    id("io.github.lyxnx.android-room") version "<version>" apply false
 }
 ```
 
@@ -196,36 +193,6 @@ Applies the compiler plugin in addition to the following:
 
 1. Adds the compose ui, foundation, and tooling preview dependencies
 2. Adds the ui testing dependencies
-
-### Room
-
-This plugin requires the [KSP](https://github.com/google/ksp) (ID `com.google.devtools.ksp`) plugin to be applied to the
-module in addition to the standard Android plugins
-
-This plugin applies RoomDB configuration options to the application or library module:
-
-1. Applies the KSP plugin if needed
-2. Sets the schema directory to the configured directory (see below)
-3. Adds the Room runtime, runtime ktx, and compiler to dependencies from the first catalog containing
-   the `androidx.room:room-runtime`, `androidx.room:room-ktx`, `androidx.room:room-compiler`, and
-   the `androidx.room:room-testing` artifacts
-4. Adds the Room testing dependency
-
-#### Configuring
-
-This has an extension function for configuring the schema directory if the default does not wish to be used:
-
-```kotlin
-// Eg. app/build.gradle.kts
-import io.github.lyxnx.gradle.android.catalogs.room.roomSchemaDir
-
-roomSchemaDir(file("somewhere/schema_dir"))
-// OR
-roomSchemaDir("somewhere/schema_dir")
-```
-
-Note that this file is relative to the current build script.
-The above would result in the schema directory being `app/somewhere/schema_dir` for the `:app` module
 
 [mavenCentral]: https://search.maven.org/artifact/io.github.lyxnx.gradle/versions-shared
 
