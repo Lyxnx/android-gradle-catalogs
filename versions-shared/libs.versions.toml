@@ -14,7 +14,7 @@ firebase-bom = "34.14.0"
 fresco = "3.6.0"
 
 glide = "5.0.7"
-google-gms-plugin = "4.4.4"
+google-gms-plugin = "4.5.0"
 gson = "2.14.0"
 
 hilt = "2.59.2"
