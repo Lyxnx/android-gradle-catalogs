@@ -56,7 +56,7 @@ graphics-path = "1.1.0"
 graphics-shapes = "1.1.0"
 gridlayout = "1.1.0"
 
-hilt = "1.4.0-rc01"
+hilt = "1.4.0"
 
 interpolator = "1.0.0"
 
