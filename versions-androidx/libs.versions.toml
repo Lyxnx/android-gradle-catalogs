@@ -73,6 +73,7 @@ multidex = "2.0.1"
 
 navigation = "2.9.8"
 navigation3 = "1.1.4"
+navigationevent = "1.1.2"
 
 paging = "3.5.0"
 palette = "1.0.0"
@@ -303,27 +304,29 @@ media2-player = { module = "androidx.media2:media2-player", version.ref = "media
 media2-session = { module = "androidx.media2:media2-session", version.ref = "media2" }
 media2-widget = { module = "androidx.media2:media2-widget", version.ref = "media2" }
 
-media3-exoplayer = { module = "androidx.media3:media3-exoplayer", version.ref = "media3" }
-media3-exoplayer-dash = { module = "androidx.media3:media3-exoplayer-dash", version.ref = "media3" }
-media3-exoplayer-hls = { module = "androidx.media3:media3-exoplayer-hls", version.ref = "media3" }
-media3-exoplayer-rtsp = { module = "androidx.media3:media3-exoplayer-rtsp", version.ref = "media3" }
-media3-exoplayer-ima = { module = "androidx.media3:media3-exoplayer-ima", version.ref = "media3" }
+media3-cast = { module = "androidx.media3:media3-cast", version.ref = "media3" }
+media3-common = { module = "androidx.media3:media3-common", version.ref = "media3" }
+media3-database = { module = "androidx.media3:media3-database", version.ref = "media3" }
+media3-datasource = { module = "androidx.media3:media3-datasource", version.ref = "media3" }
 media3-datasource-cronet = { module = "androidx.media3:media3-datasource-cronet", version.ref = "media3" }
 media3-datasource-okhttp = { module = "androidx.media3:media3-datasource-okhttp", version.ref = "media3" }
 media3-datasource-rtmp = { module = "androidx.media3:media3-datasource-rtmp", version.ref = "media3" }
-media3-ui = { module = "androidx.media3:media3-ui", version.ref = "media3" }
-media3-ui-leanback = { module = "androidx.media3:media3-ui-leanback", version.ref = "media3" }
-media3-session = { module = "androidx.media3:media3-session", version.ref = "media3" }
+media3-decoder = { module = "androidx.media3:media3-decoder", version.ref = "media3" }
+media3-exoplayer = { module = "androidx.media3:media3-exoplayer", version.ref = "media3" }
+media3-exoplayer-dash = { module = "androidx.media3:media3-exoplayer-dash", version.ref = "media3" }
+media3-exoplayer-hls = { module = "androidx.media3:media3-exoplayer-hls", version.ref = "media3" }
+media3-exoplayer-ima = { module = "androidx.media3:media3-exoplayer-ima", version.ref = "media3" }
+media3-exoplayer-rtsp = { module = "androidx.media3:media3-exoplayer-rtsp", version.ref = "media3" }
 media3-extractor = { module = "androidx.media3:media3-extractor", version.ref = "media3" }
-media3-cast = { module = "androidx.media3:media3-cast", version.ref = "media3" }
 media3-exoplayer-workmanager = { module = "androidx.media3:media3-exoplayer-workmanager", version.ref = "media3" }
-media3-transformer = { module = "androidx.media3:media3-transformer", version.ref = "media3" }
+media3-session = { module = "androidx.media3:media3-session", version.ref = "media3" }
 media3-test-utils = { module = "androidx.media3:media3-test-utils", version.ref = "media3" }
 media3-test-utils-robolectric = { module = "androidx.media3:media3-test-utils-robolectric", version.ref = "media3" }
-media3-database = { module = "androidx.media3:media3-database", version.ref = "media3" }
-media3-decoder = { module = "androidx.media3:media3-decoder", version.ref = "media3" }
-media3-datasource = { module = "androidx.media3:media3-datasource", version.ref = "media3" }
-media3-common = { module = "androidx.media3:media3-common", version.ref = "media3" }
+media3-transformer = { module = "androidx.media3:media3-transformer", version.ref = "media3" }
+media3-ui = { module = "androidx.media3:media3-ui", version.ref = "media3" }
+media3-ui-compose = { module = "androidx.media3:media3-ui-compose", version.ref = "media3" }
+media3-ui-compose-material3 = { module = "androidx.media3:media3-ui-compose-material3", version.ref = "media3" }
+media3-ui-leanback = { module = "androidx.media3:media3-ui-leanback", version.ref = "media3" }
 
 mediarouter = { module = "androidx.mediarouter:mediarouter", version.ref = "mediarouter" }
 
@@ -338,6 +341,10 @@ navigation-compose = { module = "androidx.navigation:navigation-compose", versio
 
 navigation3-runtime = { module = "androidx.navigation3:navigation3-runtime", version.ref = "navigation3" }
 navigation3-ui = { module = "androidx.navigation3:navigation3-ui", version.ref = "navigation3" }
+
+navigationevent = { module = "androidx.navigationevent:navigationevent", version.ref = "navigationevent" }
+navigationevent-compose = { module = "androidx.navigationevent:navigationevent-compose", version.ref = "navigationevent" }
+navigationevent-testing = { module = "androidx.navigationevent:navigationevent-testing", version.ref = "navigationevent" }
 
 paging-common = { module = "androidx.paging:paging-common", version.ref = "paging" }
 paging-runtime = { module = "androidx.paging:paging-runtime", version.ref = "paging" }
