@@ -37,7 +37,7 @@ kotlinx-immutablecollections = "0.5.1"
 kotlinx-io = "0.9.1"
 kotlinx-serialization = "1.11.0"
 kradle = "2.1.0"
-ksp = "2.3.9"
+ksp = "2.3.10"
 
 landscapist = "2.11.0"
 leakcanary = "2.14"
