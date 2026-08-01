@@ -21,7 +21,7 @@ hilt = "2.60.1"
 
 javapoet = "1.13.0"
 jetbrains-compose = "1.11.1"
-jsoup = "1.22.2"
+jsoup = "1.23.1"
 junit4 = "4.13.2"
 junit = "6.1.2"
 
