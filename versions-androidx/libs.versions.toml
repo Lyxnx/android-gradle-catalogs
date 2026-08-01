@@ -62,7 +62,7 @@ interpolator = "1.0.0"
 
 leanback = "1.2.0"
 lifecycle = "2.11.0"
-loader = "1.2.0-rc01"
+loader = "1.2.0"
 localbroadcastmanager = "1.1.0"
 
 media = "1.8.0"
