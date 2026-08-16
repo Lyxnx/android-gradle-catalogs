@@ -49,7 +49,7 @@ mockito-kotlin = "6.3.0"
 mockk = "1.14.11"
 moshi = "1.15.2"
 
-okhttp = "5.4.0"
+okhttp = "5.5.0"
 
 protobuf = "4.35.1"
 protobuf-gradle-plugin = "0.10.0"
