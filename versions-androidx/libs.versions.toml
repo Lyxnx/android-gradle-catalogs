@@ -119,7 +119,7 @@ wear-watchface = "1.2.1"
 wear-watchface-complications = "1.3.0"
 webkit = "1.17.0-rc01"
 window = "1.5.1"
-work = "2.12.0-beta01"
+work = "2.12.0-rc01"
 
 [libraries]
 
