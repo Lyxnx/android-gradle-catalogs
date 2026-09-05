@@ -29,7 +29,6 @@ koin = "4.2.2"
 koin-compiler = "1.1.0"
 kotlin = "2.4.10"
 kotlinpoet = "2.3.0"
-kotlinx-bcv = "0.18.2"
 kotlinx-coroutines = "1.11.0"
 kotlinx-datetime = "0.8.0"
 kotlinx-html = "0.12.0"
@@ -307,8 +306,6 @@ kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-
-kotlinx-binarycompatibilityvalidator = { id = "org.jetbrains.kotlinx.binary-compatibility-validator", version.ref = "kotlinx-bcv" }
 
 kradle-android-application = { id = "io.github.lyxnx.kradle.android-application", version.ref = "kradle" }
 kradle-android-config = { id = "io.github.lyxnx.kradle.android-config", version.ref = "kradle" }
