@@ -22,6 +22,6 @@ jobs:
       - name: Setup gradle
         uses: gradle/actions/setup-gradle@v6
         with:
-          gradle-version: current
+          gradle-version: 9.7.1
       - name: Validate catalogs
         run: ./gradlew validateCatalog
