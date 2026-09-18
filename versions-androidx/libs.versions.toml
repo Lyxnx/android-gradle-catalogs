@@ -369,8 +369,6 @@ resourceinspection-processor = { module = "androidx.resourceinspection:resourcei
 
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
-# TODO: Remove room-ktx when 2.7.0 is released as extensions are moved into main artifact (https://developer.android.com/jetpack/androidx/releases/room#2.7.0-alpha01)
-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 room-rxjava2 = { module = "androidx.room:room-rxjava2", version.ref = "room" }
 room-rxjava3 = { module = "androidx.room:room-rxjava3", version.ref = "room" }
 room-guava = { module = "androidx.room:room-guava", version.ref = "room" }
