@@ -84,6 +84,7 @@ recommendation = "1.0.0"
 recyclerview = "1.4.0"
 resourceinspection = "1.0.1"
 room = "2.8.5"
+room3 = "3.0.3"
 
 savedstate = "1.5.0"
 sharetarget = "1.2.0"
@@ -375,6 +376,14 @@ room-guava = { module = "androidx.room:room-guava", version.ref = "room" }
 room-testing = { module = "androidx.room:room-testing", version.ref = "room" }
 room-paging = { module = "androidx.room:room-paging", version.ref = "room" }
 
+room3-common = { module = "androidx.room3:room3-common", version.ref = "room3" }
+room3-compiler = { module = "androidx.room3:room3-compiler", version.ref = "room3" }
+room3-guava = { module = "androidx.room3:room3-guava", version.ref = "room3" }
+room3-paging = { module = "androidx.room3:room3-paging", version.ref = "room3" }
+room3-runtime = { module = "androidx.room3:room3-runtime", version.ref = "room3" }
+room3-rxjava3 = { module = "androidx.room3:room3-rxjava3", version.ref = "room3" }
+room3-testing = { module = "androidx.room3:room3-testing", version.ref = "room3" }
+
 savedstate = { module = "androidx.savedstate:savedstate", version.ref = "savedstate" }
 
 sharetarget = { module = "androidx.sharetarget:sharetarget", version.ref = "sharetarget" }
@@ -459,4 +468,4 @@ work-multiprocess = { module = "androidx.work:work-multiprocess", version.ref = 
 benchmark = { id = "androidx.benchmark", version.ref = "benchmark" }
 navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "navigation" }
 navigation-safeargs-kotlin = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
-
+room3 = { id = "androidx.room3", version.ref = "room3" }
