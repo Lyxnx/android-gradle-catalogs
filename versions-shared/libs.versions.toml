@@ -56,7 +56,7 @@ protobuf-gradle-plugin = "0.10.0"
 retrofit = "3.0.0"
 robolectric = "4.17"
 
-sqldelight = "2.3.2"
+sqldelight = "2.4.0"
 
 timber = "5.0.1"
 tomlj = "1.3.0"
