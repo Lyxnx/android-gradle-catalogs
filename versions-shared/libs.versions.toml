@@ -59,7 +59,7 @@ robolectric = "4.17"
 sqldelight = "2.4.0"
 
 timber = "5.0.1"
-tomlj = "1.3.0"
+tomlj = "2.0.1"
 truth = "1.4.5"
 
 vanniktech-publish-gradle-plugin = "0.37.0"
