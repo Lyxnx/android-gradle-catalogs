@@ -51,7 +51,7 @@ exifinterface = "1.4.2"
 fragment = "1.9.1"
 
 games = "4.4.2"
-graphics-core = "1.0.4"
+graphics-core = "1.1.0-beta01"
 graphics-path = "1.1.0"
 graphics-shapes = "1.1.0"
 gridlayout = "1.1.0"
