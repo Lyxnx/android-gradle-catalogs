@@ -109,7 +109,6 @@ firebase-inappmessaging-display = { module = "com.google.firebase:firebase-inapp
 firebase-installations = { module = "com.google.firebase:firebase-installations" }
 firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
 firebase-messaging-directboot = { module = "com.google.firebase:firebase-messaging-directboot" }
-firebase-ml-modeldownloader = { module = "com.google.firebase:firebase-ml-modeldownloader" }
 firebase-perf = { module = "com.google.firebase:firebase-perf" }
 firebase-storage = { module = "com.google.firebase:firebase-storage" }
 
