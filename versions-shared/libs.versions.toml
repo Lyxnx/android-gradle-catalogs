@@ -15,7 +15,7 @@ fresco = "3.9.0"
 
 glide = "5.0.9"
 google-gms-plugin = "4.5.0"
-gson = "2.14.0"
+gson = "2.15.0"
 
 hilt = "2.60.1"
 
