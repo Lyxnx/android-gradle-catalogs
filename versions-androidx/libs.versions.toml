@@ -100,7 +100,7 @@ test-ext-truth = "1.7.0"
 test-orchestrator = "1.6.1"
 test-rules = "1.7.0"
 test-runner = "1.7.0"
-test-uiautomator = "2.4.0"
+test-uiautomator = "2.4.1"
 tracing = "2.0.5"
 transition = "1.7.2"
 
