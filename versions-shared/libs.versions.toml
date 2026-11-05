@@ -51,7 +51,7 @@ moshi = "1.15.2"
 okhttp = "5.5.1"
 
 protobuf = "4.36.2"
-protobuf-gradle-plugin = "0.10.0"
+protobuf-gradle-plugin = "0.10.1"
 
 retrofit = "3.0.0"
 robolectric = "4.17"
