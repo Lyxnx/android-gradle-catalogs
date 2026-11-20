@@ -15,7 +15,8 @@
         "patch",
         "pin",
         "digest"
-      ]
+      ],
+      "automerge": true
     },
     {
       "matchDepTypes": [
@@ -32,7 +33,8 @@
         "androidx.*"
       ],
       "ignoreUnstable": false,
-      "allowedVersions": "/^[0-9]+\\.[0-9]+(\\.[0-9]+)?(-(?:beta|rc)[0-9]+)?$/"
+      "allowedVersions": "/^[0-9]+\\.[0-9]+(\\.[0-9]+)?(-(?:beta|rc)[0-9]+)?$/",
+      "automerge": true
     }
   ],
   "labels": [
